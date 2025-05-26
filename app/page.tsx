@@ -173,13 +173,13 @@ export default function Home() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center flex flex-col gap-8"
+            className="text-center flex flex-col gap-12"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col items-center gap-1"
+              className="flex flex-col items-center"
             >
               <Image
                 src="/assets/logo.svg"
@@ -213,12 +213,12 @@ export default function Home() {
             </motion.div>
 
             <motion.h1
-              className="text-xl md:text-5xl font-bold leading-tight block bg-clip-text text-transparent bg-gradient-to-r from-white  to-accent"
+              className="text-xl md:text-3xl max-w-4xl mx-auto uppercase font-bold leading-tight block bg-clip-text text-transparent bg-gradient-to-r from-white  to-accent"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              UNE NOUVELLE APPROCHE DE L'ACCOMPAGNEMENT JURIDIQUE
+              Une nouvelle approche de l'accompagnement juridique
             </motion.h1>
 
             {/* Carte acteurs*/}
