@@ -77,17 +77,44 @@ export default function Section1() {
           transition={{ duration: 0.8 }}
           className="px-4 text-white relative overflow-hidden"
         >
-          <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-4">
+          <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              className="text-center"
             >
               <h2 className=" text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
                 Nos services
               </h2>
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="bg-accent/5 rounded-2xl p-6  border border-accent/20"
+            >
+              <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
+                <div className="flex flex-col gap-2 w-full md:w-2/3">
+                  <h3 className="text-xl font-medium text-white mb-2">
+                    Que vous soyez dirigeant d'une PME/ETI, entrepreneur en
+                    phase de croissance ou juriste en entreprise, ADWIZ adapte
+                    son intervention à vos priorités et à votre rythme de
+                    décision.
+                  </h3>
+                </div>
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-2 bg-accent text-primary px-6 py-3 rounded-2xl font-semibold text-base hover:bg-accent/90 transition-all duration-300"
+                >
+                  <span>Découvrez toutes nos offres</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </motion.div>
 
             {/* Grille de cartes avec effet flip */}
@@ -159,33 +186,6 @@ export default function Section1() {
                 </motion.div>
               ))}
             </div>
-
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="bg-accent/5 rounded-2xl p-6 border border-accent/20"
-            >
-              <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
-                <div className="flex flex-col gap-2 w-full md:w-2/3">
-                  <h3 className="text-xl font-medium text-white mb-2">
-                    Que vous soyez dirigeant d'une PME/ETI, entrepreneur en
-                    phase de croissance ou juriste en entreprise, ADWIZ adapte
-                    son intervention à vos priorités et à votre rythme de
-                    décision.
-                  </h3>
-                </div>
-                <Link
-                  href="#"
-                  className="inline-flex items-center gap-2 bg-accent text-primary px-6 py-3 rounded-2xl font-semibold text-base hover:bg-accent/90 transition-all duration-300"
-                >
-                  <span>Découvrez toutes nos offres</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
           </div>
         </motion.section>
       </div>

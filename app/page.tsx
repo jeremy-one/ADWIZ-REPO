@@ -184,32 +184,17 @@ export default function Home() {
               <Image
                 src="/assets/logo.svg"
                 alt="ADWIZ Logo"
-                width={400}
-                height={400}
+                width={300}
+                height={300}
               />
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-[32px] text-accent font-medium"
+                className="text-[24px] text-accent font-medium"
               >
                 Avocat en droits des affaires
               </motion.h1>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="pt-4"
-            >
-              <a
-                href="#contact"
-                className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-2 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
-              >
-                <span>Prendre rendez-vous</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
             </motion.div>
 
             <motion.h1
@@ -271,6 +256,21 @@ export default function Home() {
               ))}
             </div>
 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="pt-4"
+            >
+              <a
+                href="#contact"
+                className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-2 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
+              >
+                <span>Prendre rendez-vous</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </motion.div>
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -325,7 +325,7 @@ export default function Home() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
-            Pourquoi ADWIZ ?
+            Nos valeurs
           </h2>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
@@ -481,27 +481,74 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
+        className="flex flex-row justify-center max-w-7xl items-center flex-wrap md:flex-nowrap py-24 px-4 gap-8 md:gap-0 mx-auto text-white relative overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="mx-auto z-10 flex flex-col items-center justify-center">
+          {/* CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="group h-96 md:h-96 w-80 md:w-full md:w-96 aspect-square perspective-1000 flex flex-col items-center justify-center"
+            style={{ perspective: "1000px" }}
+          >
+            <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 ">
+              {/* Face avant (recto) */}
+              <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 flex flex-col items-center gap-8  justify-center text-center">
+                <Image
+                  src="/assets/Francois-Dominique_Wojas.jpeg"
+                  alt="ADWIZ Logo"
+                  className="rounded-2xl object-cover"
+                  width={210}
+                  height={210}
+                />
+                <div>
+                  <h2 className="text-2xl font-bold text-white">
+                    François-Dominique Wojas
+                  </h2>
+                  <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                    Fondateur du Cabinet Adwiz.law
+                  </p>
+                </div>
+              </div>
+
+              {/* Face arrière (verso) */}
+              <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 p-6 flex flex-col items-cente justify-center w-full">
+                <a href="tel:0554529507">
+                  <Image
+                    src="/assets/qr-code.svg"
+                    alt="ADWIZ Logo"
+                    className="rounded-2xl"
+                    width={600}
+                    height={600}
+                  />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        <div className=" z-10 h-full flex flex-col justify-center items-start ">
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-center"
+            className="text-start flex flex-col gap-2"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Une question, un projet, un litige à anticiper ?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white ">
+              Une question, <br /> un projet, <br /> un litige à anticiper ?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto text-start ">
               Prenez rendez-vous gratuit (30min) avec ADWIZ pour un premier
               échange confidentiel, sans engagement.
             </p>
+
             <motion.a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-accent text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 group"
+              className="inline-flex mt-8 w-fit items-center gap-2 bg-accent text-primary py-2 px-8 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -556,6 +603,24 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
+
+      <style jsx>{`
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+        .group:hover .group-hover\\:rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </main>
   );
 }
