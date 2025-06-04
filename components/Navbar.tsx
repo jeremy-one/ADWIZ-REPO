@@ -40,10 +40,7 @@ export default function Navbar() {
   }
 
   return (
-    <motion.nav
-      style={{ y }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl mx-auto"
-    >
+    <motion.nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl mx-auto">
       <div
         className={`backdrop-blur-md border border-accent/20 rounded-full px-6 py-3 ${
           isLightPage ? "bg-white/80" : "bg-primary/80"

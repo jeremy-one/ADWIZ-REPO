@@ -41,79 +41,10 @@ import { useState, useRef } from "react";
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import SecretComponent from "@/components/secret.component";
 export default function Home() {
-  const [selectedPrinciple, setSelectedPrinciple] = useState(0);
   const router = useRouter();
   const section1Ref = useRef<HTMLDivElement>(null);
-
-  const principles = [
-    {
-      icon: Shield,
-      title: "Sécurité",
-      description: "Anticiper les risques, structurer les décisions",
-      details: [
-        "Analyse approfondie des risques juridiques",
-        "Mise en place de mesures préventives",
-        "Protection des intérêts de l'entreprise",
-        "Veille juridique proactive",
-      ],
-    },
-    {
-      icon: Target,
-      title: "Exigence",
-      description: "Analyser, approfondir, améliorer",
-      details: [
-        "Expertise pointue en droit des affaires",
-        "Méthodologie rigoureuse",
-        "Qualité des livrables garantie",
-        "Suivi précis des engagements",
-      ],
-    },
-    {
-      icon: Handshake,
-      title: "Confiance",
-      description: "Créer un cadre clair pour des relations durables ",
-      details: [
-        "Échanges transparents et réguliers",
-        "Engagement sur les résultats",
-        "Confidentialité absolue",
-        "Partenariat sur le long terme",
-      ],
-    },
-    {
-      icon: Clock,
-      title: "Réactivité",
-      description: "Agir vite, sans jamais improviser",
-      details: [
-        "Disponibilité immédiate",
-        "Solutions opérationnelles",
-        "Adaptation aux urgences",
-        "Suivi en temps réel",
-      ],
-    },
-    {
-      icon: Ear,
-      title: "Écoute",
-      description: "Comprendre vos enjeux et ensuite conseiller",
-      details: [
-        "Analyse de vos besoins spécifiques",
-        "Solutions sur mesure",
-        "Communication claire et directe",
-        "Feedback régulier",
-      ],
-    },
-    {
-      icon: BookOpen,
-      title: "Transmission",
-      description: "Partager pour renforcer la décision",
-      details: [
-        "Formation et accompagnement",
-        "Documentation exhaustive",
-        "Transfert de compétences",
-        "Capitalisation des expériences",
-      ],
-    },
-  ];
 
   const scrollToSection = () => {
     const section1 = document.getElementById("section1");
@@ -163,7 +94,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
-            className="absolute inset-0 bg-gradient-to-b from-[#0A0D1A]/70 via-[#0A0D1A]/80 to-primary/90"
+            className="absolute inset-0 bg-gradient-to-b from-[#0A0D1A]/40 via-[#0A0D1A]/60 to-primary/90"
           />
         </div>
 
@@ -203,7 +134,8 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Une nouvelle approche de l'accompagnement juridique
+              Nous faisons du droit des affaires un levier de croissance pour
+              nos clients
             </motion.h1>
 
             {/* Carte acteurs*/}
@@ -271,14 +203,14 @@ export default function Home() {
               </a>
             </motion.div>
 
-            <motion.h2
+            {/* <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 2 }}
               className="text-xl md:text-3xl text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white  to-accent"
             >
               Faire du droit des affaires un levier de croissance
-            </motion.h2>
+            </motion.h2> */}
           </motion.div>
         </div>
 
@@ -306,6 +238,49 @@ export default function Home() {
         </motion.div>
       </motion.section>
 
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-12 py-20 px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center flex flex-col gap-4"
+        >
+          <h2 className=" text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
+            Pourquoi se faire accompagner par ADWIZ ?
+          </h2>
+          <p className="text-white/70 text-lg">
+            Parce que nous proposons un accompagnement qui est centré sur vos
+            objectifs et vos besoins.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="bg-accent/5 rounded-2xl p-6  border border-accent/20"
+        >
+          <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
+            <div className="flex flex-col gap-2 w-full md:w-2/3">
+              <h3 className="text-xl font-medium text-white mb-2">
+                Que vous soyez dirigeant ou associé d'une PME/ETI, entrepreneurs
+                en phase de croissance ou avec un projet de reprise, nous
+                adaptons notre intervention à vos priorités et à votre rythme de
+                décision.
+              </h3>
+            </div>
+            <Link
+              href="#"
+              className="inline-flex items-center gap-2 bg-accent text-primary px-6 py-3 rounded-2xl font-semibold text-base hover:bg-accent/90 transition-all duration-300"
+            >
+              <span>Découvrez toutes nos offres</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+
       {/* Section 1 */}
       <Section1 />
 
@@ -325,28 +300,28 @@ export default function Home() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
-            Nos valeurs
+            Ce que vous obtenez avec ADWIZ ?
           </h2>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
           {[
             {
               icon: TargetIcon,
-              title: "Collaboration et résultats",
+              title: "Des résultats",
               description:
-                "Des objectifs concrets, pas d’actions ou de procédures inutiles. Calendrier, livrables et information continue.",
+                "Objectifs concrets, pas d'actions ou de procédure inutiles. Calendriers, livrables et information continue.",
             },
             {
               icon: Zap,
-              title: "Innovation",
+              title: "Un service innovant",
               description:
-                "Base documentaire, équipement informatique, outils digitaux, intelligence artificielle pour réduire les coûts et améliorer le conseil.",
+                "Ressources documentaires, outils digitaux et intelligence artificielle pour limiter les coûts et se concentrer sur l'accompagnement et le service.",
             },
             {
               icon: FileCheck,
-              title: "Tarif 100 % forfait ou par abonnement",
+              title: "Une tarification transparente",
               description:
-                "Prestations définies et détaillées à l’avance. Devis chiffrés.",
+                "Honoraires au forfait ou à l'abonnement. Prestations définies et détaillées à l'avance.",
             },
           ].map((point, index) => (
             <motion.div
@@ -379,15 +354,16 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Section 2 */}
+      {/* Section - Qu'est-ce qui différencie ADWIZ */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-4 bg-gradient-to-b from-[#0A0D1A] to-primary text-white relative overflow-hidden"
+        className="py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto">
+          {/* Titre principal */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -395,85 +371,162 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
-              La méthode S.E.C.R.E.T.
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
+              Qu'est-ce qui différencie ADWIZ ?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              ADWIZ a cumulé les expériences pour élaborer une méthode de
-              travail rigoureuse, structurée et orientée résultats, basée sur
-              six principes :
-            </p>
           </motion.div>
 
-          {/* Onglets des principes */}
-          <div className="flex md:justify-center no-scrollbar overflow-x-auto snap-x snap-mandatory gap-4 mb-12">
-            {principles.map((principle, index) => (
-              <motion.button
-                key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                onClick={() => setSelectedPrinciple(index)}
-                className={`flex items-center snap-center cursor-pointer gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
-                  index === selectedPrinciple
-                    ? "bg-accent/20 border border-accent/40"
-                    : "hover:bg-accent/10 border border-accent/20"
-                }`}
-              >
-                <principle.icon className="w-5 h-5 text-accent" />
-                <span className="font-medium bg-clip-text text-transparent bg-gradient-to-l from-white to-accent">
-                  {principle.title}
-                </span>
-              </motion.button>
-            ))}
-          </div>
-
-          {/* Contenu du principe sélectionné */}
-          <motion.div
-            key={selectedPrinciple}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="relative"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl transform transition-all duration-500" />
-            <div className="relative p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-                <div className="w-20 h-20 flex items-center justify-center bg-accent/10 rounded-2xl">
-                  {(() => {
-                    const Icon = principles[selectedPrinciple].icon;
-                    return <Icon className="w-10 h-10 text-accent" />;
-                  })()}
-                </div>
-                <div className="text-center md:text-left">
-                  <h3 className="text-3xl font-bold mb-2 text-white">
-                    {principles[selectedPrinciple].title}
-                  </h3>
-                  <p className="text-xl text-gray-300">
-                    {principles[selectedPrinciple].description}
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                {principles[selectedPrinciple].details.map((detail, index) => (
+          {/* Slider Container */}
+          <div className="relative">
+            {/* Slider Content */}
+            <div className="overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+              <div className="flex gap-8 py-4" style={{ width: "max-content" }}>
+                {[
+                  {
+                    icon: Target,
+                    title:
+                      "Un accompagnement sur-mesure, à la hauteur de vos enjeux",
+                    points: [
+                      "Chaque client, chaque projet, chaque contexte est unique.",
+                      "Notre approche est construite autour de vos priorités, pas de schémas types.",
+                      "Nous prenons le temps de comprendre, d'analyser et de construire à vos côtés.",
+                    ],
+                    color: "accent",
+                    gradient: "from-accent/20 to-accent/5",
+                    borderColor: "border-accent/30",
+                  },
+                  {
+                    icon: Handshake,
+                    title: "Un partenaire engagé, exigeant et constructif",
+                    points: [
+                      "Nous contribuons à faire émerger les bonnes décisions.",
+                      "Nous posons les questions utiles, anticipons les points sensibles, et apportons un regard orienté décision.",
+                      "Votre projet nous mobilise, sur le fond comme dans la relation.",
+                      "Attendez-vous à un échange direct, exigeant, orienté résultats.",
+                    ],
+                    color: "blue-400",
+                    gradient: "from-blue-500/20 to-blue-500/5",
+                    borderColor: "border-blue-400/30",
+                  },
+                  {
+                    icon: Shield,
+                    title: "Un cadre structuré pour avancer avec clarté",
+                    points: [
+                      "Notre organisation et notre méthode sont conçues pour vous faire gagner du temps et de la visibilité.",
+                      "Nous réduisons la charge mentale liée aux problématiques juridiques.",
+                      "Vous avancez en étant mieux préparé, mieux entouré, plus sécurisé.",
+                    ],
+                    color: "green-400",
+                    gradient: "from-green-500/20 to-green-500/5",
+                    borderColor: "border-green-400/30",
+                  },
+                  {
+                    icon: Zap,
+                    title: "Le droit comme levier d'action",
+                    points: [
+                      "Nous mobilisons notre expertise pour renforcer vos décisions et soutenir votre exécution.",
+                      "Structuration, gouvernance, contrats, pactes, investissements : notre accompagnement vise à transformer les enjeux juridiques en outils de pilotage.",
+                    ],
+                    color: "purple-400",
+                    gradient: "from-purple-500/20 to-purple-500/5",
+                    borderColor: "border-purple-400/30",
+                  },
+                ].map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-start gap-4 p-4 rounded-xl bg-white/5 backdrop-blur-sm"
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.8,
+                      delay: index * 0.2,
+                    }}
+                    className="flex-shrink-0 w-80 md:w-96 snap-center group"
                   >
-                    <CheckCircle className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <p className="text-gray-300">{detail}</p>
+                    {/* Carte du slider */}
+                    <div
+                      className={`relative h-full bg-gradient-to-br ${item.gradient} backdrop-blur-lg rounded-3xl border ${item.borderColor} p-8 transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl`}
+                    >
+                      {/* Icône principale */}
+                      <div className="flex justify-center mb-8">
+                        <div className="relative">
+                          <div
+                            className={`w-20 h-20 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center border ${item.borderColor}`}
+                          >
+                            <item.icon
+                              className={`w-10 h-10 text-${item.color} transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12`}
+                            />
+                          </div>
+                          <div
+                            className={`absolute -inset-2 rounded-full border ${item.borderColor} opacity-50 animate-pulse`}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Titre */}
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-8 text-center leading-tight group-hover:text-accent transition-colors duration-300">
+                        {item.title}
+                      </h3>
+
+                      {/* Points */}
+                      <div className="space-y-4">
+                        {item.points.map((point, pointIndex) => (
+                          <motion.div
+                            key={pointIndex}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                              duration: 0.6,
+                              delay: index * 0.2 + pointIndex * 0.1,
+                            }}
+                            className="flex items-start gap-3"
+                          >
+                            <p
+                              className={`text-gray-300 group-hover:text-white transition-colors duration-300 leading-relaxed ${pointIndex === item.points.length - 1 && item.points.length > 3 ? "text-accent font-bold" : ""}`}
+                            >
+                              {point}
+                            </p>
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      {/* Effet de brillance */}
+                      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </div>
             </div>
+          </div>
+
+          {/* CTA final */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-center mt-16 pt-12 border-t border-accent/20"
+          >
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Découvrez comment notre approche peut transformer vos défis
+              juridiques en opportunités de croissance
+            </p>
+            <Link
+              href="#contact"
+              className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-3 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
+            >
+              <span>Échanger avec nous</span>
+              <ArrowRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Section 2 */}
+      {/* <SecretComponent /> */}
 
       {/* Section 5 - Pourquoi ADWIZ */}
       <motion.section
@@ -497,9 +550,9 @@ export default function Home() {
               {/* Face avant (recto) */}
               <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 flex flex-col items-center gap-8  justify-center text-center">
                 <Image
-                  src="/assets/Francois-Dominique_Wojas.jpeg"
+                  src="/assets/fdw.jpeg"
                   alt="ADWIZ Logo"
-                  className="rounded-2xl object-cover"
+                  className="rounded-2xl object-cover "
                   width={210}
                   height={210}
                 />
@@ -508,7 +561,7 @@ export default function Home() {
                     François-Dominique Wojas
                   </h2>
                   <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                    Fondateur du Cabinet Adwiz.law
+                    Fondateur du cabinet ADWIZ
                   </p>
                 </div>
               </div>
@@ -519,7 +572,7 @@ export default function Home() {
                   <Image
                     src="/assets/qr-code.svg"
                     alt="ADWIZ Logo"
-                    className="rounded-2xl"
+                    className="rounded-2xl "
                     width={600}
                     height={600}
                   />
@@ -542,8 +595,8 @@ export default function Home() {
             </h2>
 
             <p className="text-xl text-gray-300 max-w-2xl mx-auto text-start ">
-              Prenez rendez-vous gratuit (30min) avec ADWIZ pour un premier
-              échange confidentiel, sans engagement.
+              Contactez nous pour un premier échange gratuit (25 min)
+              confidentiel et sans engagement.
             </p>
 
             <motion.a
@@ -576,19 +629,22 @@ export default function Home() {
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="fixed -right-4 top-1/2 -translate-y-1/2 z-50 hidden md:flex md:flex-col gap-4 p-4"
+        className="fixed -right-4 top-1/2 -translate-y-1/2 z-50 hidden  md:flex md:flex-col gap-4 p-4"
       >
         <div className="relative">
           <div className="absolute inset-0 bg-accent/5 backdrop-blur-lg rounded-l-2xl" />
           <div className="relative flex flex-col gap-6 p-4">
             {[
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Instagram, href: "#", label: "Instagram" },
-              { icon: Podcast, href: "#", label: "Spotify" },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/françois-dominique-wojas-avocat-droit-des-affaires-bordeaux/",
+                label: "LinkedIn",
+              },
             ].map((social, index) => (
               <motion.a
                 key={index}
                 href={social.href}
+                target="_blank"
                 whileHover={{ scale: 1.1, color: "var(--accent)" }}
                 className="relative group"
                 aria-label={social.label}
@@ -604,6 +660,7 @@ export default function Home() {
         </div>
       </motion.div>
 
+      {/* Styles CSS pour masquer la scrollbar */}
       <style jsx>{`
         .perspective-1000 {
           perspective: 1000px;
@@ -619,6 +676,13 @@ export default function Home() {
         }
         .group:hover .group-hover\\:rotate-y-180 {
           transform: rotateY(180deg);
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </main>
