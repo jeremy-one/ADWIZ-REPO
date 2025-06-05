@@ -42,9 +42,9 @@ export default function Navbar() {
   return (
     <motion.nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl mx-auto">
       <div
-        className={`backdrop-blur-md border border-accent/20 rounded-full px-6 py-3 ${
-          isLightPage ? "bg-white/80" : "bg-primary/80"
-        }`}
+        className={`backdrop-blur-md border ${
+          isVisible ? "border-accent/20" : "border-transparent"
+        } rounded-full px-6 py-3`}
       >
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -67,15 +67,15 @@ export default function Navbar() {
               Services
             </Link>
             <Link
-              href="#apropos"
+              href="/cabinet"
               className={` hover:text-accent transition-colors ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
               }`}
             >
-              À propos
+              Le Cabinet
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className={` hover:text-accent transition-colors ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
               }`}

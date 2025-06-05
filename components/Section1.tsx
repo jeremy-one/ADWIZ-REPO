@@ -22,7 +22,7 @@ export default function Section1() {
       link: "/droit-des-sociétés",
     },
     {
-      title: "Cessions & Acquisitions - Transmission",
+      title: "Cession - Acquisition - Transmission",
       items: [
         "Préparation et négociation",
         "Audit, valorisation, documentation intermédiaire",
@@ -33,22 +33,23 @@ export default function Section1() {
       link: "/cession-acquisition",
     },
     {
-      title: "Contentieux & Recouvrement",
+      title: "Contentieux - Recouvrement",
       items: [
         "Litiges commerciaux",
         "Conflits d'associés",
-        "Recouvrement",
+        "Recouvrement de créances",
         "Mesures d'exécution",
       ],
       icon: Gavel,
       link: "/contentieux-recouvrement",
     },
     {
-      title: "Entreprises en difficulté",
+      title: "Entreprises en difficultés",
       items: [
         "Amiable (Mandat ad hoc – Conciliation)",
-        "Judiciaire (Sauvegarde, Redressement, Liquidation judiciaire)",
-        "Accompagnement du débiteur / Protection du créancier",
+        "Judiciaire (sauvegarde, redressement, liquidation judiciaire)",
+        "Accompagnement du débiteur (négociations, plan)",
+        "Protection du créancier (déclaration de créance, contrats en cours, revendication)",
       ],
       icon: AlertTriangle,
       link: "/entreprises-en-difficulté",

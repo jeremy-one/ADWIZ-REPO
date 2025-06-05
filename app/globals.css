@@ -218,6 +218,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --font-tt-norms: 'TT Norms', sans-serif;
+  --font-work-sans: var(--font-work-sans), sans-serif;
 }
 
 body {
@@ -229,4 +230,9 @@ body {
 /* Configuration des titres avec TT Norms par défaut */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-tt-norms);
+}
+
+/* Configuration des paragraphes avec Work Sans */
+p {
+  font-family: var(--font-work-sans);
 }

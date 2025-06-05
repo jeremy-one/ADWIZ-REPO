@@ -60,7 +60,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="min-h-screen flex px-4 relative overflow-hidden"
+        className="min-h-screen flex px-4 relative overflow-hidden pt-14"
       >
         {/* Background Video avec animation */}
         <div className="absolute inset-0 z-0">
@@ -124,7 +124,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-[24px] text-accent font-medium"
               >
-                Avocat en droits des affaires
+                Avocat en droit des affaires
               </motion.h1>
             </motion.div>
 
@@ -142,21 +142,21 @@ export default function Home() {
             <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory md:justify-center no-scrollbar">
               {[
                 {
-                  title: "Dirigeants",
+                  title: "Dirigeants - Associés",
                   description:
-                    "Organisez votre gouvernance, sécurisez vos décisions, gérez vos contentieux.",
+                    "Organisez la gouvernance et vos relations dans l’entreprise",
                   icon: BriefcaseBusiness,
                 },
                 {
                   title: "Fondateurs - Repreneurs",
                   description:
-                    "Créez votre société, structurez votre projet, formalisez les relations avec vos associés.",
+                    "Structurez et développez votre projet d’entreprise",
                   icon: Building2,
                 },
                 {
                   title: "Directions juridiques",
                   description:
-                    "Externalisez une mission spécifique, encadrez une opération complexe, sécurisez vos processus.",
+                    "Externalisez vos contentieux et le recouvrement",
                   icon: Building2,
                 },
               ].map((card, index) => (
@@ -175,7 +175,7 @@ export default function Home() {
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-gray-400 group-hover:text-white transition-colors duration-300 mb-6">
+                  <p className=" text-gray-400 group-hover:text-white transition-colors duration-300 mb-6">
                     {card.description}
                   </p>
                   <Link
@@ -246,7 +246,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="text-center flex flex-col gap-4"
         >
-          <h2 className=" text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
+          <h2 className=" text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
             Pourquoi se faire accompagner par ADWIZ ?
           </h2>
           <p className="text-white/70 text-lg">
@@ -434,8 +434,7 @@ export default function Home() {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    // initial={{ opacity: 0, x: 100 }}
                     viewport={{ once: true }}
                     transition={{
                       duration: 0.8,

@@ -145,15 +145,15 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li className="text-gray-400 text-sm">
-                <span className="block">123 Avenue des Champs-Élysées</span>
-                <span>75008 Paris, France</span>
+                <span className="block">12 Place de la Bourse</span>
+                <span>33000 Bordeaux</span>
               </li>
               <li className="text-gray-400 text-sm">
                 <a
                   href="tel:+33123456789"
                   className="hover:text-accent transition-colors"
                 >
-                  +33 1 23 45 67 89
+                  +33 (0)5 54 52 95 07
                 </a>
               </li>
               <li className="text-gray-400 text-sm">
@@ -161,7 +161,7 @@ export default function Footer() {
                   href="mailto:contact@adwiz.fr"
                   className="hover:text-accent transition-colors"
                 >
-                  contact@adwiz.fr
+                  fdw@adwiz.law
                 </a>
               </li>
             </ul>

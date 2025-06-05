@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import { Work_Sans } from "next/font/google";
 
 import "./globals.css";
 
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-work-sans",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +28,7 @@ export default function RootLayout({
       <Head>
         <meta name="robots" content="noindex" />
       </Head>
-      <body className={`antialiased `}>
+      <body className={`${workSans.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

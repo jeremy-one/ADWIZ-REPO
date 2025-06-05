@@ -86,7 +86,7 @@ export default function SecretComponent() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="py-24 px-4 bg-gradient-to-b from-[#0A0D1A] to-primary text-white relative overflow-hidden"
+      className="py-24 px-4 text-white relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
