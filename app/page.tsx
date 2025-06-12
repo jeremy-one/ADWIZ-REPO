@@ -394,10 +394,10 @@ export default function Home() {
                     points: [
                       "Chaque client, chaque projet est unique.",
                       "Notre approche est centrée sur le conseil et le service, pas de produits standards.",
-                      <p key="bold-1" className="font-bold">
+                      <span key="bold-1" className="font-bold">
                         Nous prenons le temps de comprendre, d'analyser et de
                         construire à vos côtés.
-                      </p>,
+                      </span>,
                     ],
                     color: "accent",
                     gradient: "from-accent/20 to-accent/5",
@@ -409,10 +409,10 @@ export default function Home() {
                     points: [
                       "Nous contribuons à faire émerger les bonnes décisions.",
                       "Nous posons les questions utiles, anticipons les points sensibles, et apportons un regard pragmatique.",
-                      <p key="bold-2" className="font-bold">
+                      <span key="bold-2" className="font-bold">
                         Attendez-vous à un échange direct, exigeant et orienté
                         résultats.
-                      </p>,
+                      </span>,
                     ],
                     color: "blue-400",
                     gradient: "from-blue-500/20 to-blue-500/5",
@@ -424,10 +424,10 @@ export default function Home() {
                     points: [
                       "Notre organisation, notre méthode et nos ressources vous font gagner du temps et facilitent la prise de décision.",
                       "Vous avancez en étant mieux préparé, mieux entouré, plus sécurisé.",
-                      <p key="bold-3" className="font-bold">
+                      <span key="bold-3" className="font-bold">
                         Nous réduisons la charge mentale liée aux problématiques
                         juridiques.
-                      </p>,
+                      </span>,
                     ],
                     color: "green-400",
                     gradient: "from-green-500/20 to-green-500/5",
