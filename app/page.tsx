@@ -146,13 +146,13 @@ export default function Home() {
                 {
                   title: "Dirigeants - Associés",
                   description:
-                    "Organisez la gouvernance et vos relations dans l’entreprise",
+                    "Organisez la gouvernance et vos relations dans l'entreprise",
                   icon: BriefcaseBusiness,
                 },
                 {
                   title: "Fondateurs - Repreneurs",
                   description:
-                    "Structurez et développez votre projet d’entreprise",
+                    "Structurez et développez votre projet d'entreprise",
                   icon: Building2,
                 },
                 {
@@ -200,7 +200,7 @@ export default function Home() {
                 href="#contact"
                 className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-2 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
               >
-                <span>Une question ? Visio gratuite (25 min) </span>
+                <span>Une question ? Visio gratuite (25 min) </span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>
@@ -323,7 +323,7 @@ export default function Home() {
               icon: FileCheck,
               title: "Une tarification transparente",
               description:
-                "Honoraires au forfait ou à l'abonnement. Prestations définies et tarifs fixés à l’avance",
+                "Honoraires au forfait ou à l'abonnement. Prestations définies et tarifs fixés à l'avance",
             },
           ].map((point, index) => (
             <motion.div
@@ -394,8 +394,8 @@ export default function Home() {
                     points: [
                       "Chaque client, chaque projet est unique.",
                       "Notre approche est centrée sur le conseil et le service, pas de produits standards.",
-                      <p className="font-bold">
-                        Nous prenons le temps de comprendre, d’analyser et de
+                      <p key="bold-1" className="font-bold">
+                        Nous prenons le temps de comprendre, d'analyser et de
                         construire à vos côtés.
                       </p>,
                     ],
@@ -409,7 +409,7 @@ export default function Home() {
                     points: [
                       "Nous contribuons à faire émerger les bonnes décisions.",
                       "Nous posons les questions utiles, anticipons les points sensibles, et apportons un regard pragmatique.",
-                      <p className="font-bold">
+                      <p key="bold-2" className="font-bold">
                         Attendez-vous à un échange direct, exigeant et orienté
                         résultats.
                       </p>,
@@ -424,7 +424,7 @@ export default function Home() {
                     points: [
                       "Notre organisation, notre méthode et nos ressources vous font gagner du temps et facilitent la prise de décision.",
                       "Vous avancez en étant mieux préparé, mieux entouré, plus sécurisé.",
-                      <p className="font-bold">
+                      <p key="bold-3" className="font-bold">
                         Nous réduisons la charge mentale liée aux problématiques
                         juridiques.
                       </p>,
