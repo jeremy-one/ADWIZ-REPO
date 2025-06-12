@@ -194,69 +194,270 @@ export default function CessionAcquisition() {
       </motion.section>
 
       {/* Section Expertise */}
-      <section className="py-20 px-4">
-        <h2 className="text-3xl text-center md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]">
-          Une expertise juridique intégrée à vos opérations
-        </h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 text-center">
-          Une opération de cession ou d'acquisition mobilise des enjeux
-          juridiques, financiers, humains et patrimoniaux.
-        </p>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 text-center font-bold">
-          ADWIZ intervient à vos cotés pour :
-        </p>
-        <div className="max-w-7xl mx-auto flex flex-col gap-8">
+      <section className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent" />
+        <div className="max-w-7xl mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16 items-center gap-4 flex flex-col justify-center"
+            className="text-center mb-16"
           >
-            <ul className="text-xl text-gray-300 max-w-3xl mx-auto space-y-4 text-left grid grid-cols-3 gap-4">
-              <li className="flex items-start gap-2 bg-accent/10 rounded-lg p-4 h-full">
-                <ArrowRight className="min-w-5 min-h-5 text-accent mt-1" />
-                <span>
-                  Préparer le cadre juridique dès la phase de réflexion
-                </span>
-              </li>
-              <li className="flex items-start gap-2 bg-accent/10 rounded-lg p-4 h-full">
-                <ArrowRight className="min-w-5 min-h-5 text-accent mt-1" />
-                <span>Structurer les négociations, sans zones d'ombre</span>
-              </li>
-              <li className="flex items-start gap-2 bg-accent/10 rounded-lg p-4 h-full">
-                <ArrowRight className="min-w-5 min-h-5 text-accent mt-1" />
-                <span>Rédiger l'ensemble des documents clés</span>
-              </li>
-            </ul>
-            <ul className="text-xl text-gray-300 max-w-3xl mx-auto space-y-4 text-left flex gap-4">
-              <li className="flex items-start gap-2 bg-accent/10 rounded-lg p-4 h-full">
-                <ArrowRight className="min-w-5 min-h-5 text-accent mt-1" />
-                <span>Coordonner le processus jusqu'au closing final</span>
-              </li>
-              <li className="flex items-start gap-2 bg-accent/10 rounded-lg p-4 h-full">
-                <ArrowRight className="min-w-5 min-h-5 text-accent mt-1" />
-                <span>
-                  Intégrer les contraintes fiscales, sociales et de gouvernance
-                </span>
-              </li>
-            </ul>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-8">
-              Nous agissons en coordination avec vos interlocuteurs habituels
-              (expert-comptable, cabinet M&A, assureurs, notaire, avocat
-              fiscaliste…) pour assurer une cohérence d'ensemble, du premier
-              échange à la signature définitive.
+            <h2 className="text-3xl text-center md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]">
+              Une expertise juridique intégrée à vos opérations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Une opération de cession ou d'acquisition mobilise des enjeux
+              juridiques, financiers, humains et patrimoniaux.
+            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12 font-bold">
+              ADWIZ intervient à vos cotés pour :
             </p>
           </motion.div>
-        </div>
-        <div className="flex justify-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-accent text-black rounded-full px-8 py-4 hover:bg-accent/90 transition-all duration-300"
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-accent/30 hidden md:block" />
+
+            {/* Timeline steps */}
+            <div className="space-y-16 md:space-y-12">
+              {/* Étape 1 */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="relative flex flex-col md:flex-row items-center gap-8"
+              >
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-black" />
+                </div>
+
+                {/* Content */}
+                <div className="w-full md:w-1/2 md:pr-12">
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
+                  >
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                          Étape 1
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-white">
+                        Préparer le cadre juridique dès la phase de réflexion
+                      </h3>
+                      <p className="text-gray-300">
+                        Structuration initiale de l'opération et identification
+                        des enjeux juridiques clés pour sécuriser votre démarche
+                        dès le départ.
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+                <div className="w-full md:w-1/2 hidden md:block" />
+              </motion.div>
+
+              {/* Étape 2 */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative flex flex-col md:flex-row-reverse items-center gap-8"
+              >
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-black" />
+                </div>
+
+                {/* Content */}
+                <div className="w-full md:w-1/2 md:pl-12">
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
+                  >
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-accent/10 rounded-full transform -translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                          Étape 2
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-white">
+                        Structurer les négociations, sans zones d'ombre
+                      </h3>
+                      <p className="text-gray-300">
+                        Encadrement des discussions et mise en place d'un
+                        processus de négociation transparent et sécurisé pour
+                        toutes les parties.
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+                <div className="w-full md:w-1/2 hidden md:block" />
+              </motion.div>
+
+              {/* Étape 3 */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="relative flex flex-col md:flex-row items-center gap-8"
+              >
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-black" />
+                </div>
+
+                {/* Content */}
+                <div className="w-full md:w-1/2 md:pr-12">
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
+                  >
+                    <div className="absolute bottom-0 right-0 w-32 h-32 bg-accent/10 rounded-full transform translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                          Étape 3
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-white">
+                        Rédiger l'ensemble des documents clés
+                      </h3>
+                      <p className="text-gray-300">
+                        Conception et rédaction de tous les actes juridiques
+                        nécessaires à la réalisation de votre opération dans les
+                        meilleures conditions.
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+                <div className="w-full md:w-1/2 hidden md:block" />
+              </motion.div>
+
+              {/* Étape 4 */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="relative flex flex-col md:flex-row-reverse items-center gap-8"
+              >
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-black" />
+                </div>
+
+                {/* Content */}
+                <div className="w-full md:w-1/2 md:pl-12">
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
+                  >
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/10 rounded-full transform -translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                          Étape 4
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-white">
+                        Coordonner le processus jusqu'au closing final
+                      </h3>
+                      <p className="text-gray-300">
+                        Pilotage de l'ensemble des étapes jusqu'à la
+                        finalisation de l'opération, en coordination avec tous
+                        les intervenants.
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+                <div className="w-full md:w-1/2 hidden md:block" />
+              </motion.div>
+
+              {/* Étape 5 */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="relative flex flex-col md:flex-row items-center gap-8"
+              >
+                {/* Timeline dot - Final */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
+                  <CheckCircle className="w-5 h-5 text-black" />
+                </div>
+
+                {/* Content */}
+                <div className="w-full md:w-1/2 md:pr-12">
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group border border-accent/20"
+                  >
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                          Finalisation
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-white">
+                        Intégrer les contraintes fiscales, sociales et de
+                        gouvernance
+                      </h3>
+                      <p className="text-gray-300">
+                        Prise en compte de l'ensemble des aspects réglementaires
+                        pour une opération complète et sécurisée juridiquement.
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+                <div className="w-full md:w-1/2 hidden md:block" />
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Message de coordination */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-16 text-center"
           >
-            Échangeons sur votre projet
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+            <div className="bg-accent/10 rounded-2xl p-8 backdrop-blur-sm">
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Nous agissons en coordination avec vos interlocuteurs habituels
+                (expert-comptable, cabinet M&A, assureurs, notaire, avocat
+                fiscaliste…) pour assurer une cohérence d'ensemble, du premier
+                échange à la signature définitive.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* CTA */}
+          <div className="flex justify-center mt-12">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-accent text-black rounded-full px-8 py-4 hover:bg-accent/90 transition-all duration-300"
+            >
+              Échangeons sur votre projet
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -276,65 +477,118 @@ export default function CessionAcquisition() {
             </h2>
           </motion.div>
 
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-accent/20 hidden md:block" />
-
-            <div className="space-y-16 md:space-y-0">
-              {phases.map((phase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className={`relative flex flex-col md:flex-row items-center gap-8 ${
-                    index % 2 === 0 ? "md:flex-row-reverse" : ""
-                  }`}
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-accent z-10 hidden md:block" />
-
-                  {/* Content */}
-                  <div className="w-full md:w-1/2">
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
-                    >
-                      {/* Decorative elements */}
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
-                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/10 rounded-full transform -translate-x-12 translate-y-12 group-hover:scale-150 transition-transform duration-500" />
-
-                      <div className="relative z-10">
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className="p-2 rounded-lg bg-accent/20">
-                            <phase.icon className="w-6 h-6 text-accent" />
-                          </div>
-                          <h3 className="text-xl font-semibold">
-                            {phase.title}
-                          </h3>
+          {/* Accordion */}
+          <div className="max-w-4xl mx-auto space-y-4">
+            {phases.map((phase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative"
+              >
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:border-accent/30 transition-all duration-300">
+                  {/* Accordion Header */}
+                  <button
+                    onClick={() =>
+                      setSelectedPhase(selectedPhase === index ? -1 : index)
+                    }
+                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="relative">
+                        <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-all duration-300">
+                          <phase.icon className="w-6 h-6 text-accent" />
                         </div>
-                        <ul className="space-y-3">
-                          {phase.items.map((item, itemIndex) => (
-                            <li
-                              key={itemIndex}
-                              className="flex items-start gap-3"
-                            >
-                              <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2.5" />
-                              <span className="text-gray-300">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-accent text-black text-xs font-bold flex items-center justify-center">
+                          {index + 1}
+                        </div>
                       </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                          {phase.title}
+                        </h3>
+                        <p className="text-sm text-gray-400 mt-1">
+                          Phase {index + 1} de l'accompagnement
+                        </p>
+                      </div>
+                    </div>
+                    <motion.div
+                      animate={{ rotate: selectedPhase === index ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex-shrink-0"
+                    >
+                      <ChevronDown className="w-6 h-6 text-accent" />
                     </motion.div>
-                  </div>
+                  </button>
 
-                  {/* Spacer for even items */}
-                  <div className="w-full md:w-1/2 hidden md:block" />
-                </motion.div>
-              ))}
-            </div>
+                  {/* Accordion Content */}
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: selectedPhase === index ? "auto" : 0,
+                      opacity: selectedPhase === index ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6">
+                      <div className="border-t border-white/10 pt-6">
+                        <div className="grid gap-4">
+                          {phase.items.map((item, itemIndex) => (
+                            <motion.div
+                              key={itemIndex}
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{
+                                opacity: selectedPhase === index ? 1 : 0,
+                                x: selectedPhase === index ? 0 : -20,
+                              }}
+                              transition={{
+                                duration: 0.3,
+                                delay:
+                                  selectedPhase === index ? itemIndex * 0.1 : 0,
+                              }}
+                              className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 group/item"
+                            >
+                              <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                              <span className="text-gray-300 group-hover/item:text-white transition-colors duration-300">
+                                {item}
+                              </span>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Decorative gradient line */}
+                {selectedPhase === index && (
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="absolute -bottom-2 left-6 right-6 h-1 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full"
+                  />
+                )}
+              </motion.div>
+            ))}
           </div>
+
+          {/* Navigation hints */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-gray-400 text-sm">
+              Cliquez sur chaque phase pour découvrir les détails de notre
+              accompagnement
+            </p>
+          </motion.div>
         </div>
       </section>
 

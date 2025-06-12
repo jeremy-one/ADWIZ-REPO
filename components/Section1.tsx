@@ -3,7 +3,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Briefcase, ArrowRight, Gavel, AlertTriangle } from "lucide-react";
+import {
+  Briefcase,
+  ArrowRight,
+  Gavel,
+  AlertTriangle,
+  Handshake,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Section1() {
@@ -14,7 +20,7 @@ export default function Section1() {
       title: "Droit des sociétés",
       items: [
         "Création de société",
-        "Structuration de groupe (holding, conventions intragroupe, gouvernance)",
+        "Structuration de groupe (Holding, Conventions intragroupe, gouvernance)",
         "Pactes d'associés",
         "Modification statutaire",
       ],
@@ -25,11 +31,11 @@ export default function Section1() {
       title: "Cession - Acquisition - Transmission",
       items: [
         "Préparation et négociation",
-        "Audit, valorisation, documentation intermédiaire",
+        "Audit, Valorisation, Documentation intermédiaire",
         "Rédaction des actes",
         "Exécution de l'opération",
       ],
-      icon: ArrowRight,
+      icon: Handshake,
       link: "/cession-acquisition",
     },
     {
@@ -44,12 +50,12 @@ export default function Section1() {
       link: "/contentieux-recouvrement",
     },
     {
-      title: "Entreprises en difficultés",
+      title: "Entreprises en difficulté",
       items: [
         "Amiable (Mandat ad hoc – Conciliation)",
-        "Judiciaire (sauvegarde, redressement, liquidation judiciaire)",
-        "Accompagnement du débiteur (négociations, plan)",
-        "Protection du créancier (déclaration de créance, contrats en cours, revendication)",
+        "Judiciaire (Sauvegarde, Redressement, Liquidation judiciaire)",
+        "Accompagnement du débiteur (Négociations, Plan)",
+        "Protection du créancier (Déclaration de créance, Contrats en cours, Revendication)",
       ],
       icon: AlertTriangle,
       link: "/entreprises-en-difficulté",

@@ -39,8 +39,9 @@ export default function Footer() {
                 isLightPage ? "text-[#373433]" : "text-gray-400"
               }`}
             >
-              ADWIZ accompagne les entreprises dans leur développement
-              juridique, en mettant le droit au service de leurs ambitions.
+              ADWIZ accompagne les entreprises dans leurs problématiques
+              juridiques, en faisant du droit des affaires un outil de
+              développement.
             </p>
           </div>
 
@@ -59,7 +60,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  Droit des affaires
+                  Droit des sociétés
                 </Link>
               </li>
               <li>
@@ -67,7 +68,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  Conseil juridique
+                  Cession – Acquisition – Levée de fonds
                 </Link>
               </li>
               <li>
@@ -75,7 +76,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  Accompagnement stratégique
+                  Contentieux & Recouvrement
                 </Link>
               </li>
               <li>
@@ -83,7 +84,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  Formation juridique
+                  Entreprises en difficulté
                 </Link>
               </li>
             </ul>
@@ -96,15 +97,15 @@ export default function Footer() {
                 isLightPage ? "text-[#373433]" : "text-white"
               }`}
             >
-              Entreprise
+              ADWIZ
             </h3>
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
+                  href="/le-cabinet"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  À propos
+                  Qui sommes-nous ?
                 </Link>
               </li>
               <li>
@@ -112,7 +113,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  Notre équipe
+                  Réseaux
                 </Link>
               </li>
               <li>
@@ -125,10 +126,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  Carrières
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -141,7 +142,7 @@ export default function Footer() {
                 isLightPage ? "text-[#373433]" : "text-white"
               }`}
             >
-              Contact
+              Nous trouver
             </h3>
             <ul className="space-y-2">
               <li className="text-gray-400 text-sm">
@@ -161,7 +162,7 @@ export default function Footer() {
                   href="mailto:contact@adwiz.fr"
                   className="hover:text-accent transition-colors"
                 >
-                  fdw@adwiz.law
+                  contact@adwiz.law
                 </a>
               </li>
             </ul>

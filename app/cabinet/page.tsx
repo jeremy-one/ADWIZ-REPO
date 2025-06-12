@@ -25,6 +25,7 @@ import {
   DollarSign,
 } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function CabinetPage() {
   const [activeValue, setActiveValue] = useState(0);
@@ -207,29 +208,47 @@ export default function CabinetPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mb-24"
+            className="mb-24 flex gap-24 flex-col items-center justify-center"
           >
-            <motion.div variants={itemVariants} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent mb-6">
-                Notre Parcours
-              </h2>
-              <div className="max-w-4xl mx-auto space-y-6 text-white/80 text-lg leading-relaxed">
-                <p>
-                  Notre parcours s'inscrit dans un enchaînement d'expériences
-                  complémentaires.
-                </p>
-                <p>
-                  Une double formation à l'Université et à HEC Paris a posé les
-                  bases d'une approche du droit conçue comme un levier au
-                  service des enjeux opérationnels et économiques.
-                </p>
-                <p>
-                  Trois cabinets au profil différent ont forgé une méthode
-                  complète, alliant rigueur, agilité et compréhension
-                  stratégique :
-                </p>
-              </div>
-            </motion.div>
+            <div className="flex gap-12 h-full">
+              <motion.div
+                variants={itemVariants}
+                className="text-center  flex flex-col h-full"
+              >
+                <Image
+                  src="/assets/fdw.jpeg"
+                  alt="ADWIZ Logo"
+                  className="rounded-2xl object-cover "
+                  width={500}
+                  height={210}
+                />
+              </motion.div>
+
+              <motion.div
+                variants={itemVariants}
+                className=" flex flex-col gap-4 justify-center"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent mb-6">
+                  Notre Parcours
+                </h2>
+                <div className="max-w-4xl mx-auto space-y-6 text-white/80 text-lg leading-relaxed">
+                  <p>
+                    Notre parcours s'inscrit dans un enchaînement d'expériences
+                    complémentaires.
+                  </p>
+                  <p>
+                    Une double formation à l'Université et à HEC Paris a posé
+                    les bases d'une approche du droit conçue comme un levier au
+                    service des enjeux opérationnels et économiques.
+                  </p>
+                  <p>
+                    Trois cabinets au profil différent ont forgé une méthode
+                    complète, alliant rigueur, agilité et compréhension
+                    stratégique :
+                  </p>
+                </div>
+              </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {parcours.map((item, index) => (

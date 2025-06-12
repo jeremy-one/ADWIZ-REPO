@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Section1 from "../components/Section1";
+import { TbBrandTiktok } from "react-icons/tb";
 
 import {
   User,
@@ -36,6 +37,7 @@ import {
   Music,
   Podcast,
   BriefcaseBusiness,
+  Facebook,
 } from "lucide-react";
 import { useState, useRef } from "react";
 import React from "react";
@@ -198,7 +200,7 @@ export default function Home() {
                 href="#contact"
                 className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-2 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
               >
-                <span>Prendre rendez-vous</span>
+                <span>Une question ? Visio gratuite (25 min) </span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>
@@ -251,7 +253,7 @@ export default function Home() {
           </h2>
           <p className="text-white/70 text-lg">
             Parce que nous proposons un accompagnement qui est centré sur vos
-            objectifs et vos besoins.
+            objectifs et vos besoins
           </p>
         </motion.div>
         <motion.div
@@ -321,7 +323,7 @@ export default function Home() {
               icon: FileCheck,
               title: "Une tarification transparente",
               description:
-                "Honoraires au forfait ou à l'abonnement. Prestations définies et détaillées à l'avance.",
+                "Honoraires au forfait ou à l'abonnement. Prestations définies et tarifs fixés à l’avance",
             },
           ].map((point, index) => (
             <motion.div
@@ -379,17 +381,23 @@ export default function Home() {
           {/* Slider Container */}
           <div className="relative">
             {/* Slider Content */}
-            <div className="overflow-x-auto snap-x snap-mandatory scrollbar-hide">
-              <div className="flex gap-8 py-4" style={{ width: "max-content" }}>
+            <div className="overflow-x-auto snap-x flex justify-center snap-mandatory scrollbar-hide">
+              <div
+                className="flex gap-8 py-4 "
+                style={{ width: "max-content" }}
+              >
                 {[
                   {
                     icon: Target,
                     title:
-                      "Un accompagnement sur-mesure, à la hauteur de vos enjeux",
+                      "Un accompagnement sur mesure, dimensionné à vos enjeux",
                     points: [
-                      "Chaque client, chaque projet, chaque contexte est unique.",
-                      "Notre approche est construite autour de vos priorités, pas de schémas types.",
-                      "Nous prenons le temps de comprendre, d'analyser et de construire à vos côtés.",
+                      "Chaque client, chaque projet est unique.",
+                      "Notre approche est centrée sur le conseil et le service, pas de produits standards.",
+                      <p className="font-bold">
+                        Nous prenons le temps de comprendre, d’analyser et de
+                        construire à vos côtés.
+                      </p>,
                     ],
                     color: "accent",
                     gradient: "from-accent/20 to-accent/5",
@@ -400,9 +408,11 @@ export default function Home() {
                     title: "Un partenaire engagé, exigeant et constructif",
                     points: [
                       "Nous contribuons à faire émerger les bonnes décisions.",
-                      "Nous posons les questions utiles, anticipons les points sensibles, et apportons un regard orienté décision.",
-                      "Votre projet nous mobilise, sur le fond comme dans la relation.",
-                      "Attendez-vous à un échange direct, exigeant, orienté résultats.",
+                      "Nous posons les questions utiles, anticipons les points sensibles, et apportons un regard pragmatique.",
+                      <p className="font-bold">
+                        Attendez-vous à un échange direct, exigeant et orienté
+                        résultats.
+                      </p>,
                     ],
                     color: "blue-400",
                     gradient: "from-blue-500/20 to-blue-500/5",
@@ -412,24 +422,16 @@ export default function Home() {
                     icon: Shield,
                     title: "Un cadre structuré pour avancer avec clarté",
                     points: [
-                      "Notre organisation et notre méthode sont conçues pour vous faire gagner du temps et de la visibilité.",
-                      "Nous réduisons la charge mentale liée aux problématiques juridiques.",
+                      "Notre organisation, notre méthode et nos ressources vous font gagner du temps et facilitent la prise de décision.",
                       "Vous avancez en étant mieux préparé, mieux entouré, plus sécurisé.",
+                      <p className="font-bold">
+                        Nous réduisons la charge mentale liée aux problématiques
+                        juridiques.
+                      </p>,
                     ],
                     color: "green-400",
                     gradient: "from-green-500/20 to-green-500/5",
                     borderColor: "border-green-400/30",
-                  },
-                  {
-                    icon: Zap,
-                    title: "Le droit comme levier d'action",
-                    points: [
-                      "Nous mobilisons notre expertise pour renforcer vos décisions et soutenir votre exécution.",
-                      "Structuration, gouvernance, contrats, pactes, investissements : notre accompagnement vise à transformer les enjeux juridiques en outils de pilotage.",
-                    ],
-                    color: "purple-400",
-                    gradient: "from-purple-500/20 to-purple-500/5",
-                    borderColor: "border-purple-400/30",
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -590,7 +592,7 @@ export default function Home() {
             className="text-start flex flex-col gap-2"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white ">
-              Une question, <br /> un projet, <br /> un litige à anticiper ?
+              Une question, <br /> un projet, <br /> un litige ?
             </h2>
 
             <p className="text-xl text-gray-300 max-w-2xl mx-auto text-start ">
@@ -623,6 +625,61 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* Section - Qu'est-ce qui différencie ADWIZ */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
+            Cabinet membre des réseaux
+          </h2>
+        </motion.div>
+        <div className="max-w-7xl mx-auto flex justify-center gap-12">
+          {/* CTA final */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="text-center  "
+          >
+            <Image
+              src="/assets/ace-avocat.png"
+              alt="ADWIZ Logo"
+              className="rounded-2xl object-cover filter invert"
+              width={210}
+              height={210}
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="text-center  flex justify-center gap-4"
+          >
+            <Image
+              src="/assets/solution-hf.png"
+              alt="ADWIZ Logo"
+              className="rounded-2xl object-cover "
+              width={210}
+              height={210}
+            />
+          </motion.div>
+        </div>
+      </motion.section>
+
       {/* Social Media Floating Bar */}
       <motion.div
         initial={{ opacity: 0, x: 100 }}
@@ -638,6 +695,21 @@ export default function Home() {
                 icon: Linkedin,
                 href: "https://www.linkedin.com/in/françois-dominique-wojas-avocat-droit-des-affaires-bordeaux/",
                 label: "LinkedIn",
+              },
+              {
+                icon: Instagram,
+                href: "https://www.instagram.com/adwiz_law/",
+                label: "Instagram",
+              },
+              {
+                icon: Facebook,
+                href: "#",
+                label: "Facebook",
+              },
+              {
+                icon: TbBrandTiktok,
+                href: "https://www.tiktok.com/@adwiz_law?_t=ZN-8x95ZEyxJ1a&_r=1",
+                label: "Tiktok",
               },
             ].map((social, index) => (
               <motion.a
