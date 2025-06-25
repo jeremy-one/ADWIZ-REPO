@@ -44,37 +44,54 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulation d'envoi
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset après 3 secondes
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        nom: "",
-        email: "",
-        entreprise: "",
-        telephone: "",
-        sujet: "",
-        message: "",
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Erreur lors de l'envoi");
+      }
+
+      setIsSubmitted(true);
+
+      // Reset après 3 secondes
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          nom: "",
+          email: "",
+          entreprise: "",
+          telephone: "",
+          sujet: "",
+          message: "",
+        });
+      }, 3000);
+    } catch (error) {
+      console.error("Erreur:", error);
+      alert("Erreur lors de l'envoi du message. Veuillez réessayer.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      content: "contact@adwiz.fr",
+      content: "contact@adwiz.law",
       description: "Réponse sous 24h",
     },
     {
       icon: Phone,
       title: "Téléphone",
-      content: "+33 1 23 45 67 89",
+      content: "+33 (0)5 54 52 95 07",
       description: "Lun-Ven 9h-18h",
     },
     {
@@ -199,14 +216,14 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="group inline-flex w-fit items-center gap-3 bg-accent text-primary px-8 py-4 rounded-xl font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
+                <motion.a
+                  href="https://app.lemcal.com/@fdw"
+                  target="_blank"
+                  className="group inline-flex w-fit items-center gap-3 bg-accent text-primary px-4 py-2 rounded-xl font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
                 >
                   Consultation gratuite
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </motion.button>
+                </motion.a>
               </motion.div>
             </motion.div>
 
@@ -408,9 +425,7 @@ export default function ContactPage() {
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-accent text-primary py-4 px-6 rounded-xl font-semibold flex items-center justify-center gap-3 hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-accent text-primary cursor-pointer py-2 px-4 rounded-xl font-semibold flex items-center justify-center gap-3 hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>

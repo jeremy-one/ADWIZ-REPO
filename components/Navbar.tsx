@@ -58,14 +58,14 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link
+            {/* <Link
               href="#services"
               className={`hover:text-accent transition-colors ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
               }`}
             >
               Services
-            </Link>
+            </Link> */}
             <Link
               href="/cabinet"
               className={` hover:text-accent transition-colors ${
@@ -83,7 +83,8 @@ export default function Navbar() {
               Contact
             </Link>
             <Link
-              href="#rdv"
+              href="https://app.lemcal.com/@fdw"
+              target="_blank"
               className={` px-6 py-2 rounded-full font-semibold hover:bg-accent/90 transition-colors ${
                 isLightPage
                   ? "text-white bg-gradient-to-r from-[#879BEB] to-[#BAA080]/90 hover:bg-gradient-to-r hover:from-[#BAA080] hover:to-[#879BEB]/90 transition-all duration-300"

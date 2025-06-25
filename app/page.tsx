@@ -196,13 +196,13 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="pt-4"
             >
-              <a
-                href="#contact"
+              <Link
+                href="https://app.lemcal.com/@fdw"
+                target="_blank"
                 className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-2 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
               >
                 <span>Une question ? Visio gratuite (25 min) </span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </motion.div>
 
             {/* <motion.h2
@@ -309,9 +309,9 @@ export default function Home() {
           {[
             {
               icon: TargetIcon,
-              title: "Des résultats",
+              title: "Des résultats concrets",
               description:
-                "Objectifs concrets, pas d'actions ou de procédure inutiles. Calendriers, livrables et information continue.",
+                "Calendriers, livrables et information continue. Pas d'actions ou de procédure inutiles.",
             },
             {
               icon: Zap,
@@ -323,7 +323,7 @@ export default function Home() {
               icon: FileCheck,
               title: "Une tarification transparente",
               description:
-                "Honoraires au forfait ou à l'abonnement. Prestations définies et tarifs fixés à l'avance",
+                "Honoraires au forfait ou à l'abonnement. Prestations définies et tarifs fixés à l'avance.",
             },
           ].map((point, index) => (
             <motion.div
@@ -399,9 +399,9 @@ export default function Home() {
                         construire à vos côtés.
                       </span>,
                     ],
-                    color: "accent",
-                    gradient: "from-accent/20 to-accent/5",
-                    borderColor: "border-accent/30",
+                    color: "blue-400",
+                    gradient: "from-accent/10 to-accent/5",
+                    borderColor: "border-accent/20",
                   },
                   {
                     icon: Handshake,
@@ -415,8 +415,8 @@ export default function Home() {
                       </span>,
                     ],
                     color: "blue-400",
-                    gradient: "from-blue-500/20 to-blue-500/5",
-                    borderColor: "border-blue-400/30",
+                    gradient: "from-accent/10 to-accent/5",
+                    borderColor: "border-accent/20",
                   },
                   {
                     icon: Shield,
@@ -430,8 +430,8 @@ export default function Home() {
                       </span>,
                     ],
                     color: "green-400",
-                    gradient: "from-green-500/20 to-green-500/5",
-                    borderColor: "border-green-400/30",
+                    gradient: "from-accent/10 to-accent/5",
+                    borderColor: "border-accent/20",
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -516,7 +516,8 @@ export default function Home() {
               juridiques en opportunités de croissance
             </p>
             <Link
-              href="#contact"
+              href="https://app.lemcal.com/@fdw"
+              target="_blank"
               className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-3 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
             >
               <span>Échanger avec nous</span>
@@ -601,7 +602,8 @@ export default function Home() {
             </p>
 
             <motion.a
-              href="#contact"
+              href="https://app.lemcal.com/@fdw"
+              target="_blank"
               className="inline-flex mt-8 w-fit items-center gap-2 bg-accent text-primary py-2 px-8 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -672,7 +674,7 @@ export default function Home() {
             <Image
               src="/assets/solution-hf.png"
               alt="ADWIZ Logo"
-              className="rounded-2xl object-cover "
+              className="rounded-2xl object-cover filter invert"
               width={210}
               height={210}
             />

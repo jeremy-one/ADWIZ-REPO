@@ -28,7 +28,7 @@ export default function Section1() {
       link: "/droit-des-sociétés",
     },
     {
-      title: "Cession - Acquisition - Transmission",
+      title: "Transactions & Levée de fonds ",
       items: [
         "Préparation et négociation",
         "Audit, Valorisation, Documentation intermédiaire",

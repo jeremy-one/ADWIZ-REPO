@@ -246,28 +246,32 @@ export default function CabinetPage() {
                     complète, alliant rigueur, agilité et compréhension
                     stratégique :
                   </p>
+                  <ul>
+                    <li>
+                      <p>
+                        <span className="font-bold">White & Case LLP</span> :
+                        L'exigence des grands cabinets internationaux, la
+                        rigueur des processus et la maîtrise technique avancée
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span className="font-bold">Delcade</span> :
+                        L'innovation et la culture entrepreneuriale appliquées
+                        au conseil
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span className="font-bold">Dynamis Avocats</span> : Une
+                        pratique ancrée dans la réalité des dirigeants, la
+                        capacité à prioriser les enjeux et à orienter les
+                        décisions
+                      </p>
+                    </li>
+                  </ul>
                 </div>
               </motion.div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {parcours.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/20 hover:border-accent/40 transition-all duration-500"
-                >
-                  <div className="w-16 h-16 flex items-center justify-center bg-accent/20 rounded-2xl mb-6 mx-auto">
-                    <item.icon className="w-8 h-8 text-accent" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 text-center">
-                    {item.institution}
-                  </h3>
-                  <p className="text-white/80 leading-relaxed text-center">
-                    {item.description}
-                  </p>
-                </motion.div>
-              ))}
             </div>
 
             <motion.div variants={itemVariants} className="text-center">
@@ -300,143 +304,121 @@ export default function CabinetPage() {
               <h3 className="text-2xl font-bold text-white mb-8 text-center">
                 La grille d'analyse établie pour chaque dossier
               </h3>
-              <p className="text-white/80 text-center mb-8">
+              <p className="text-white/80 text-center mb-12">
                 Chaque dossier est analysé à travers 4 dimensions :
               </p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 gap-8">
                 {grille.map((item, index) => (
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-accent/20 text-center"
+                    className="group relative overflow-hidden"
                   >
-                    <div className="w-12 h-12 flex items-center justify-center bg-accent/20 rounded-xl mb-4 mx-auto">
-                      <item.icon className="w-6 h-6 text-accent" />
+                    <div className="h-full relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg rounded-2xl p-8 border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-500" />
+                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/5 rounded-full translate-y-12 -translate-x-12 group-hover:scale-110 transition-transform duration-500" />
+
+                      <div className="relative z-10">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                            <item.icon className="w-8 h-8 text-accent" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-white text-xl mb-1">
+                              {item.title}
+                            </h4>
+                            <div className="w-12 h-1 bg-gradient-to-r from-accent to-accent/50 rounded-full" />
+                          </div>
+                        </div>
+                        <p className="text-white/80 text-lg leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                    <h4 className="font-bold text-white mb-2">{item.title}</h4>
-                    <p className="text-white/70 text-sm">{item.description}</p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
 
             {/* Mise en œuvre des actions */}
-            <motion.div variants={itemVariants} className="mb-16">
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                La mise en œuvre des actions
-              </h3>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/20 max-w-4xl mx-auto">
-                <p className="text-white/80 mb-6 text-center">
-                  L'exécution des actions repose sur la simplicité et
-                  l'efficacité :
-                </p>
-                <div className="space-y-4">
-                  {[
-                    "Écouter les besoins, hiérarchiser les priorités",
-                    "Analyser rapidement, conclure clairement",
-                    "Tester, ajuster, avancer",
-                    "Améliorer chaque étape pour accélérer la décision et sécuriser le résultat",
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-accent" />
-                      <span className="text-white/90">{item}</span>
-                    </div>
-                  ))}
+            <motion.div
+              variants={itemVariants}
+              className="mb-16 flex gap-8 items-center justify-center flex-col md:flex-row"
+            >
+              <div className="flex flex-col gap-4">
+                <h3 className="text-2xl font-bold text-white mb-8 ">
+                  La mise en œuvre des actions
+                </h3>
+                <div className="max-w-4xl mx-auto">
+                  <p className="text-white/80 mb-6">
+                    L'exécution des actions repose sur la simplicité et
+                    l'efficacité :
+                  </p>
+                  <div className="space-y-4">
+                    {[
+                      "Écouter les besoins, hiérarchiser les priorités",
+                      "Analyser rapidement, conclure clairement",
+                      "Tester, ajuster, avancer",
+                      "Améliorer chaque étape pour accélérer la décision et sécuriser le résultat",
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-white/90">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <Image
+                  src="/assets/desk-1.jpg"
+                  alt="ADWIZ Logo"
+                  className="rounded-2xl object-cover w-96 h-96"
+                  width={500}
+                  height={500}
+                />
               </div>
             </motion.div>
 
             {/* Rôle de l'avocat */}
-            <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                Le rôle de l'avocat dans le dossier
-              </h3>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/20 max-w-4xl mx-auto">
-                <p className="text-white/80 mb-6 text-center">
-                  Une posture méthodique guide chaque intervention :
-                </p>
-                <div className="space-y-4">
-                  {[
-                    "Décrypter les dynamiques humaines en présence",
-                    "Identifier les données clés pour dégager une ligne d'action",
-                    "Mobiliser la technique juridique au service d'un objectif",
-                    "Avancer vite, sans perdre la maîtrise des enjeux",
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-accent" />
-                      <span className="text-white/90">{item}</span>
-                    </div>
-                  ))}
+            <motion.div
+              variants={itemVariants}
+              className="flex gap-8 items-center justify-center flex-col md:flex-row"
+            >
+              <div className="flex flex-col gap-4 order-2 md:order-1">
+                <Image
+                  src="/assets/desk-2.jpg"
+                  alt="ADWIZ Logo"
+                  className="rounded-2xl object-cover w-96 h-96"
+                  width={500}
+                  height={210}
+                />
+              </div>
+              <div className="flex flex-col gap-4 order-1 md:order-2">
+                <h3 className="text-2xl font-bold text-white mb-8 ">
+                  Le rôle de l'avocat dans le dossier
+                </h3>
+                <div className="max-w-4xl mx-auto">
+                  <p className="text-white/80 mb-6">
+                    Une posture méthodique guide chaque intervention :
+                  </p>
+                  <div className="space-y-4">
+                    {[
+                      "Décrypter les dynamiques humaines en présence",
+                      "Identifier les données clés pour dégager une ligne d'action",
+                      "Mobiliser la technique juridique au service d'un objectif",
+                      "Avancer vite, sans perdre la maîtrise des enjeux",
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-white/90">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
-          </motion.section>
-
-          {/* Section Notre Approche */}
-          <motion.section
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="mb-24"
-          >
-            <motion.div variants={itemVariants} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent mb-6">
-                Notre Approche
-              </h2>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {approche.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-accent/20 hover:border-accent/40 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 flex items-center justify-center bg-accent/20 rounded-xl mb-4">
-                    <item.icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-white/70 text-sm">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
-
-          {/* Section Parcours Satisfaction Client */}
-          <motion.section
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="mb-24"
-          >
-            <motion.div variants={itemVariants} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent mb-6">
-                Notre Parcours Satisfaction Client
-              </h2>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {[
-                { title: "Écoute active", icon: Ear },
-                { title: "Prestations juridiques lisibles", icon: FileText },
-                { title: "Disponibilité et efficacité", icon: Clock },
-                { title: "Honoraires transparents", icon: DollarSign },
-                { title: "Coopération et partage", icon: Share2 },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-accent/20 text-center"
-                >
-                  <div className="w-12 h-12 flex items-center justify-center bg-accent/20 rounded-xl mb-4 mx-auto">
-                    <item.icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="font-bold text-white text-sm">{item.title}</h3>
-                </motion.div>
-              ))}
-            </div>
           </motion.section>
 
           {/* CTA Final */}
@@ -456,14 +438,16 @@ export default function CabinetPage() {
                 comment nous pouvons faire du droit un levier de croissance pour
                 votre entreprise.
               </p>
-              <motion.button
+              <motion.a
+                href="https://app.lemcal.com/@fdw"
+                target="_blank"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group inline-flex items-center gap-3 bg-accent text-primary px-8 py-4 rounded-xl font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
+                className="group inline-flex items-center gap-3 bg-accent text-primary px-4 py-2 rounded-xl font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
               >
-                Consultation gratuite
+                Consultation gratuite (25 minutes)
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </motion.button>
+              </motion.a>
             </div>
           </motion.section>
         </div>

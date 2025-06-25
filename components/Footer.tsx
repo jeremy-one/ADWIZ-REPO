@@ -68,7 +68,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  Cession – Acquisition – Levée de fonds
+                  Transactions & Levée de fonds
                 </Link>
               </li>
               <li>
