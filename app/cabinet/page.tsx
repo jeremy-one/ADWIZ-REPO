@@ -304,37 +304,21 @@ export default function CabinetPage() {
               <h3 className="text-2xl font-bold text-white mb-8 text-center">
                 La grille d'analyse établie pour chaque dossier
               </h3>
-              <p className="text-white/80 text-center mb-12">
+              <p className="text-white/80 text-center mb-8">
                 Chaque dossier est analysé à travers 4 dimensions :
               </p>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {grille.map((item, index) => (
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="group relative overflow-hidden"
+                    className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-accent/20 text-center"
                   >
-                    <div className="h-full relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg rounded-2xl p-8 border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10">
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-500" />
-                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/5 rounded-full translate-y-12 -translate-x-12 group-hover:scale-110 transition-transform duration-500" />
-
-                      <div className="relative z-10">
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <item.icon className="w-8 h-8 text-accent" />
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-white text-xl mb-1">
-                              {item.title}
-                            </h4>
-                            <div className="w-12 h-1 bg-gradient-to-r from-accent to-accent/50 rounded-full" />
-                          </div>
-                        </div>
-                        <p className="text-white/80 text-lg leading-relaxed">
-                          {item.description}
-                        </p>
-                      </div>
+                    <div className="w-12 h-12 flex items-center justify-center bg-accent/20 rounded-xl mb-4 mx-auto">
+                      <item.icon className="w-6 h-6 text-accent" />
                     </div>
+                    <h4 className="font-bold text-white mb-2">{item.title}</h4>
+                    <p className="text-white/70 text-sm">{item.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -343,7 +327,7 @@ export default function CabinetPage() {
             {/* Mise en œuvre des actions */}
             <motion.div
               variants={itemVariants}
-              className="mb-16 flex gap-8 items-center justify-center flex-col md:flex-row"
+              className=" py-24 flex gap-8 items-center justify-center flex-col md:flex-row"
             >
               <div className="flex flex-col gap-4">
                 <h3 className="text-2xl font-bold text-white mb-8 ">
@@ -384,7 +368,7 @@ export default function CabinetPage() {
             {/* Rôle de l'avocat */}
             <motion.div
               variants={itemVariants}
-              className="flex gap-8 items-center justify-center flex-col md:flex-row"
+              className="flex gap-8 items-center justify-center flex-col md:flex-row py-24"
             >
               <div className="flex flex-col gap-4 order-2 md:order-1">
                 <Image

@@ -97,6 +97,44 @@ export default function CessionAcquisition() {
     },
   ];
 
+  const timelineSteps = [
+    {
+      step: 1,
+      title: "Préparer le cadre juridique dès la phase de réflexion",
+      description:
+        "Structuration initiale de l'opération et identification des enjeux juridiques clés pour sécuriser votre démarche dès le départ.",
+      position: "left",
+    },
+    {
+      step: 2,
+      title: "Structurer les négociations, sans zones d'ombre",
+      description:
+        "Encadrement des discussions et mise en place d'un processus de négociation transparent et sécurisé pour toutes les parties.",
+      position: "right",
+    },
+    {
+      step: 3,
+      title: "Rédiger l'ensemble des documents clés",
+      description:
+        "Conception et rédaction de tous les actes juridiques nécessaires à la réalisation de votre opération dans les meilleures conditions.",
+      position: "left",
+    },
+    {
+      step: 4,
+      title: "Coordonner le processus jusqu'au closing final",
+      description:
+        "Pilotage de l'ensemble des étapes jusqu'à la finalisation de l'opération, en coordination avec tous les intervenants.",
+      position: "right",
+    },
+    {
+      step: 5,
+      title: "Intégrer les contraintes fiscales, sociales et de gouvernance",
+      description:
+        "Prise en compte de l'ensemble des aspects réglementaires pour une opération complète et sécurisée juridiquement.",
+      position: "left",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0D1A] to-primary text-white">
       {/* Hero Section */}
@@ -223,210 +261,52 @@ export default function CessionAcquisition() {
 
             {/* Timeline steps */}
             <div className="space-y-16 md:space-y-12">
-              {/* Étape 1 */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="relative flex flex-col md:flex-row items-center gap-8"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-black" />
-                </div>
+              {timelineSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{
+                    opacity: 0,
+                    x: step.position === "left" ? -50 : 50,
+                  }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`relative flex flex-col md:flex-row items-center gap-8 ${
+                    step.position === "right" ? "md:flex-row-reverse" : ""
+                  }`}
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
+                    <div className="w-3 h-3 rounded-full bg-black" />
+                  </div>
 
-                {/* Content */}
-                <div className="w-full md:w-1/2 md:pr-12">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
+                  {/* Content */}
+                  <div
+                    className={`w-full md:w-1/2 ${
+                      step.position === "left" ? "md:pr-12" : "md:pl-12"
+                    }`}
                   >
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                          Étape 1
-                        </span>
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
+                    >
+                      <div className="relative z-10">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-2 h-2 rounded-full bg-accent" />
+                          <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                            Étape {step.step}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-bold mb-3 text-white">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-300">{step.description}</p>
                       </div>
-                      <h3 className="text-xl font-bold mb-3 text-white">
-                        Préparer le cadre juridique dès la phase de réflexion
-                      </h3>
-                      <p className="text-gray-300">
-                        Structuration initiale de l'opération et identification
-                        des enjeux juridiques clés pour sécuriser votre démarche
-                        dès le départ.
-                      </p>
-                    </div>
-                  </motion.div>
-                </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </motion.div>
-
-              {/* Étape 2 */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="relative flex flex-col md:flex-row-reverse items-center gap-8"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-black" />
-                </div>
-
-                {/* Content */}
-                <div className="w-full md:w-1/2 md:pl-12">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
-                  >
-                    <div className="absolute top-0 left-0 w-32 h-32 bg-accent/10 rounded-full transform -translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                          Étape 2
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-white">
-                        Structurer les négociations, sans zones d'ombre
-                      </h3>
-                      <p className="text-gray-300">
-                        Encadrement des discussions et mise en place d'un
-                        processus de négociation transparent et sécurisé pour
-                        toutes les parties.
-                      </p>
-                    </div>
-                  </motion.div>
-                </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </motion.div>
-
-              {/* Étape 3 */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="relative flex flex-col md:flex-row items-center gap-8"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-black" />
-                </div>
-
-                {/* Content */}
-                <div className="w-full md:w-1/2 md:pr-12">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
-                  >
-                    <div className="absolute bottom-0 right-0 w-32 h-32 bg-accent/10 rounded-full transform translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-500" />
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                          Étape 3
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-white">
-                        Rédiger l'ensemble des documents clés
-                      </h3>
-                      <p className="text-gray-300">
-                        Conception et rédaction de tous les actes juridiques
-                        nécessaires à la réalisation de votre opération dans les
-                        meilleures conditions.
-                      </p>
-                    </div>
-                  </motion.div>
-                </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </motion.div>
-
-              {/* Étape 4 */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="relative flex flex-col md:flex-row-reverse items-center gap-8"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-black" />
-                </div>
-
-                {/* Content */}
-                <div className="w-full md:w-1/2 md:pl-12">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group"
-                  >
-                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/10 rounded-full transform -translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-500" />
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                          Étape 4
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-white">
-                        Coordonner le processus jusqu'au closing final
-                      </h3>
-                      <p className="text-gray-300">
-                        Pilotage de l'ensemble des étapes jusqu'à la
-                        finalisation de l'opération, en coordination avec tous
-                        les intervenants.
-                      </p>
-                    </div>
-                  </motion.div>
-                </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </motion.div>
-
-              {/* Étape 5 */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="relative flex flex-col md:flex-row items-center gap-8"
-              >
-                {/* Timeline dot - Final */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-accent z-10 hidden md:flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-black" />
-                </div>
-
-                {/* Content */}
-                <div className="w-full md:w-1/2 md:pr-12">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 relative overflow-hidden group border border-accent/20"
-                  >
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                          Finalisation
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-white">
-                        Intégrer les contraintes fiscales, sociales et de
-                        gouvernance
-                      </h3>
-                      <p className="text-gray-300">
-                        Prise en compte de l'ensemble des aspects réglementaires
-                        pour une opération complète et sécurisée juridiquement.
-                      </p>
-                    </div>
-                  </motion.div>
-                </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </motion.div>
+                    </motion.div>
+                  </div>
+                  <div className="w-full md:w-1/2 hidden md:block" />
+                </motion.div>
+              ))}
             </div>
           </div>
 
@@ -562,16 +442,6 @@ export default function CessionAcquisition() {
                     </div>
                   </motion.div>
                 </div>
-
-                {/* Decorative gradient line */}
-                {selectedPhase === index && (
-                  <motion.div
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="absolute -bottom-2 left-6 right-6 h-1 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full"
-                  />
-                )}
               </motion.div>
             ))}
           </div>
