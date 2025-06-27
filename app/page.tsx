@@ -6,48 +6,25 @@ import Section1 from "../components/Section1";
 import { TbBrandTiktok } from "react-icons/tb";
 
 import {
-  User,
-  Rocket,
   Building2,
-  Briefcase,
   ArrowRight,
-  FileText,
-  Gavel,
-  AlertTriangle,
   Target as TargetIcon,
-  Pin as PinIcon,
-  MessageCircle,
-  Star,
   ChevronDown,
   Target,
   Zap,
-  Scale,
-  MessageSquare,
-  Users,
   FileCheck,
   Handshake,
-  Clock,
-  BookOpen,
   Shield,
-  Star as StarIcon,
-  CheckCircle,
-  Ear,
   Linkedin,
   Instagram,
-  Music,
-  Podcast,
   BriefcaseBusiness,
   Facebook,
 } from "lucide-react";
-import { useState, useRef } from "react";
+
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import SecretComponent from "@/components/secret.component";
-export default function Home() {
-  const router = useRouter();
-  const section1Ref = useRef<HTMLDivElement>(null);
 
+export default function Home() {
   const scrollToSection = () => {
     const section1 = document.getElementById("section1");
     if (section1) {

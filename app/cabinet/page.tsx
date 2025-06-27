@@ -2,100 +2,11 @@
 
 import SecretComponent from "@/components/secret.component";
 import { motion } from "framer-motion";
-import {
-  GraduationCap,
-  Building2,
-  Target,
-  Users,
-  Shield,
-  Zap,
-  Heart,
-  Ear,
-  Share2,
-  CheckCircle,
-  TrendingUp,
-  Eye,
-  Clock,
-  ArrowRight,
-  Star,
-  Award,
-  Handshake,
-  MessageCircle,
-  FileText,
-  DollarSign,
-} from "lucide-react";
-import { useState } from "react";
+import { Target, TrendingUp, Eye, ArrowRight, FileText } from "lucide-react";
+
 import Image from "next/image";
 
 export default function CabinetPage() {
-  const [activeValue, setActiveValue] = useState(0);
-
-  const parcours = [
-    {
-      institution: "White & Case LLP",
-      description:
-        "L'exigence des grands cabinets internationaux, la rigueur des processus et la maîtrise technique avancée",
-      icon: Building2,
-    },
-    {
-      institution: "Delcade",
-      description:
-        "L'innovation et la culture entrepreneuriale appliquées au conseil",
-      icon: Zap,
-    },
-    {
-      institution: "Dynamis Avocats",
-      description:
-        "Une pratique ancrée dans la réalité des dirigeants, la capacité à prioriser les enjeux et à orienter les décisions",
-      icon: Target,
-    },
-  ];
-
-  const valeurs = [
-    {
-      letter: "S",
-      title: "SÉCURITÉ",
-      description: "Anticiper les risques, structurer les décisions",
-      icon: Shield,
-      color: "from-blue-500 to-blue-600",
-    },
-    {
-      letter: "E",
-      title: "EXIGENCE",
-      description: "Analyser, approfondir, améliorer",
-      icon: Award,
-      color: "from-purple-500 to-purple-600",
-    },
-    {
-      letter: "C",
-      title: "CONFIANCE",
-      description: "Créer un cadre clair pour des relations durables",
-      icon: Handshake,
-      color: "from-green-500 to-green-600",
-    },
-    {
-      letter: "R",
-      title: "RÉACTIVITÉ",
-      description: "Agir vite, sans jamais improviser",
-      icon: Zap,
-      color: "from-yellow-500 to-yellow-600",
-    },
-    {
-      letter: "E",
-      title: "ÉCOUTE",
-      description: "Comprendre avant de conseiller",
-      icon: Ear,
-      color: "from-pink-500 to-pink-600",
-    },
-    {
-      letter: "T",
-      title: "TRANSMISSION",
-      description: "Partager pour renforcer la décision",
-      icon: Share2,
-      color: "from-indigo-500 to-indigo-600",
-    },
-  ];
-
   const grille = [
     {
       title: "Procédurale",
@@ -117,39 +28,6 @@ export default function CabinetPage() {
       description:
         "Simuler des scénarios alternatifs pour identifier les zones de rupture",
       icon: Eye,
-    },
-  ];
-
-  const approche = [
-    {
-      title: "Travail en équipe",
-      description: "Collaboration étroite pour des solutions optimales",
-      icon: Users,
-    },
-    {
-      title: "Méthodes et outils",
-      description: "Processus structurés et outils innovants",
-      icon: Target,
-    },
-    {
-      title: "Expertise juridique de référence",
-      description: "Maîtrise technique avancée et veille permanente",
-      icon: Award,
-    },
-    {
-      title: "Réponse sous 48h",
-      description: "Réactivité garantie pour vos urgences",
-      icon: Clock,
-    },
-    {
-      title: "Rendez-vous sous une semaine",
-      description: "Disponibilité rapide pour vos besoins",
-      icon: MessageCircle,
-    },
-    {
-      title: "Cabinet centré sur l'humain",
-      description: "Relations privilégiées et accompagnement personnalisé",
-      icon: Heart,
     },
   ];
 
