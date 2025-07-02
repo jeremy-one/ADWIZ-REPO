@@ -432,7 +432,7 @@ export default function Home() {
                             className={`w-20 h-20 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center border ${item.borderColor}`}
                           >
                             <item.icon
-                              className={`w-10 h-10 text-${item.color} transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12`}
+                              className={`w-10 h-10 text-${item.color} group-hover:text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12`}
                             />
                           </div>
                           <div
