@@ -107,35 +107,47 @@ export default function Home() {
               </motion.h1>
             </motion.div>
 
-            <motion.h1
-              className="text-xl md:text-3xl max-w-4xl mx-auto uppercase font-bold leading-tight block bg-clip-text text-transparent bg-gradient-to-r from-white  to-accent"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              Nous faisons du droit des affaires un levier de croissance pour
-              nos clients
-            </motion.h1>
+            <div className="flex flex-col gap-4">
+              <motion.h1
+                className="text-xl md:text-3xl max-w-4xl mx-auto uppercase font-bold leading-tight block bg-clip-text text-transparent bg-gradient-to-r from-white  to-accent"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                Défendre vos intérêts, structurer vos projets, sécuriser vos
+                transactions.
+              </motion.h1>
+              <motion.p
+                className="max-w-4xl mx-auto font-bold "
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                Avocat en droit des affaires, j’interviens à chaque moment
+                stratégique de la vie de l’entreprise, en conseil comme en
+                contentieux. Mes conseils sont un levier de croissance pour mes
+                clients.
+              </motion.p>
+            </div>
 
             {/* Carte acteurs*/}
             <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory md:justify-center no-scrollbar">
               {[
                 {
-                  title: "Dirigeants - Associés",
+                  title: "Dirigeants",
                   description:
-                    "Organisez la gouvernance et vos relations dans l'entreprise",
+                    "Organisez votre activité. Gérez les contentieux, le recouvrement et les difficultés.",
                   icon: BriefcaseBusiness,
                 },
                 {
-                  title: "Fondateurs - Repreneurs",
-                  description:
-                    "Structurez et développez votre projet d'entreprise",
+                  title: "ASSOCIES",
+                  description: "Encadrez vos relations et réglez les conflits.",
                   icon: Building2,
                 },
                 {
-                  title: "Directions juridiques",
+                  title: "FONDATEURS - REPRENEURS",
                   description:
-                    "Externalisez vos contentieux et le recouvrement",
+                    "Structurez, développez ou cédez votre entreprise.",
                   icon: Building2,
                 },
               ].map((card, index) => (
@@ -216,7 +228,7 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </motion.section>
-
+      {/* 
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-12 py-20 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -258,7 +270,7 @@ export default function Home() {
             </Link>
           </div>
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Section 1 */}
       <Section1 />
@@ -268,7 +280,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-4 bg-gradient-to-b from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
+        className="py-24 px-4 bg-gradient-to-b  flex flex-col gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
       >
         {/* Pourquoi ADWIZ */}
         <motion.div
@@ -279,10 +291,33 @@ export default function Home() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
-            Ce que vous obtenez avec ADWIZ ?
+            Pourquoi se faire accompagner par ADWIZ ?
           </h2>
         </motion.div>
-        <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+        <motion.h3 className="text-xl md:text-3xl text-center max-w-4xl mx-auto font-semibold ">
+          Parce que nous proposons un accompagnement qui est centré sur vos
+          objectifs et vos besoins. <br /> Que vous soyez dirigeants ou associés
+          d’une PME/ETI, entrepreneurs en phase de croissance ou avec un projet
+          de reprise, nous adaptons notre intervention à vos priorités et à
+          votre rythme de décision.
+        </motion.h3>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="pt-4 flex justify-center"
+        >
+          <Link
+            href="https://app.lemcal.com/@fdw"
+            target="_blank"
+            className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-2 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
+          >
+            <span>Découvrez nos offres</span>
+          </Link>
+        </motion.div>
+
+        {/* <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
           {[
             {
               icon: TargetIcon,
@@ -330,7 +365,7 @@ export default function Home() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </motion.section>
 
       {/* Section - Qu'est-ce qui différencie ADWIZ */}
@@ -481,7 +516,7 @@ export default function Home() {
           </div>
 
           {/* CTA final */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -500,7 +535,78 @@ export default function Home() {
               <span>Échanger avec nous</span>
               <ArrowRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-          </motion.div>
+          </motion.div> */}
+        </div>
+      </motion.section>
+
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="py-24 px-4 bg-gradient-to-b  flex flex-col gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
+      >
+        {/* Pourquoi ADWIZ */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
+            Ce que vous obtenez avec ADWIZ?
+          </h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+          {[
+            {
+              icon: TargetIcon,
+              title: "Des résultats concrets",
+              description:
+                "Calendriers, livrables et information continue. Pas d'actions ou de procédure inutiles.",
+            },
+            {
+              icon: Zap,
+              title: "Un service innovant",
+              description:
+                "Ressources documentaires, outils digitaux et intelligence artificielle pour limiter les coûts et se concentrer sur l'accompagnement et le service.",
+            },
+            {
+              icon: FileCheck,
+              title: "Une tarification transparente",
+              description:
+                "Honoraires au forfait ou à l'abonnement. Prestations définies et tarifs fixés à l'avance.",
+            },
+          ].map((point, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.2,
+                type: "spring",
+                stiffness: 100,
+              }}
+              className="group relative"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:from-accent/10 group-hover:to-accent/15 border border-accent/20 group-hover:border-accent/40" />
+              <div className="relative p-8 text-center">
+                <div className="flex justify-center mb-4">
+                  <point.icon className="w-12 h-12 text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-accent transition-colors duration-300">
+                  {point.title}
+                </h3>
+                <p className="text-gray-400 group-hover:text-white transition-colors duration-300">
+                  {point.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.section>
 
@@ -529,7 +635,7 @@ export default function Home() {
               {/* Face avant (recto) */}
               <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 flex flex-col items-center gap-8  justify-center text-center">
                 <Image
-                  src="/assets/fdw.jpeg"
+                  src="/assets/fdw.png"
                   alt="ADWIZ Logo"
                   className="rounded-2xl object-cover "
                   width={210}

@@ -17,45 +17,45 @@ export default function Section1() {
 
   const domains = [
     {
-      title: "Droit des sociétés",
+      title: "J’ai un litige ou une créance à recouvrer",
       items: [
-        "Création de société",
-        "Structuration de groupe (Holding, Conventions intragroupe, gouvernance)",
-        "Pactes d'associés",
-        "Modification statutaire",
+        "Litiges commerciaux",
+        "Responsabilité des dirigeants ",
+        "Conflits d’associés ",
+        "Recouvrement de créances - Mesures d’exécution",
       ],
       icon: Briefcase,
       link: "/droit-des-sociétés",
     },
     {
-      title: "Transactions & Levée de fonds ",
+      title: "Je veux m’associer, céder ou reprendre une entreprise",
       items: [
-        "Préparation et négociation",
-        "Audit, Valorisation, Documentation intermédiaire",
-        "Rédaction des actes",
-        "Exécution de l'opération",
+        "Négocations, Valorisations, Audit",
+        "Rédaction des actes de cession",
+        "Rédaction des pactes d’associés",
+        "Exécution de l’opération, formalités",
       ],
       icon: Handshake,
       link: "/cession-acquisition",
     },
     {
-      title: "Contentieux - Recouvrement",
+      title: "Je veux structurer juridiquement mon activité",
       items: [
-        "Litiges commerciaux",
-        "Conflits d'associés",
-        "Recouvrement de créances",
-        "Mesures d'exécution",
+        "Création de sociétés",
+        "Structuration de groupes (holding, conventions intragroupe, conventions de gouvernance)",
+        "Modifications statutaires",
+        "Contrats commerciaux",
       ],
       icon: Gavel,
       link: "/contentieux-recouvrement",
     },
     {
-      title: "Entreprises en difficulté",
+      title: "Entreprises en difficulté : je suis débiteur ou créancier",
       items: [
-        "Amiable (Mandat ad hoc – Conciliation)",
-        "Judiciaire (Sauvegarde, Redressement, Liquidation judiciaire)",
-        "Accompagnement du débiteur (Négociations, Plan)",
-        "Protection du créancier (Déclaration de créance, Contrats en cours, Revendication)",
+        "Amiable (mandat ad hoc - conciliation)",
+        "Judiciaire (sauvegarde, redressement, liquidation judiciaire)",
+        "Accompagnement du débiteur (négociations, plan)",
+        "Protection du créancier (déclaration de créance, contrats en cours, revendication)",
       ],
       icon: AlertTriangle,
       link: "/entreprises-en-difficulté",
@@ -93,7 +93,7 @@ export default function Section1() {
               className="text-center"
             >
               <h2 className=" text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
-                Nos services
+                Quel est votre besoin ?
               </h2>
             </motion.div>
 
@@ -127,7 +127,7 @@ export default function Section1() {
                     </div>
 
                     {/* Face arrière (verso) */}
-                    <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 p-6 flex flex-col">
+                    <div className="absolute inset-0 w-full h-fit backface-hidden rotate-y-180 rounded-2xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 p-6 flex flex-col">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-10 h-10 flex items-center justify-center bg-accent/20 rounded-xl">
                           {(() => {

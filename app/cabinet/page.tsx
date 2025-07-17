@@ -9,24 +9,23 @@ import Image from "next/image";
 export default function CabinetPage() {
   const grille = [
     {
-      title: "Procédurale",
-      description: "Formaliser les problématiques et respecter les normes",
+      title: "Pragmatique",
+      description: "Calibrer les actions en fonction des enjeux",
       icon: FileText,
     },
     {
-      title: "Stratégique",
-      description: "Anticiper les réactions et ajuster la trajectoire",
+      title: "Procédurale",
+      description: "Identifier et hiérarchiser les problématiques",
       icon: Target,
     },
     {
-      title: "Concurrentielle",
-      description: "Défendre avec précision, activer les bons leviers",
+      title: "Stratégique",
+      description: "Orienter les décisions en fonction de leurs conséquences",
       icon: TrendingUp,
     },
     {
-      title: "Contra-factuelle",
-      description:
-        "Simuler des scénarios alternatifs pour identifier les zones de rupture",
+      title: "Créative",
+      description: "Envisager des scénarios alternatifs et innovants",
       icon: Eye,
     },
   ];
@@ -72,11 +71,13 @@ export default function CabinetPage() {
             className="text-center mb-20"
           >
             <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent mb-6">
-              Le Cabinet
+              Notre Parcours
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Découvrez notre parcours, nos valeurs et notre méthode de travail
-              unique pour faire du droit des affaires un levier de croissance.
+              ADWIZ c’est un parcours professionnel durant lequel nous avons
+              développées des valeurs et une méthode de travail que nous
+              employons pour vous assister dans la réalisation de vos projets et
+              la défense de vos intérêts.
             </p>
           </motion.div>
 
@@ -106,9 +107,6 @@ export default function CabinetPage() {
                 variants={itemVariants}
                 className=" flex flex-col gap-4 justify-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent mb-6">
-                  Notre Parcours
-                </h2>
                 <div className="max-w-4xl mx-auto space-y-6 text-white/80 text-lg leading-relaxed">
                   <p>
                     Notre parcours s'inscrit dans un enchaînement d'expériences
@@ -124,40 +122,33 @@ export default function CabinetPage() {
                     complète, alliant rigueur, agilité et compréhension
                     stratégique :
                   </p>
-                  <ul>
+                  <ul className="list-disc list-inside space-y-2 text-white/80 text-lg leading-relaxed">
                     <li>
-                      <p>
-                        <span className="font-bold">White & Case LLP</span> :
-                        L'exigence des grands cabinets internationaux, la
-                        rigueur des processus et la maîtrise technique avancée
-                      </p>
+                      <span className="font-bold">White & Case LLP</span> :
+                      L'exigence des grands cabinets internationaux, la rigueur
+                      des processus et la maîtrise technique avancée
                     </li>
                     <li>
-                      <p>
-                        <span className="font-bold">Delcade</span> :
-                        L'innovation et la culture entrepreneuriale appliquées
-                        au conseil
-                      </p>
+                      <span className="font-bold">Delcade</span> : L'innovation
+                      et la culture entrepreneuriale appliquées au conseil
                     </li>
                     <li>
-                      <p>
-                        <span className="font-bold">Dynamis Avocats</span> : Une
-                        pratique ancrée dans la réalité des dirigeants, la
-                        capacité à prioriser les enjeux et à orienter les
-                        décisions
-                      </p>
+                      <span className="font-bold">Dynamis Avocats</span> : Une
+                      pratique ancrée dans la réalité des dirigeants, la
+                      capacité à prioriser les enjeux et à orienter les
+                      décisions
                     </li>
                   </ul>
                 </div>
               </motion.div>
             </div>
 
-            <motion.div variants={itemVariants} className="text-center">
+            {/* <motion.div variants={itemVariants} className="text-center">
               <p className="text-white/80 text-lg leading-relaxed max-w-4xl mx-auto">
                 Ce parcours fonde une méthode de travail efficace, structurée,
                 et pensée pour accompagner la prise de décision.
               </p>
-            </motion.div>
+            </motion.div> */}
           </motion.section>
 
           {/* Section Valeurs S.E.C.R.E.T */}
@@ -177,30 +168,78 @@ export default function CabinetPage() {
               </h2>
             </motion.div>
 
-            {/* Grille d'analyse */}
             <motion.div variants={itemVariants} className="mb-16">
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                La grille d'analyse établie pour chaque dossier
-              </h3>
-              <p className="text-white/80 text-center mb-8">
-                Chaque dossier est analysé à travers 4 dimensions :
+              <p className="text-white/80 text-center mb-8 max-w-4xl mx-auto">
+                Les dossiers qui nous sont confiés font l’objet d’une
+                implication rigoureuse. Nous trouvons les bons arguments et
+                développons un discours clair et percutant pour convaincre les
+                juridictions quand nous organisons votre défense. Nous élaborons
+                les solutions juridiques qui vous permettront de réaliser vos
+                projets avec un maximum de sécurité tout en anticipant vos
+                actions pour favoriser votre activité et votre développement.
               </p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {grille.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    variants={itemVariants}
-                    className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-accent/20 text-center"
-                  >
-                    <div className="w-12 h-12 flex items-center justify-center bg-accent/20 rounded-xl mb-4 mx-auto">
-                      <item.icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="font-bold text-white mb-2">{item.title}</h4>
-                    <p className="text-white/70 text-sm">{item.description}</p>
-                  </motion.div>
-                ))}
+            </motion.div>
+
+            {/* Rôle de l'avocat */}
+            <motion.div
+              variants={itemVariants}
+              className="flex gap-8 items-center justify-center flex-col md:flex-row py-24"
+            >
+              <div className="flex flex-col gap-4 order-2 md:order-1">
+                <Image
+                  src="/assets/desk-2.jpg"
+                  alt="ADWIZ Logo"
+                  className="rounded-2xl object-cover w-96 h-96"
+                  width={500}
+                  height={210}
+                />
+              </div>
+              <div className="flex flex-col gap-4 order-1 md:order-2">
+                <h3 className="text-2xl font-bold text-white mb-8 ">
+                  Le rôle de l'avocat dans le dossier
+                </h3>
+                <div className="max-w-4xl mx-auto">
+                  <p className="text-white/80 mb-6">
+                    Une posture méthodique guide chaque intervention :
+                  </p>
+                  <div className="space-y-4">
+                    {[
+                      "Décrypter les dynamiques humaines en présence",
+                      "Identifier les données clés pour dégager une ligne d'action",
+                      "Mobiliser la technique juridique au service d'un objectif",
+                      "Avancer vite, sans perdre la maîtrise des enjeux",
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <span className="text-white/90">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
+
+            <motion.div variants={itemVariants} className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent mb-6">
+                Chaque dossier est analysé à travers 4 dimensions :
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {grille.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-accent/20 text-center"
+                >
+                  <div className="w-12 h-12 flex items-center justify-center bg-accent/20 rounded-xl mb-4 mx-auto">
+                    <item.icon className="w-6 h-6 text-accent" />
+                  </div>
+                  <h4 className="font-bold text-white mb-2">{item.title}</h4>
+                  <p className="text-white/70 text-sm">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
 
             {/* Mise en œuvre des actions */}
             <motion.div
@@ -240,45 +279,6 @@ export default function CabinetPage() {
                   width={500}
                   height={500}
                 />
-              </div>
-            </motion.div>
-
-            {/* Rôle de l'avocat */}
-            <motion.div
-              variants={itemVariants}
-              className="flex gap-8 items-center justify-center flex-col md:flex-row py-24"
-            >
-              <div className="flex flex-col gap-4 order-2 md:order-1">
-                <Image
-                  src="/assets/desk-2.jpg"
-                  alt="ADWIZ Logo"
-                  className="rounded-2xl object-cover w-96 h-96"
-                  width={500}
-                  height={210}
-                />
-              </div>
-              <div className="flex flex-col gap-4 order-1 md:order-2">
-                <h3 className="text-2xl font-bold text-white mb-8 ">
-                  Le rôle de l'avocat dans le dossier
-                </h3>
-                <div className="max-w-4xl mx-auto">
-                  <p className="text-white/80 mb-6">
-                    Une posture méthodique guide chaque intervention :
-                  </p>
-                  <div className="space-y-4">
-                    {[
-                      "Décrypter les dynamiques humaines en présence",
-                      "Identifier les données clés pour dégager une ligne d'action",
-                      "Mobiliser la technique juridique au service d'un objectif",
-                      "Avancer vite, sans perdre la maîtrise des enjeux",
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                        <span className="text-white/90">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </motion.div>
           </motion.section>

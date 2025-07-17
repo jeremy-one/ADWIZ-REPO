@@ -97,12 +97,12 @@ export default function SecretComponent() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
-            La méthode S.E.C.R.E.T.
+            Nos valeurs
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            ADWIZ a cumulé les expériences pour élaborer une méthode de travail
-            rigoureuse, structurée et orientée résultats, basée sur six
-            principes :
+            ADWIZ a cumulé les expériences au cours desquelles nos valeurs se
+            sont développées. Elles reposent sur six principes que nous avons
+            appelés : La méthode S.E.C.R.E.T.
           </p>
         </motion.div>
 
