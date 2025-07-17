@@ -228,49 +228,6 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </motion.section>
-      {/* 
-      <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-12 py-20 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center flex flex-col gap-4"
-        >
-          <h2 className=" text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
-            Pourquoi se faire accompagner par ADWIZ ?
-          </h2>
-          <p className="text-white/70 text-lg">
-            Parce que nous proposons un accompagnement qui est centré sur vos
-            objectifs et vos besoins
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-accent/5 rounded-2xl p-6  border border-accent/20"
-        >
-          <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
-            <div className="flex flex-col gap-2 w-full md:w-2/3">
-              <h3 className="text-xl font-medium text-white mb-2">
-                Que vous soyez dirigeant ou associé d'une PME/ETI, entrepreneurs
-                en phase de croissance ou avec un projet de reprise, nous
-                adaptons notre intervention à vos priorités et à votre rythme de
-                décision.
-              </h3>
-            </div>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 bg-accent text-primary px-6 py-3 rounded-2xl font-semibold text-base hover:bg-accent/90 transition-all duration-300"
-            >
-              <span>Découvrez toutes nos offres</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </motion.div>
-      </div> */}
 
       {/* Section 1 */}
       <Section1 />
@@ -282,90 +239,32 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="py-24 px-4 bg-gradient-to-b  flex flex-col gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
       >
-        {/* Pourquoi ADWIZ */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
-            Pourquoi se faire accompagner par ADWIZ ?
-          </h2>
-        </motion.div>
-        <motion.h3 className="text-xl md:text-3xl text-center max-w-4xl mx-auto font-semibold ">
+        <h2 className=" text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
+          Pourquoi se faire accompagner par ADWIZ ?
+        </h2>
+        <p className="text-white/70 text-lg max-w-4xl mx-auto text-center">
           Parce que nous proposons un accompagnement qui est centré sur vos
           objectifs et vos besoins. <br /> Que vous soyez dirigeants ou associés
           d’une PME/ETI, entrepreneurs en phase de croissance ou avec un projet
           de reprise, nous adaptons notre intervention à vos priorités et à
           votre rythme de décision.
-        </motion.h3>
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="pt-4 flex justify-center"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className=" rounded-2xl p-6 flex justify-center"
         >
           <Link
-            href="https://app.lemcal.com/@fdw"
-            target="_blank"
-            className="group inline-flex items-center gap-2 bg-accent text-primary px-8 py-2 rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
+            href="#"
+            className="inline-flex items-center gap-2 bg-accent text-primary px-6 py-3 rounded-2xl font-semibold text-base hover:bg-accent/90 transition-all duration-300"
           >
-            <span>Découvrez nos offres</span>
+            <span>Découvrez toutes nos offres</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
-
-        {/* <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
-          {[
-            {
-              icon: TargetIcon,
-              title: "Des résultats concrets",
-              description:
-                "Calendriers, livrables et information continue. Pas d'actions ou de procédure inutiles.",
-            },
-            {
-              icon: Zap,
-              title: "Un service innovant",
-              description:
-                "Ressources documentaires, outils digitaux et intelligence artificielle pour limiter les coûts et se concentrer sur l'accompagnement et le service.",
-            },
-            {
-              icon: FileCheck,
-              title: "Une tarification transparente",
-              description:
-                "Honoraires au forfait ou à l'abonnement. Prestations définies et tarifs fixés à l'avance.",
-            },
-          ].map((point, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-                delay: index * 0.2,
-                type: "spring",
-                stiffness: 100,
-              }}
-              className="group relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:from-accent/10 group-hover:to-accent/15 border border-accent/20 group-hover:border-accent/40" />
-              <div className="relative p-8 text-center">
-                <div className="flex justify-center mb-4">
-                  <point.icon className="w-12 h-12 text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-accent transition-colors duration-300">
-                  {point.title}
-                </h3>
-                <p className="text-gray-400 group-hover:text-white transition-colors duration-300">
-                  {point.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div> */}
       </motion.section>
 
       {/* Section - Qu'est-ce qui différencie ADWIZ */}
