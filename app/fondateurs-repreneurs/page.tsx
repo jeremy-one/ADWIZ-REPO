@@ -16,6 +16,8 @@ import {
   Scale,
   MessageCircle,
   Building2,
+  RefreshCcw,
+  Euro,
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -44,7 +46,7 @@ export default function Dirigeants() {
         "Rédaction des actes",
         "Coordination avec experts-comptables, notaires, partenaires financiers",
       ],
-      icon: ChartNoAxesCombined,
+      icon: RefreshCcw,
     },
     {
       title: "Investir dans une entreprise",
@@ -56,7 +58,7 @@ export default function Dirigeants() {
         "Rédaction du pacte et des garanties",
         "Coordination avec experts-comptables, notaires, partenaires financiers",
       ],
-      icon: Handshake,
+      icon: Euro,
     },
   ];
 
@@ -347,17 +349,14 @@ export default function Dirigeants() {
                         <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-all duration-300">
                           <phase.icon className="w-6 h-6 text-accent" />
                         </div>
-                        <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-accent text-black text-xs font-bold flex items-center justify-center">
-                          {index + 1}
-                        </div>
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
                           {phase.title}
                         </h3>
-                        <p className="text-sm text-gray-400 mt-1">
+                        {/* <p className="text-sm text-gray-400 mt-1">
                           Phase {index + 1} de l'accompagnement
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                     <motion.div
