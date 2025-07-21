@@ -138,17 +138,20 @@ export default function Home() {
                   description:
                     "Organisez votre activité. Gérez les contentieux, le recouvrement et les difficultés.",
                   icon: BriefcaseBusiness,
+                  link: "/dirigeants",
                 },
                 {
                   title: "ASSOCIES",
                   description: "Encadrez vos relations et réglez les conflits.",
                   icon: Building2,
+                  link: "/associes",
                 },
                 {
                   title: "FONDATEURS - REPRENEURS",
                   description:
                     "Structurez, développez ou cédez votre entreprise.",
                   icon: Building2,
+                  link: "/fondateurs-repreneurs",
                 },
               ].map((card, index) => (
                 <motion.div
@@ -170,7 +173,7 @@ export default function Home() {
                     {card.description}
                   </p>
                   <Link
-                    href="#"
+                    href={card.link}
                     className="group inline-flex items-center gap-2 text-white font-normal hover:text-accent transition-all duration-300"
                   >
                     En savoir plus <ArrowRight className="w-4 h-4" />
@@ -366,7 +369,7 @@ export default function Home() {
                             className={`w-20 h-20 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center border ${item.borderColor}`}
                           >
                             <item.icon
-                              className={`w-10 h-10 text-${item.color} group-hover:text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12`}
+                              className={`w-10 h-10 text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12`}
                             />
                           </div>
                           <div
@@ -495,7 +498,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:from-accent/10 group-hover:to-accent/15 border border-accent/20 group-hover:border-accent/40" />
               <div className="relative p-8 text-center">
                 <div className="flex justify-center mb-4">
-                  <point.icon className="w-12 h-12 group-hover:text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
+                  <point.icon className="w-12 h-12 text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-accent transition-colors duration-300">
                   {point.title}

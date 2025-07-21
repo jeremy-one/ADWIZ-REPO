@@ -232,6 +232,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-tt-norms);
 }
 
+ul {
+  list-style-type: disc;
+  font-family: var(--font-tt-norms);
+}
+
 /* Configuration des paragraphes avec Work Sans */
 p, a {
   font-family: var(--font-work-sans);

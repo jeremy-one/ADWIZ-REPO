@@ -25,7 +25,7 @@ export default function Section1() {
         "Recouvrement de créances - Mesures d’exécution",
       ],
       versoTitle: "Contentieux - Recouvrement",
-      icon: Briefcase,
+      icon: Gavel,
       link: "/droit-des-sociétés",
     },
     {
@@ -61,7 +61,7 @@ export default function Section1() {
         "Contrats commerciaux",
       ],
       versoTitle: "Droit des sociétés - Droit commercial",
-      icon: Gavel,
+      icon: Briefcase,
       link: "/contentieux-recouvrement",
     },
   ];

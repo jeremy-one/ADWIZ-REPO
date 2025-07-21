@@ -143,12 +143,12 @@ export default function CabinetPage() {
               </motion.div>
             </div>
 
-            {/* <motion.div variants={itemVariants} className="text-center">
+            <motion.div variants={itemVariants} className="text-center">
               <p className="text-white/80 text-lg leading-relaxed max-w-4xl mx-auto">
                 Ce parcours fonde une méthode de travail efficace, structurée,
                 et pensée pour accompagner la prise de décision.
               </p>
-            </motion.div> */}
+            </motion.div>
           </motion.section>
 
           {/* Section Valeurs S.E.C.R.E.T */}

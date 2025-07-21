@@ -18,7 +18,6 @@ export default function SecretComponent() {
       title: "Sécurité",
       description: "Anticiper les risques, structurer les décisions",
       details: [
-        "Anticiper les risques, structurer les décisions",
         "Définition des besoins",
         "Analyse juridique rigoureuse et approfondie",
         "Organisation de processus de travail",
