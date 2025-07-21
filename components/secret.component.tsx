@@ -18,10 +18,11 @@ export default function SecretComponent() {
       title: "Sécurité",
       description: "Anticiper les risques, structurer les décisions",
       details: [
-        "Analyse approfondie des risques juridiques",
-        "Mise en place de mesures préventives",
-        "Protection des intérêts de l'entreprise",
-        "Veille juridique proactive",
+        "Anticiper les risques, structurer les décisions",
+        "Définition des besoins",
+        "Analyse juridique rigoureuse et approfondie",
+        "Organisation de processus de travail",
+        "Méthodologie appliquée à la production",
       ],
     },
     {
@@ -29,10 +30,10 @@ export default function SecretComponent() {
       title: "Exigence",
       description: "Analyser, approfondir, améliorer",
       details: [
-        "Expertise pointue en droit des affaires",
-        "Méthodologie rigoureuse",
-        "Qualité des livrables garantie",
-        "Suivi précis des engagements",
+        "Actions orientées résultat",
+        "Conscience professionnelle",
+        "Curiosité intellectuelle",
+        "Formation continue",
       ],
     },
     {
@@ -40,8 +41,8 @@ export default function SecretComponent() {
       title: "Confiance",
       description: "Créer un cadre clair pour des relations durables ",
       details: [
-        "Échanges transparents et réguliers",
-        "Engagement sur les résultats",
+        "Echanges transparents et réguliers",
+        "Absence de jugement",
         "Confidentialité absolue",
         "Partenariat sur le long terme",
       ],
@@ -51,10 +52,10 @@ export default function SecretComponent() {
       title: "Réactivité",
       description: "Agir vite, sans jamais improviser",
       details: [
-        "Disponibilité immédiate",
-        "Solutions opérationnelles",
-        "Adaptation aux urgences",
-        "Suivi en temps réel",
+        "Disponibilité constante",
+        "Flexibilité face aux urgences",
+        "Rapidité d’exécution",
+        "Capacité d’anticipation",
       ],
     },
     {
@@ -62,10 +63,10 @@ export default function SecretComponent() {
       title: "Écoute",
       description: "Comprendre vos enjeux et ensuite conseiller",
       details: [
-        "Analyse de vos besoins spécifiques",
-        "Solutions sur mesure",
-        "Communication claire et directe",
-        "Feedback régulier",
+        "Ecoute active",
+        "Analyse de vos besoins",
+        "Solutions personnalisées",
+        "Évaluation de votre satisfaction",
       ],
     },
     {
@@ -73,9 +74,9 @@ export default function SecretComponent() {
       title: "Transmission",
       description: "Partager pour renforcer la décision",
       details: [
+        "Livrables clairs et utiles",
+        "Travail collaboratif",
         "Formation et accompagnement",
-        "Documentation exhaustive",
-        "Transfert de compétences",
         "Capitalisation des expériences",
       ],
     },

@@ -24,8 +24,21 @@ export default function Section1() {
         "Conflits d’associés ",
         "Recouvrement de créances - Mesures d’exécution",
       ],
+      versoTitle: "Contentieux - Recouvrement",
       icon: Briefcase,
       link: "/droit-des-sociétés",
+    },
+    {
+      title: "Entreprises en difficulté : je suis débiteur ou créancier",
+      items: [
+        "Amiable (mandat ad hoc - conciliation)",
+        "Judiciaire (sauvegarde, redressement, liquidation judiciaire)",
+        "Accompagnement du débiteur (négociations, plan)",
+        "Protection du créancier (déclaration de créance, contrats en cours, revendication)",
+      ],
+      versoTitle: "Entreprises en difficulté",
+      icon: AlertTriangle,
+      link: "/entreprises-en-difficulté",
     },
     {
       title: "Je veux m’associer, céder ou reprendre une entreprise",
@@ -35,6 +48,7 @@ export default function Section1() {
         "Rédaction des pactes d’associés",
         "Exécution de l’opération, formalités",
       ],
+      versoTitle: "Transactions - Levées de fonds",
       icon: Handshake,
       link: "/cession-acquisition",
     },
@@ -46,19 +60,9 @@ export default function Section1() {
         "Modifications statutaires",
         "Contrats commerciaux",
       ],
+      versoTitle: "Droit des sociétés - Droit commercial",
       icon: Gavel,
       link: "/contentieux-recouvrement",
-    },
-    {
-      title: "Entreprises en difficulté : je suis débiteur ou créancier",
-      items: [
-        "Amiable (mandat ad hoc - conciliation)",
-        "Judiciaire (sauvegarde, redressement, liquidation judiciaire)",
-        "Accompagnement du débiteur (négociations, plan)",
-        "Protection du créancier (déclaration de créance, contrats en cours, revendication)",
-      ],
-      icon: AlertTriangle,
-      link: "/entreprises-en-difficulté",
     },
   ];
 
@@ -136,7 +140,7 @@ export default function Section1() {
                           })()}
                         </div>
                         <h4 className="text-lg font-bold text-white">
-                          {domain.title}
+                          {domain.versoTitle}
                         </h4>
                       </div>
 

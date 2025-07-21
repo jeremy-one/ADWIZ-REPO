@@ -122,7 +122,7 @@ export default function CabinetPage() {
                     complète, alliant rigueur, agilité et compréhension
                     stratégique :
                   </p>
-                  <ul className="list-disc list-inside space-y-2 text-white/80 text-lg leading-relaxed">
+                  <ul className="list-disc list-inside space-y-8 text-white/80 text-lg leading-relaxed">
                     <li>
                       <span className="font-bold">White & Case LLP</span> :
                       L'exigence des grands cabinets internationaux, la rigueur

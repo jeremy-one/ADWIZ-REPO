@@ -118,7 +118,7 @@ export default function Home() {
                 transactions.
               </motion.h1>
               <motion.p
-                className="max-w-4xl mx-auto font-bold "
+                className="text-white/70 text-lg max-w-4xl mx-auto text-center"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
@@ -495,7 +495,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:from-accent/10 group-hover:to-accent/15 border border-accent/20 group-hover:border-accent/40" />
               <div className="relative p-8 text-center">
                 <div className="flex justify-center mb-4">
-                  <point.icon className="w-12 h-12 text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
+                  <point.icon className="w-12 h-12 group-hover:text-accent transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-accent transition-colors duration-300">
                   {point.title}
