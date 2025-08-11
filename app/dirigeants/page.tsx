@@ -206,11 +206,6 @@ export default function Dirigeants() {
               décision et de la responsabilité.
               <br />
               <br />
-              Vous devez chaque jour faire des choix complexes : décisions
-              opérationnelles, partenariats commerciaux, arbitrages financiers,
-              recrutement, croissance, gestion des litiges et des difficultés…
-              <br />
-              <br />
               Vous avez besoin de clarté, de fiabilité, de sécurité et d’un
               partenaire qui transforme le droit en outil de pilotage.
             </motion.p>

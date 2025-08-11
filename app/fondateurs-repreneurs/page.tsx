@@ -199,13 +199,8 @@ export default function Dirigeants() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto"
             >
-              Entreprendre, c’est accepter de prendre des risques. Créer ou
-              reprendre une entreprise, investir dans un projet : chaque
-              décision mobilise du temps, de l’énergie et du capital.
-              <br />
-              <br />
-              À chaque étape, cette prise de risque doit être mesurée et
-              maîtrisée.
+              Créer, reprendre ou investir dans une entreprise est une prise de
+              risque qui doit être mesurée et maîtrisée.
               <br />
               <br />
               ADWIZ est votre partenaire pour valider vos intuitions, sécuriser

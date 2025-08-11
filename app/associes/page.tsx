@@ -190,11 +190,6 @@ export default function Dirigeants() {
               des responsabilités.
               <br />
               <br />
-              Quand les intentions ne sont pas clairement formalisées, le risque
-              de désaccord peut conduire au conflit : divergences stratégiques,
-              inégalités d’investissement, blocages décisionnels…
-              <br />
-              <br />
               Il est nécessaire de sécuriser vos relations entre associés pour
               qu’elles soient un levier – et non un frein – à la réussite de
               votre entreprise.
