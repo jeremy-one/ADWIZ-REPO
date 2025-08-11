@@ -26,7 +26,7 @@ export default function Section1() {
       ],
       versoTitle: "Contentieux - Recouvrement",
       icon: Gavel,
-      link: "/droit-des-sociétés",
+      link: "/contentieux-recouvrement",
     },
     {
       title: "Entreprises en difficulté : je suis débiteur ou créancier",
@@ -38,7 +38,7 @@ export default function Section1() {
       ],
       versoTitle: "Entreprises en difficulté",
       icon: AlertTriangle,
-      link: "/entreprises-en-difficulté",
+      link: "/entreprises-en-difficulte",
     },
     {
       title: "Je veux m’associer, céder ou reprendre une entreprise",
@@ -50,7 +50,7 @@ export default function Section1() {
       ],
       versoTitle: "Transactions - Levées de fonds",
       icon: Handshake,
-      link: "/cession-acquisition",
+      link: "/transactions-levees-de-fonds",
     },
     {
       title: "Je veux structurer juridiquement mon activité",
@@ -62,7 +62,7 @@ export default function Section1() {
       ],
       versoTitle: "Droit des sociétés - Droit commercial",
       icon: Briefcase,
-      link: "/contentieux-recouvrement",
+      link: "/droit-des-societes-droit-des-contrats",
     },
   ];
 
