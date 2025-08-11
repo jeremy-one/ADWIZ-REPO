@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
   const y = useTransform(
     scrollY,
@@ -40,9 +41,9 @@ export default function Navbar() {
   }
 
   return (
-    <motion.nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl mx-auto">
+    <motion.nav className="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl mx-auto">
       <div
-        className={`backdrop-blur-md border ${
+        className={`backdrop-blur-lg bg-black/10 border ${
           isVisible ? "border-accent/20" : "border-transparent"
         } rounded-full px-6 py-3`}
       >
@@ -96,24 +97,90 @@ export default function Navbar() {
           </div>
 
           {/* Menu mobile */}
-          <button className="md:hidden text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+          <button
+            className={`md:hidden ${isLightPage ? "text-[#373433]" : "text-white"}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
           </button>
         </div>
       </div>
+
+      {/* Menu mobile déroulant */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{
+          opacity: isMobileMenuOpen ? 1 : 0,
+          y: isMobileMenuOpen ? 0 : -20,
+        }}
+        transition={{ duration: 0.2 }}
+        className={`md:hidden mt-2 backdrop-blur-md border rounded-2xl overflow-hidden ${
+          isMobileMenuOpen ? "block" : "hidden"
+        } ${isVisible ? "border-accent/20" : "border-transparent"}`}
+      >
+        <div className="px-6 py-4 space-y-4">
+          <Link
+            href="/cabinet"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`block hover:text-accent transition-colors ${
+              isLightPage ? "text-[#373433]" : "text-gray-300"
+            }`}
+          >
+            Le Cabinet
+          </Link>
+          <Link
+            href="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`block hover:text-accent transition-colors ${
+              isLightPage ? "text-[#373433]" : "text-gray-300"
+            }`}
+          >
+            Contact
+          </Link>
+          <Link
+            href="https://app.lemcal.com/@fdw"
+            target="_blank"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`block text-center px-6 py-2 rounded-full font-semibold hover:bg-accent/90 transition-colors ${
+              isLightPage
+                ? "text-white bg-gradient-to-r from-[#879BEB] to-[#BAA080]/90 hover:bg-gradient-to-r hover:from-[#BAA080] hover:to-[#879BEB]/90 transition-all duration-300"
+                : "text-primary bg-accent"
+            }`}
+          >
+            Prendre RDV
+          </Link>
+        </div>
+      </motion.div>
     </motion.nav>
   );
 }

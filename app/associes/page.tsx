@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Dirigeants() {
   const [selectedPhase, setSelectedPhase] = useState(0);
@@ -240,9 +241,9 @@ export default function Dirigeants() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="flex gap-8 items-center justify-center flex-col md:flex-row py-24 px-24"
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center py-24 px-4 md:px-24"
       >
-        <div className="flex flex-col gap-8 max-w-2xl">
+        <div className="flex flex-col gap-8 w-full">
           <h2 className="text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
             Pourquoi se faire accompagner par ADWIZ pour rédiger son pacte
             d’associés ?
@@ -288,7 +289,15 @@ export default function Dirigeants() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 w-1/2"></div>
+        <div className="flex flex-col gap-8 w-full">
+          <Image
+            src="/assets/building.jpeg"
+            alt="Fondateurs et repreneurs"
+            width={500}
+            height={500}
+            className="rounded-2xl object-cover min-h-[100%] w-full"
+          />
+        </div>
         {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -484,11 +493,19 @@ export default function Dirigeants() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-4 bg-gradient-to-b flex gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
+        className="py-24 px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto md:px-24"
       >
-        <div className="flex flex-col gap-8 w-1/2"></div>
+        <div className="flex flex-col gap-8 w-full">
+          <Image
+            src="/assets/scene.jpeg"
+            alt="Fondateurs et repreneurs"
+            width={500}
+            height={500}
+            className="rounded-2xl object-cover min-h-[100%] w-full"
+          />
+        </div>
 
-        <div className="flex flex-col gap-8 w-1/2">
+        <div className="flex flex-col gap-8 w-full">
           <h2 className="text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
             Sortir d’un blocage décisionnel entre associés pour pérenniser
             l’activité de l’entreprise
