@@ -102,7 +102,9 @@ export default function SecretComponent() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             ADWIZ a cumulé les expériences au cours desquelles nos valeurs se
             sont développées. Elles reposent sur six principes que nous avons
-            appelés : La méthode S.E.C.R.E.T.
+            appelés :
+            <br />
+            La méthode S.E.C.R.E.T.
           </p>
         </motion.div>
 
@@ -172,6 +174,81 @@ export default function SecretComponent() {
               ))}
             </div>
           </div>
+        </motion.div>
+
+        {/* Section CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid md:grid-cols-2 gap-8 mt-16"
+        >
+          {/* CTA Contact */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="group relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl transform group-hover:scale-105 transition-transform duration-500" />
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col border border-white/10 hover:border-accent/30 transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-all duration-300">
+                  <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                  Une question ?
+                </h3>
+              </div>
+              <p className="text-gray-300 mb-6 flex-grow">
+                Vous avez une question sur nos services ou souhaitez des informations complémentaires ? Contactez-nous.
+              </p>
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 text-accent font-medium hover:text-white transition-colors duration-300 group/link"
+              >
+                Nous contacter
+                <svg className="w-4 h-4 transform transition-transform duration-300 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
+
+          {/* CTA Lemcal */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="group relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl transform group-hover:scale-105 transition-transform duration-500" />
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col border border-white/10 hover:border-accent/30 transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-all duration-300">
+                  <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                  Un échange ?
+                </h3>
+              </div>
+              <p className="text-gray-300 mb-6 flex-grow">
+                Réservez directement un créneau pour échanger sur votre projet lors d'une visio gratuite de 25 minutes.
+              </p>
+              <a
+                href="https://app.lemcal.com/@fdw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent font-medium hover:text-white transition-colors duration-300 group/link"
+              >
+                Prendre rendez-vous
+                <svg className="w-4 h-4 transform transition-transform duration-300 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>
