@@ -286,13 +286,13 @@ export default function Dirigeants() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 w-full ">
+        <div className="flex flex-col gap-8 w-full">
           <Image
             src="/assets/hand-shake.jpeg"
             alt="Fondateurs et repreneurs"
             width={500}
-            height={500}
-            className="rounded-2xl object-cover min-h-[100%] w-full"
+            height={400}
+            className="rounded-2xl object-cover w-full h-auto"
           />
         </div>
         {/* <motion.div
@@ -496,8 +496,8 @@ export default function Dirigeants() {
             src="/assets/contract.jpeg"
             alt="Fondateurs et repreneurs"
             width={500}
-            height={500}
-            className="rounded-2xl object-cover min-h-[100%] w-full"
+            height={400}
+            className="rounded-2xl object-cover w-full h-auto"
           />
         </div>
 

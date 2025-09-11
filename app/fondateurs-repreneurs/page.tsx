@@ -298,8 +298,8 @@ export default function Dirigeants() {
             src="/assets/desk.jpeg"
             alt="Fondateurs et repreneurs"
             width={500}
-            height={500}
-            className="rounded-2xl"
+            height={400}
+            className="rounded-2xl object-cover w-full h-auto"
           />
         </div>
         {/* <motion.div
@@ -507,8 +507,8 @@ export default function Dirigeants() {
             src="/assets/desk-3.jpg"
             alt="Fondateurs et repreneurs"
             width={500}
-            height={500}
-            className="rounded-2xl object-cover min-h-[100%] w-full"
+            height={420}
+            className="rounded-2xl object-cover w-full h-[420px]"
           />
         </div>
 
