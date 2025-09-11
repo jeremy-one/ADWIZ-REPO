@@ -65,7 +65,7 @@ export default function Dirigeants() {
 
   const situations = [
     {
-      title: "Je créer mon entreprise",
+      title: "Je crée mon entreprise",
       description:
         "Préparez votre transmission avec rigueur, en gardant la main sur le tempo et les conditions.",
       icon: MessageCircle,
@@ -77,7 +77,7 @@ export default function Dirigeants() {
       icon: Scale,
     },
     {
-      title: "J’investie dans une entreprise",
+      title: "J'investis dans une entreprise",
       description:
         "Accédez à un accompagnement clair, sans angles morts, adapté aux contraintes de chaque opération.",
       icon: Scale,
@@ -187,11 +187,18 @@ export default function Dirigeants() {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-xs md:text-sm font-medium text-gray-400 uppercase tracking-widest"
+            >
+              Avocat en droit des affaires
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]"
             >
-              ADWIZ, votre avocat en droit des affaires pour créer, reprendre ou
-              investir dans une entreprise
+              ADWIZ vous accompagne pour créer, reprendre ou investir dans une entreprise
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -497,7 +504,7 @@ export default function Dirigeants() {
       >
         <div className="flex flex-col gap-8 w-full">
           <Image
-            src="/assets/speed.jpeg"
+            src="/assets/desk-3.jpg"
             alt="Fondateurs et repreneurs"
             width={500}
             height={500}

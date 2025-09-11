@@ -173,11 +173,18 @@ export default function Dirigeants() {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-xs md:text-sm font-medium text-gray-400 uppercase tracking-widest"
+            >
+              Avocat en droit des affaires
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]"
             >
-              ADWIZ, votre avocat pour rédiger vos pactes d’associés et régler
-              vos conflits d’associés
+              ADWIZ rédige vos pactes d'associés et règle vos conflits d'associés
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

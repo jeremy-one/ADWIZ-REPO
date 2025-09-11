@@ -8,6 +8,9 @@ import {
   CheckCircle,
   Handshake,
   Clock,
+  RefreshCw,
+  Store,
+  TrendingUp,
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -46,41 +49,41 @@ export default function DroitDesSocietesDroitDesContrats() {
 
   const phases = [
     {
-      title: "Céder ou acquérir les titres d’une société",
+      title: "Céder ou acquérir les titres d'une société",
       items: [
         "Audit des cibles, valorisation, négociations",
-        "Décisions des organes sociaux validant l’opération",
+        "Décisions des organes sociaux validant l'opération",
         "Rédaction de la documentation contractuelle (NDA, LOI, SPA, GAP...)",
         "Closing, signing, appel de fonds",
       ],
-      icon: FileText,
+      icon: RefreshCw,
     },
     {
       title: "Céder ou acquérir un fonds de commerce",
       items: [
         "Définition des actifs à céder ou reprendre, valorisation, négociations",
-        "Décisions des organes sociaux validant l’opération",
+        "Décisions des organes sociaux validant l'opération",
         "Rédaction de la documentation contractuelle (NDA, LOI, acte de cession, GAP...)",
         "Closing, signing, appel de fonds, séquestre",
       ],
-      icon: CheckCircle,
+      icon: Store,
     },
     {
       title: "Procéder à une levée de fonds",
       items: [
-        "Définition des conditions de l’augmentation de capital (DPS, prime d’émission)",
+        "Définition des conditions de l'augmentation de capital (DPS, prime d'émission)",
         "Décisions des organes sociaux validant la souscription au capital",
         "Organisation et constatation de la souscription au capital",
         "Mise à jour de la table capitalistique, modifications des statuts",
       ],
-      icon: Handshake,
+      icon: TrendingUp,
     },
     {
-      title: "Encadrez l’activité et les relations entre associés",
+      title: "Encadrez l'activité et les relations entre associés",
       items: [
-        "Structuration du véhicule d’acquisition",
-        "Organisation de l’activité post transaction (accompagnement, management)",
-        "Rédaction du pacte d’associés, management package",
+        "Structuration du véhicule d'acquisition",
+        "Organisation de l'activité post transaction (accompagnement, management)",
+        "Rédaction du pacte d'associés, management package",
       ],
       icon: Handshake,
     },
@@ -128,11 +131,18 @@ export default function DroitDesSocietesDroitDesContrats() {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-xs md:text-sm font-medium text-gray-400 uppercase tracking-widest"
+            >
+              Avocat en droit des affaires
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]"
             >
-              Céder, reprendre ou investir dans une entreprise avec ADWIZ Avocat
-              en droit des affaires
+              Céder, reprendre ou investir dans une entreprise avec ADWIZ
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

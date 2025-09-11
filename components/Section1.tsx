@@ -17,12 +17,36 @@ export default function Section1() {
 
   const domains = [
     {
-      title: "J’ai un litige ou une créance à recouvrer",
+      title: "Je veux structurer juridiquement mon activité",
+      items: [
+        "Création de sociétés",
+        "Structuration de groupes (holding, conventions intragroupe, conventions de gouvernance)",
+        "Modifications statutaires",
+        "Contrats commerciaux",
+      ],
+      versoTitle: "Droit des sociétés - Droit commercial",
+      icon: Briefcase,
+      link: "/droit-des-societes-droit-des-contrats",
+    },
+    {
+      title: "Je veux m'associer, céder ou reprendre une entreprise",
+      items: [
+        "Négocations, Valorisations, Audit",
+        "Rédaction des actes de cession",
+        "Rédaction des pactes d'associés",
+        "Exécution de l'opération, formalités",
+      ],
+      versoTitle: "Transactions - Levées de fonds",
+      icon: Handshake,
+      link: "/transactions-levees-de-fonds",
+    },
+    {
+      title: "J'ai un litige ou une créance à recouvrer",
       items: [
         "Litiges commerciaux",
         "Responsabilité des dirigeants ",
-        "Conflits d’associés ",
-        "Recouvrement de créances - Mesures d’exécution",
+        "Conflits d'associés ",
+        "Recouvrement de créances - Mesures d'exécution",
       ],
       versoTitle: "Contentieux - Recouvrement",
       icon: Gavel,
@@ -39,30 +63,6 @@ export default function Section1() {
       versoTitle: "Entreprises en difficulté",
       icon: AlertTriangle,
       link: "/entreprises-en-difficulte",
-    },
-    {
-      title: "Je veux m’associer, céder ou reprendre une entreprise",
-      items: [
-        "Négocations, Valorisations, Audit",
-        "Rédaction des actes de cession",
-        "Rédaction des pactes d’associés",
-        "Exécution de l’opération, formalités",
-      ],
-      versoTitle: "Transactions - Levées de fonds",
-      icon: Handshake,
-      link: "/transactions-levees-de-fonds",
-    },
-    {
-      title: "Je veux structurer juridiquement mon activité",
-      items: [
-        "Création de sociétés",
-        "Structuration de groupes (holding, conventions intragroupe, conventions de gouvernance)",
-        "Modifications statutaires",
-        "Contrats commerciaux",
-      ],
-      versoTitle: "Droit des sociétés - Droit commercial",
-      icon: Briefcase,
-      link: "/droit-des-societes-droit-des-contrats",
     },
   ];
 

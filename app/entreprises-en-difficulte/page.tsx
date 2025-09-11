@@ -109,11 +109,18 @@ export default function DroitDesSocietesDroitDesContrats() {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-xs md:text-sm font-medium text-gray-400 uppercase tracking-widest"
+            >
+              Avocat en procédures collectives
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]"
             >
-              Traiter les difficultés de l’entreprise avec ADWIZ Avocat en
-              procédures collectives
+              Traiter les difficultés de l'entreprise avec ADWIZ
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

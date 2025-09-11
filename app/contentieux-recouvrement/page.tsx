@@ -8,6 +8,8 @@ import {
   CheckCircle,
   Handshake,
   Clock,
+  Briefcase,
+  Gavel,
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -60,19 +62,19 @@ export default function ContentieuxRecouvrement() {
         "Contentieux de haut de bilan, nullités des décisions, abus de majorité et de minorité",
         "Contentieux post-acquisition, GAP",
         "Responsabilité des dirigeants",
-        "Conflits d’associés",
+        "Conflits d'associés",
       ],
-      icon: CheckCircle,
+      icon: Briefcase,
     },
     {
       title: "Contentieux du recouvrement",
       items: [
         "Mise en demeure, recouvrement amiable",
         "Mesures conservatoires (saisies conservatoires, hypothèques judiciaires provisoires…)",
-        "Procédures d’urgence (référé provision), procédure au fond (titre exécutoire)",
-        "Mesures d’exécution",
+        "Procédures d'urgence (référé provision), procédure au fond (titre exécutoire)",
+        "Mesures d'exécution",
       ],
-      icon: Handshake,
+      icon: Gavel,
     },
   ];
 
@@ -118,11 +120,18 @@ export default function ContentieuxRecouvrement() {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-xs md:text-sm font-medium text-gray-400 uppercase tracking-widest"
+            >
+              Avocat en contentieux des affaires
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]"
             >
-              Défendez vos intérêts et recouvrez vos créances avec ADWIZ Avocat
-              en contentieux des affaires
+              Défendez vos intérêts et recouvrez vos créances avec ADWIZ
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
