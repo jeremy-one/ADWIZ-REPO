@@ -94,13 +94,13 @@ export default function DroitDesSocietesDroitDesContrats() {
       icon: Handshake,
       title: "Une approche orientée selon vos enjeux business et personnels",
       description:
-        "Nous ne traitons pas l’opération comme une série de documents juridiques mais comme un projet dans son ensemble.",
+        "Nous ne traitons pas l'opération comme une série de documents juridiques mais comme un projet dans son ensemble",
     },
     {
       icon: FileText,
       title: "Des livrables directement exploitables",
       description:
-        "Clairs, bien rédigés, rassurant pour vos partenaires (investisseurs, banques, clients, fournisseurs…).",
+        "Clairs, bien rédigés, rassurant pour vos partenaires (investisseurs, banques, clients, fournisseurs…)",
     },
     {
       icon: Clock,
@@ -528,7 +528,7 @@ export default function DroitDesSocietesDroitDesContrats() {
               juridique adapté.
               <br />
               Prenons rendez-vous pour un premier échange confidentiel et sans
-              engagement
+              engagement.
             </p>
             <Link
               href="/contact"

@@ -248,45 +248,32 @@ export default function Dirigeants() {
         <div className="flex flex-col gap-8 w-full">
           <h2 className="text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
             Pourquoi se faire accompagner par ADWIZ pour rédiger son pacte
-            d’associés ?
+            d'associés ?
           </h2>
           <p className="text-white/70 text-lg  mx-auto">
-            Un pacte d’associés est un outil de gouvernance et d’organisation
-            des relations qui permet de créer un cadre de confiance.
+            Un pacte d'associés est un outil de gouvernance et d'organisation des relations au sein de l'entreprise qui permet de créer un cadre de confiance.
             <br />
             <br />
-            Vous anticipez les tensions, protégez les intérêts de chacun et
-            sécurisez l’avenir de votre société.
+            Vous anticipez les tensions, protégez les intérêts de chacun et sécurisez l'avenir de votre société.
             <br />
             <br />
-            Que faut-il prévoir dans son pacte d’associés ?
+            <span className="font-semibold">Que faut-il prévoir dans son pacte d'associés ?</span>
           </p>
-          <ul className="list-disc list-inside text-normal">
-            <li>Rédiger ou revoir un pacte d’associés adapté à vos réalités</li>
+          <ul className="list-disc list-inside text-white/70 text-lg">
+            <li>Organiser la gouvernance : prise de décision, répartition du pouvoir, quorum, veto, information</li>
             <li>
-              Anticiper les situations sensibles : départ, décès, blocage, vente
-              de parts…
+              Encadrer les engagements financiers, opérationnels et stratégiques de chacun dans l'intérêt de l'entreprise
             </li>
             <li>
-              Organiser la prise de décision : répartition du pouvoir, quorum,
-              veto
+              Gérer les entrées et sorties du capital en trouvant le bon équilibre entre les associés et les investisseurs
             </li>
             <li>
-              Protéger les associés minoritaires ou majoritaires selon les cas
-            </li>
-            <li>
-              Cadrer les engagements financiers, opérationnels et stratégiques
-              de chacun
-            </li>
-            <li>Gérer les entrées et sorties au capital</li>
-            <li>
-              Prévenir ou résoudre un conflit entre associés, sans forcément
-              passer par le tribunal
+              Anticiper les situations sensibles : départ, décès, blocage, vente de parts, résolution des conflits
             </li>
           </ul>
           <p className="text-white/70 text-lg  mx-auto font-semibold">
             Notre approche allie stratégie, rigueur juridique et gestion
-            émotionnelle pour transformer la relation d’associés en véritable
+            émotionnelle pour transformer la relation d'associés en véritable
             atout de gouvernance.
           </p>
         </div>
@@ -508,9 +495,12 @@ export default function Dirigeants() {
         </div>
 
         <div className="flex flex-col gap-8 w-full">
+          <p className="text-sm text-accent font-medium uppercase tracking-widest">
+            Cas client
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
-            Sortir d’un blocage décisionnel entre associés pour pérenniser
-            l’activité de l’entreprise
+            Sortir d'un blocage décisionnel entre associés pour pérenniser
+            l'activité de l'entreprise
           </h2>
           <p className="text-white/70 text-lg  mx-auto">
             Deux associés, cofondateurs d’une start-up tech, sont en désaccord

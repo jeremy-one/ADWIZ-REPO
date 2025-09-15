@@ -14,7 +14,7 @@ export default function CabinetPage() {
       icon: FileText,
     },
     {
-      title: "Procédurale",
+      title: "Méthodique",
       description: "Identifier et hiérarchiser les problématiques",
       icon: Target,
     },
@@ -71,13 +71,10 @@ export default function CabinetPage() {
             className="text-center mb-20"
           >
             <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent mb-6">
-              Notre Parcours
+              François-Dominique WOJAS
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              ADWIZ c’est un parcours professionnel durant lequel nous avons
-              développées des valeurs et une méthode de travail que nous
-              employons pour vous assister dans la réalisation de vos projets et
-              la défense de vos intérêts.
+              ADWIZ est un cabinet d'avocat en droit des affaires dédié aux dirigeants et associés, aux entrepreneurs et aux investisseurs. Avec une expertise en droit et contentieux des affaires, nous proposons une approche sur mesure au service de vos projets professionnels, de vos enjeux personnels et de la protection de vos intérêts.
             </p>
           </motion.div>
 
@@ -167,13 +164,14 @@ export default function CabinetPage() {
 
             <motion.div variants={itemVariants} className="mb-16">
               <p className="text-white/80 text-center mb-8 max-w-4xl mx-auto">
-                Les dossiers qui nous sont confiés font l’objet d’une
-                implication rigoureuse. Nous trouvons les bons arguments et
-                développons un discours clair et percutant pour convaincre les
-                juridictions quand nous organisons votre défense. Nous élaborons
-                les solutions juridiques qui vous permettront de réaliser vos
+                Les dossiers qui nous sont confiés font l'objet d'une
+                implication rigoureuse. 
+                Nous élaborons les solutions juridiques qui vous permettront de réaliser vos
                 projets avec un maximum de sécurité tout en anticipant vos
                 actions pour favoriser votre activité et votre développement.
+                Nous trouvons les bons arguments et
+                développons un discours clair et percutant pour convaincre les
+                juridictions quand nous organisons votre défense.
               </p>
             </motion.div>
 
@@ -197,14 +195,14 @@ export default function CabinetPage() {
                 </h3>
                 <div className="max-w-4xl mx-auto">
                   <p className="text-white/80 mb-6">
-                    Une posture méthodique guide chaque intervention :
+                    Vous écouter et vous conseiller en :
                   </p>
                   <div className="space-y-4">
                     {[
-                      "Décrypter les dynamiques humaines en présence",
-                      "Identifier les données clés pour dégager une ligne d'action",
-                      "Mobiliser la technique juridique au service d'un objectif",
-                      "Avancer vite, sans perdre la maîtrise des enjeux",
+                      "Décryptant votre état d'esprit et celui des autres parties",
+                      "Identifiant les données clés du dossier pour dégager une ligne d'action",
+                      "Mobilisant la technique juridique au service de votre objectif",
+                      "Progressant vite, sans perdre la maîtrise de vos enjeux",
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-3">
                         <div className="w-2 h-2 rounded-full bg-accent" />
@@ -249,15 +247,14 @@ export default function CabinetPage() {
                 </h3>
                 <div className="max-w-4xl mx-auto">
                   <p className="text-white/80 mb-6">
-                    L'exécution des actions repose sur la simplicité et
-                    l'efficacité :
+                    Exécuter avec simplicité et efficacité en :
                   </p>
                   <div className="space-y-4">
                     {[
-                      "Écouter les besoins, hiérarchiser les priorités",
-                      "Analyser rapidement, conclure clairement",
-                      "Tester, ajuster, avancer",
-                      "Améliorer chaque étape pour accélérer la décision et sécuriser le résultat",
+                      "Écoutant vos besoins",
+                      "Hiérarchisant les priorités",
+                      "Analysant rapidement et communiquant clairement",
+                      "Améliorant chaque étape pour accélérer la décision et sécuriser le résultat",
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-3">
                         <div className="w-2 h-2 rounded-full bg-accent" />

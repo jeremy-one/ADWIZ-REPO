@@ -259,11 +259,10 @@ export default function Dirigeants() {
       >
         <div className="flex flex-col gap-8">
           <h2 className="text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
-            Pourquoi se faire accompagner par ADWIZ ?
+            Pourquoi se faire accompagner par ADWIZ?
           </h2>
           <p className="text-white/70 text-lg  mx-auto">
-            Un avocat en droit des affaires ne se limite pas à rédiger des
-            statuts ou à immatriculer une société. C’est un partenaire business.
+            Un avocat en droit des affaires ne se limite pas à rédiger des statuts ou un contrat de cession. C'est un partenaire business.
             <br />
             <br />
             En collaborant avec ADWIZ, vous accédez à une expertise juridique
@@ -272,22 +271,19 @@ export default function Dirigeants() {
             <br />
             Nous intervenons à chaque phase pour :
           </p>
-          <ul className="list-disc list-inside text-normal">
-            <li>Évaluer la pertinence d’une création, reprise ou franchise</li>
+          <ul className="list-disc list-inside text-white/70 text-lg">
+            <li>Évaluer la pertinence de la création ou de la transaction</li>
             <li>
-              Valider la faisabilité juridique et concurrentielle de votre
-              projet
+              Valider l'opportunité économique et concurrentielle de votre projet
             </li>
             <li>Choisir un statut adapté à votre profil et à vos ambitions</li>
+            <li>Rédiger la documentation juridique</li>
             <li>Sécuriser vos engagements : bail, partenaires, fournisseurs</li>
             <li>
-              Protéger vos actifs immatériels : marque, code, outils numériques
-            </li>
-            <li>
-              Organiser vos relations d’associés pour prévenir les conflits
+              Organiser la gouvernance et vos relations d'associés
             </li>
           </ul>
-          <p className="text-white text-lg  mx-auto font-semibold">
+          <p className="text-white/70 text-lg  mx-auto font-semibold">
             Nous sécurisons juridiquement votre projet pour en faire une
             entreprise solide et durable.
           </p>
@@ -331,8 +327,7 @@ export default function Dirigeants() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]">
-              Notre accompagnement pour anticiper, cadrer ou résoudre les enjeux
-              entre associés
+              Notre offre pour accompagner le développement de votre entreprise
             </h2>
           </motion.div>
 
@@ -513,6 +508,9 @@ export default function Dirigeants() {
         </div>
 
         <div className="flex flex-col gap-8 w-full">
+          <p className="text-sm text-accent font-medium uppercase tracking-widest">
+            Cas client
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
             Repenser une reprise trop risquée
           </h2>
@@ -581,9 +579,7 @@ export default function Dirigeants() {
               votre avocat en droit des affaires.
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              ADWIZ vous propose un accompagnement juridique sur mesure, pensé
-              pour sécuriser vos choix, structurer votre croissance et faciliter
-              votre quotidien de dirigeant.
+              ADWIZ vous propose un accompagnement juridique sur mesure pour développer votre activité et investir dans vos projets.
             </p>
             <Link
               href="/contact"

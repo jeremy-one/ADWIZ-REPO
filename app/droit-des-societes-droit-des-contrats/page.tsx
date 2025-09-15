@@ -92,13 +92,13 @@ export default function DroitDesSocietesDroitDesContrats() {
       icon: Handshake,
       title:
         "Un partenaire qui intègre vos objectifs business et vos enjeux personnels",
-      description: "Nous parlons stratégie, pas uniquement conformité.",
+      description: "Nous parlons stratégie, pas uniquement conformité",
     },
     {
       icon: FileText,
       title: "Des livrables directement exploitables",
       description:
-        "Clairs, bien rédigés, rassurant pour vos partenaires (investisseurs, banques, clients, fournisseurs…).",
+        "Clairs, bien rédigés, rassurant pour vos partenaires (investisseurs, banques, clients, fournisseurs…)",
     },
     {
       icon: Clock,

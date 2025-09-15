@@ -502,6 +502,9 @@ export default function Dirigeants() {
         </div>
 
         <div className="flex flex-col gap-8 w-full">
+          <p className="text-sm text-accent font-medium uppercase tracking-widest">
+            Cas client
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
             Créer une holding pour organiser la gouvernance et préparer la
             transmission

@@ -5,11 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [queSubmenuOpen, setQueSubmenuOpen] = useState(false);
+  const [pourSubmenuOpen, setPourSubmenuOpen] = useState(false);
+  const [queSubmenuTimer, setQueSubmenuTimer] = useState<NodeJS.Timeout | null>(null);
+  const [pourSubmenuTimer, setPourSubmenuTimer] = useState<NodeJS.Timeout | null>(null);
   const { scrollY } = useScroll();
   const y = useTransform(
     scrollY,
@@ -33,8 +38,12 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (queSubmenuTimer) clearTimeout(queSubmenuTimer);
+      if (pourSubmenuTimer) clearTimeout(pourSubmenuTimer);
+    };
+  }, [queSubmenuTimer, pourSubmenuTimer]);
 
   if (!mounted) {
     return null;
@@ -59,30 +68,97 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            {/* <Link
-              href="#services"
-              className={`hover:text-accent transition-colors ${
-                isLightPage ? "text-[#373433]" : "text-gray-300"
-              }`}
-            >
-              Services
-            </Link> */}
             <Link
               href="/cabinet"
               className={` hover:text-accent transition-colors ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
               }`}
             >
-              Le Cabinet
+              Qui sommes-nous ?
             </Link>
-            <Link
-              href="/contact"
-              className={` hover:text-accent transition-colors ${
-                isLightPage ? "text-[#373433]" : "text-gray-300"
-              }`}
+            
+            <div 
+              className="relative group"
+              onMouseEnter={() => {
+                if (queSubmenuTimer) clearTimeout(queSubmenuTimer);
+                setQueSubmenuOpen(true);
+              }}
+              onMouseLeave={() => {
+                const timer = setTimeout(() => setQueSubmenuOpen(false), 150);
+                setQueSubmenuTimer(timer);
+              }}
             >
-              Contact
-            </Link>
+              <button className={`flex items-center gap-1 hover:text-accent transition-colors ${
+                isLightPage ? "text-[#373433]" : "text-gray-300"
+              }`}>
+                Que faisons-nous ? <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {queSubmenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute top-full left-0 pt-2 z-50"
+                  onMouseEnter={() => {
+                    if (queSubmenuTimer) clearTimeout(queSubmenuTimer);
+                    setQueSubmenuOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    const timer = setTimeout(() => setQueSubmenuOpen(false), 150);
+                    setQueSubmenuTimer(timer);
+                  }}
+                >
+                  <div className="w-64 bg-black/90 backdrop-blur-lg border border-accent/20 rounded-2xl p-4">
+                    <Link href="/droit-des-societes-droit-des-contrats" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
+                      Droit des Sociétés - Commercial
+                    </Link>
+                    <Link href="/transactions-levees-de-fonds" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
+                      Transaction - Levée de fonds
+                    </Link>
+                    <Link href="/contentieux-recouvrement" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
+                      Contentieux - Recouvrement
+                    </Link>
+                    <Link href="/entreprises-en-difficulte" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
+                      Entreprises en difficulté
+                    </Link>
+                  </div>
+                </motion.div>
+              )}
+            </div>
+
+            <div 
+              className="relative"
+              onMouseEnter={() => setPourSubmenuOpen(true)}
+              onMouseLeave={() => setPourSubmenuOpen(false)}
+            >
+              <button className={`flex items-center gap-1 hover:text-accent transition-colors ${
+                isLightPage ? "text-[#373433]" : "text-gray-300"
+              }`}>
+                Pour qui ? <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {pourSubmenuOpen && (
+                <div className="absolute top-full right-0 z-50 mt-1">
+                  <div 
+                    className="w-52 bg-black/95 backdrop-blur-lg border border-accent/20 rounded-2xl p-4 shadow-xl"
+                    onMouseEnter={() => setPourSubmenuOpen(true)}
+                    onMouseLeave={() => setPourSubmenuOpen(false)}
+                  >
+                    <Link href="/dirigeants" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
+                      Dirigeants
+                    </Link>
+                    <Link href="/associes" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
+                      Associés
+                    </Link>
+                    <Link href="/fondateurs-repreneurs" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
+                      Fondateurs - Repreneurs
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <Link
               href="https://app.lemcal.com/@fdw"
               target="_blank"
@@ -156,17 +232,46 @@ export default function Navbar() {
               isLightPage ? "text-[#373433]" : "text-gray-300"
             }`}
           >
-            Le Cabinet
+            Qui sommes-nous ?
           </Link>
-          <Link
-            href="/contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className={`block hover:text-accent transition-colors ${
-              isLightPage ? "text-[#373433]" : "text-gray-300"
-            }`}
-          >
-            Contact
-          </Link>
+          
+          <div className="space-y-2">
+            <div className={`text-sm font-semibold ${isLightPage ? "text-[#373433]" : "text-gray-300"}`}>
+              Que faisons-nous ?
+            </div>
+            <div className="pl-4 space-y-2">
+              <Link href="/droit-des-societes-droit-des-contrats" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`}>
+                Droit des Sociétés - Commercial
+              </Link>
+              <Link href="/transactions-levees-de-fonds" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`}>
+                Transaction - Levée de fonds
+              </Link>
+              <Link href="/contentieux-recouvrement" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`}>
+                Contentieux - Recouvrement
+              </Link>
+              <Link href="/entreprises-en-difficulte" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`}>
+                Entreprises en difficulté
+              </Link>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <div className={`text-sm font-semibold ${isLightPage ? "text-[#373433]" : "text-gray-300"}`}>
+              Pour qui ?
+            </div>
+            <div className="pl-4 space-y-2">
+              <Link href="/dirigeants" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`}>
+                Dirigeants
+              </Link>
+              <Link href="/associes" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`}>
+                Associés
+              </Link>
+              <Link href="/fondateurs-repreneurs" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`}>
+                Fondateurs - Repreneurs
+              </Link>
+            </div>
+          </div>
+          
           <Link
             href="https://app.lemcal.com/@fdw"
             target="_blank"

@@ -509,14 +509,12 @@ export default function ContentieuxRecouvrement() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-accent to-white bg-[length:200%_auto] hover:bg-[length:200%_auto] transition-all duration-700 ease-in-out hover:bg-[position:100%_0] bg-[position:0_0]">
-              Discutons de votre projet
+              Expliquez nous votre situation
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Créer, structurer et développer son activité nécessite un conseil
-              juridique adapté.
+              Prenez rendez-vous avec ADWIZ pour évoquer les actions à mener pour résoudre votre litige.
               <br />
-              Prenons rendez-vous pour un premier échange confidentiel et sans
-              engagement
+              Premier échange confidentiel, sans engagement.
             </p>
             <Link
               href="/contact"
