@@ -1,20 +1,20 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Users, Building2, Scale, AlertTriangle, FileText, TrendingUp } from "lucide-react";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [queSubmenuOpen, setQueSubmenuOpen] = useState(false);
-  const [pourSubmenuOpen, setPourSubmenuOpen] = useState(false);
-  const [queSubmenuTimer, setQueSubmenuTimer] = useState<NodeJS.Timeout | null>(null);
-  const [pourSubmenuTimer, setPourSubmenuTimer] = useState<NodeJS.Timeout | null>(null);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [clientsOpen, setClientsOpen] = useState(false);
+  const [servicesTimer, setServicesTimer] = useState<NodeJS.Timeout | null>(null);
+  const [clientsTimer, setClientsTimer] = useState<NodeJS.Timeout | null>(null);
   const { scrollY } = useScroll();
   const y = useTransform(
     scrollY,
@@ -30,6 +30,31 @@ export default function Navbar() {
     setIsLightPage(pathname === "/light");
   }, [pathname]);
 
+
+  const handleServicesEnter = () => {
+    if (servicesTimer) clearTimeout(servicesTimer);
+    if (clientsTimer) clearTimeout(clientsTimer);
+    setClientsOpen(false); // Fermer l'autre menu
+    setServicesOpen(true);
+  };
+
+  const handleServicesLeave = () => {
+    const timer = setTimeout(() => setServicesOpen(false), 200);
+    setServicesTimer(timer);
+  };
+
+  const handleClientsEnter = () => {
+    if (clientsTimer) clearTimeout(clientsTimer);
+    if (servicesTimer) clearTimeout(servicesTimer);
+    setServicesOpen(false); // Fermer l'autre menu
+    setClientsOpen(true);
+  };
+
+  const handleClientsLeave = () => {
+    const timer = setTimeout(() => setClientsOpen(false), 200);
+    setClientsTimer(timer);
+  };
+
   useEffect(() => {
     setMounted(true);
     const handleScroll = () => {
@@ -40,10 +65,10 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      if (queSubmenuTimer) clearTimeout(queSubmenuTimer);
-      if (pourSubmenuTimer) clearTimeout(pourSubmenuTimer);
+      if (servicesTimer) clearTimeout(servicesTimer);
+      if (clientsTimer) clearTimeout(clientsTimer);
     };
-  }, [queSubmenuTimer, pourSubmenuTimer]);
+  }, [servicesTimer, clientsTimer]);
 
   if (!mounted) {
     return null;
@@ -79,84 +104,115 @@ export default function Navbar() {
             
             <div 
               className="relative group"
-              onMouseEnter={() => {
-                if (queSubmenuTimer) clearTimeout(queSubmenuTimer);
-                setQueSubmenuOpen(true);
-              }}
-              onMouseLeave={() => {
-                const timer = setTimeout(() => setQueSubmenuOpen(false), 150);
-                setQueSubmenuTimer(timer);
-              }}
+              onMouseEnter={handleServicesEnter}
+              onMouseLeave={handleServicesLeave}
             >
-              <button className={`flex items-center gap-1 hover:text-accent transition-colors ${
+              <button className={`flex items-center gap-1 hover:text-accent transition-all duration-300 ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
-              }`}>
-                Que faisons-nous ? <ChevronDown className="w-4 h-4" />
+              } ${servicesOpen ? 'text-accent' : ''}`}>
+                Que faisons-nous ? 
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
-              {queSubmenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="absolute top-full left-0 pt-2 z-50"
-                  onMouseEnter={() => {
-                    if (queSubmenuTimer) clearTimeout(queSubmenuTimer);
-                    setQueSubmenuOpen(true);
-                  }}
-                  onMouseLeave={() => {
-                    const timer = setTimeout(() => setQueSubmenuOpen(false), 150);
-                    setQueSubmenuTimer(timer);
-                  }}
-                >
-                  <div className="w-64 bg-black/90 backdrop-blur-lg border border-accent/20 rounded-2xl p-4">
-                    <Link href="/droit-des-societes-droit-des-contrats" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
-                      Droit des Sociétés - Commercial
-                    </Link>
-                    <Link href="/transactions-levees-de-fonds" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
-                      Transaction - Levée de fonds
-                    </Link>
-                    <Link href="/contentieux-recouvrement" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
-                      Contentieux - Recouvrement
-                    </Link>
-                    <Link href="/entreprises-en-difficulte" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
-                      Entreprises en difficulté
-                    </Link>
-                  </div>
-                </motion.div>
-              )}
+              <AnimatePresence>
+                {servicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="absolute top-full left-0 pt-2 z-50"
+                    onMouseEnter={handleServicesEnter}
+                    onMouseLeave={handleServicesLeave}
+                  >
+                    <div className="w-80 bg-gradient-to-b from-black/98 to-black/95 backdrop-blur-xl border border-accent/30 rounded-2xl p-6 shadow-2xl shadow-black/50">
+                      <div className="space-y-1">
+                        <Link 
+                          href="/droit-des-societes-droit-des-contrats" 
+                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
+                          <span className="font-medium">Droit des Sociétés - Commercial</span>
+                        </Link>
+                        <Link 
+                          href="/transactions-levees-de-fonds" 
+                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
+                          <span className="font-medium">Transaction - Levée de fonds</span>
+                        </Link>
+                        <Link 
+                          href="/contentieux-recouvrement" 
+                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
+                          <span className="font-medium">Contentieux - Recouvrement</span>
+                        </Link>
+                        <Link 
+                          href="/entreprises-en-difficulte" 
+                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
+                          <span className="font-medium">Entreprises en difficulté</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             <div 
-              className="relative"
-              onMouseEnter={() => setPourSubmenuOpen(true)}
-              onMouseLeave={() => setPourSubmenuOpen(false)}
+              className="relative group"
+              onMouseEnter={handleClientsEnter}
+              onMouseLeave={handleClientsLeave}
             >
-              <button className={`flex items-center gap-1 hover:text-accent transition-colors ${
+              <button className={`flex items-center gap-1 hover:text-accent transition-all duration-300 ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
-              }`}>
-                Pour qui ? <ChevronDown className="w-4 h-4" />
+              } ${clientsOpen ? 'text-accent' : ''}`}>
+                Pour qui ? 
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${clientsOpen ? 'rotate-180' : ''}`} />
               </button>
               
-              {pourSubmenuOpen && (
-                <div className="absolute top-full right-0 z-50 mt-1">
-                  <div 
-                    className="w-52 bg-black/95 backdrop-blur-lg border border-accent/20 rounded-2xl p-4 shadow-xl"
-                    onMouseEnter={() => setPourSubmenuOpen(true)}
-                    onMouseLeave={() => setPourSubmenuOpen(false)}
+              <AnimatePresence>
+                {clientsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="absolute top-full right-0 pt-2 z-50"
+                    onMouseEnter={handleClientsEnter}
+                    onMouseLeave={handleClientsLeave}
                   >
-                    <Link href="/dirigeants" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
-                      Dirigeants
-                    </Link>
-                    <Link href="/associes" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
-                      Associés
-                    </Link>
-                    <Link href="/fondateurs-repreneurs" className="block py-2 px-3 text-gray-300 hover:text-accent transition-colors rounded-lg">
-                      Fondateurs - Repreneurs
-                    </Link>
-                  </div>
-                </div>
-              )}
+                    <div className="w-64 bg-gradient-to-b from-black/98 to-black/95 backdrop-blur-xl border border-accent/30 rounded-2xl p-6 shadow-2xl shadow-black/50">
+                      <div className="space-y-1">
+                        <Link 
+                          href="/dirigeants" 
+                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
+                          <span className="font-medium">Dirigeants</span>
+                        </Link>
+                        <Link 
+                          href="/associes" 
+                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
+                          <span className="font-medium">Associés</span>
+                        </Link>
+                        <Link 
+                          href="/fondateurs-repreneurs" 
+                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
+                          <span className="font-medium">Fondateurs - Repreneurs</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
             
             <Link
@@ -286,6 +342,7 @@ export default function Navbar() {
           </Link>
         </div>
       </motion.div>
+
     </motion.nav>
   );
 }
