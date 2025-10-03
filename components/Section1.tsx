@@ -73,7 +73,7 @@ export default function Section1() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
+      className="py-12 md:py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
     >
       {/* Effet de fond organique */}
       <div className="absolute inset-0 z-0">
@@ -86,23 +86,23 @@ export default function Section1() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="px-4 text-white relative overflow-hidden"
+          className="text-white relative overflow-hidden"
         >
-          <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-12">
+          <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-8 md:gap-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center px-4"
             >
-              <h2 className=" text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
                 Quel est votre besoin ?
               </h2>
             </motion.div>
 
             {/* Grille de cartes avec effet flip */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12 px-4">
               {domains.map((domain, index) => (
                 <motion.div
                   key={index}
@@ -110,7 +110,7 @@ export default function Section1() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group h-[400px] perspective-1000"
+                  className="group h-[380px] md:h-[400px] perspective-1000"
                   style={{ perspective: "1000px" }}
                   onClick={(e) => {
                     if (window.innerWidth < 768) {
@@ -120,44 +120,44 @@ export default function Section1() {
                 >
                   <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d md:group-hover:rotate-y-180">
                     {/* Face avant (recto) */}
-                    <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 flex flex-col items-center justify-center text-center">
-                      <div className="w-16 h-16 flex items-center justify-center bg-accent/20 rounded-2xl mb-6">
+                    <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                      <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-accent/20 rounded-2xl mb-4 md:mb-6">
                         {(() => {
                           const Icon = domain.icon;
                           return <Icon className="w-8 h-8 text-accent" />;
                         })()}
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-4">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 px-2">
                         {domain.title}
                       </h3>
-                      <p className="text-accent/80 text-sm">
+                      <p className="text-accent/80 text-xs md:text-sm">
                         <span className="hidden md:inline">Survolez pour voir les détails</span>
                         <span className="md:hidden">Touchez pour voir les détails</span>
                       </p>
                     </div>
 
                     {/* Face arrière (verso) */}
-                    <div className="absolute inset-0 w-full h-fit backface-hidden rotate-y-180 rounded-2xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 p-6 flex flex-col">
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 flex items-center justify-center bg-accent/20 rounded-xl">
+                    <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 p-4 md:p-6 flex flex-col">
+                      <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+                        <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-accent/20 rounded-xl flex-shrink-0">
                           {(() => {
                             const Icon = domain.icon;
-                            return <Icon className="w-5 h-5 text-accent" />;
+                            return <Icon className="w-4 h-4 md:w-5 md:h-5 text-accent" />;
                           })()}
                         </div>
-                        <h4 className="text-lg font-bold text-white">
+                        <h4 className="text-base md:text-lg font-bold text-white">
                           {domain.versoTitle}
                         </h4>
                       </div>
 
-                      <div className="flex-1 space-y-3 mb-6">
+                      <div className="flex-1 space-y-2 md:space-y-3 mb-4 md:mb-6 overflow-y-auto">
                         {domain.items.map((item, i) => (
                           <div
                             key={i}
-                            className="flex items-start gap-3 p-3 rounded-xl bg-accent/5 border border-accent/10"
+                            className="flex items-start gap-2 md:gap-3 p-2 md:p-3 rounded-xl bg-accent/5 border border-accent/10"
                           >
-                            <div className="min-w-2 w-2 h-2 rounded-full bg-accent mt-2" />
-                            <span className="text-sm text-white/90 leading-relaxed">
+                            <div className="min-w-2 w-2 h-2 rounded-full bg-accent mt-1 md:mt-2 flex-shrink-0" />
+                            <span className="text-xs md:text-sm text-white/90 leading-relaxed">
                               {item}
                             </span>
                           </div>
@@ -166,7 +166,7 @@ export default function Section1() {
 
                       <Link
                         href={domain.link}
-                        className="w-full flex items-center justify-center gap-2 bg-accent text-primary px-4 py-3 rounded-xl font-semibold text-sm hover:bg-accent/90 transition-all duration-300"
+                        className="w-full flex items-center justify-center gap-2 bg-accent text-primary px-4 py-2.5 md:py-3 rounded-xl font-semibold text-xs md:text-sm hover:bg-accent/90 transition-all duration-300"
                       >
                         <span>Plus d'informations</span>
                         <ArrowRight className="w-4 h-4" />

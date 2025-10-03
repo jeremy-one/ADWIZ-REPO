@@ -131,7 +131,7 @@ export default function Home() {
             </div>
 
             {/* Carte acteurs*/}
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory md:justify-center no-scrollbar">
+            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory md:justify-center no-scrollbar pb-4">
               {[
                 {
                   title: "Dirigeants",
@@ -156,7 +156,7 @@ export default function Home() {
               ].map((card, index) => (
                 <motion.div
                   key={index}
-                  className=" w-full min-w-82 snap-center md:max-w-82 bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-accent/20 transform transition-all duration-500 group-hover:scale-[1.02] group-hover:border-accent/40"
+                  className="w-full min-w-[280px] md:min-w-0 snap-center md:max-w-sm bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-accent/20 transform transition-all duration-500 group-hover:scale-[1.02] group-hover:border-accent/40 flex-shrink-0"
                   initial={{ opacity: 0, y: -600 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
@@ -240,15 +240,15 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-4 bg-gradient-to-b  flex flex-col gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
+        className="py-12 md:py-24 px-4 bg-gradient-to-b flex flex-col gap-6 md:gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
       >
-        <h2 className=" text-4xl md:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-accent text-center">
           Pourquoi se faire accompagner par ADWIZ ?
         </h2>
-        <p className="text-white/70 text-lg max-w-4xl mx-auto text-center">
+        <p className="text-white/70 text-base md:text-lg max-w-4xl mx-auto text-center px-4">
           Parce que nous proposons un accompagnement qui est centré sur vos
-          objectifs et vos besoins. <br /> Que vous soyez dirigeants ou associés
-          d’une PME/ETI, entrepreneurs en phase de croissance ou avec un projet
+          objectifs et vos besoins. <br className="hidden md:block" /> Que vous soyez dirigeants ou associés
+          d'une PME/ETI, entrepreneurs en phase de croissance ou avec un projet
           de reprise, nous adaptons notre intervention à vos priorités et à
           votre rythme de décision.
         </p>
@@ -258,7 +258,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className=" rounded-2xl p-6 flex justify-center"
+          className="rounded-2xl p-4 md:p-6 flex justify-center"
         >
           <Link
             href="#"
@@ -276,7 +276,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
+        className="py-12 md:py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
       >
         <div className="max-w-7xl mx-auto">
           {/* Titre principal */}
@@ -285,19 +285,26 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
               Qu'est-ce qui différencie ADWIZ ?
             </h2>
           </motion.div>
 
           {/* Slider Container */}
           <div className="relative">
+            {/* Indicateur de scroll mobile */}
+            <div className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              <div className="w-2 h-2 rounded-full bg-accent"></div>
+              <div className="w-2 h-2 rounded-full bg-accent/30"></div>
+              <div className="w-2 h-2 rounded-full bg-accent/30"></div>
+            </div>
+
             {/* Slider Content */}
-            <div className="overflow-x-auto snap-x flex justify-center snap-mandatory scrollbar-hide">
+            <div className="overflow-x-auto snap-x flex md:justify-center snap-mandatory scrollbar-hide pb-4">
               <div
-                className="flex gap-8 py-4 "
+                className="flex gap-6 md:gap-8 py-4 px-4 md:px-0"
                 style={{ width: "max-content" }}
               >
                 {[
@@ -356,7 +363,7 @@ export default function Home() {
                       duration: 0.8,
                       delay: index * 0.2,
                     }}
-                    className="flex-shrink-0 w-80 md:w-96 snap-center group"
+                    className="flex-shrink-0 w-[300px] md:w-80 lg:w-96 snap-center group"
                   >
                     {/* Carte du slider */}
                     <div
@@ -446,7 +453,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-4 bg-gradient-to-b  flex flex-col gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
+        className="py-12 md:py-24 px-4 bg-gradient-to-b flex flex-col gap-6 md:gap-8 items-center from-[#0A0D1A] to-primary text-white relative overflow-hidden mx-auto"
       >
         {/* Pourquoi ADWIZ */}
         <motion.div
@@ -454,14 +461,14 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
             Ce que vous obtenez avec ADWIZ?
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto w-full">
           {[
             {
               icon: TargetIcon,
@@ -521,7 +528,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="flex flex-row justify-center max-w-7xl items-center flex-wrap md:flex-nowrap py-24 px-4 gap-8 md:gap-0 mx-auto text-white relative overflow-hidden"
+        className="flex flex-row justify-center max-w-7xl items-center flex-wrap md:flex-nowrap py-12 md:py-24 px-4 gap-8 md:gap-0 mx-auto text-white relative overflow-hidden"
       >
         <div className="mx-auto z-10 flex flex-col items-center justify-center">
           {/* CTA Section */}
@@ -530,7 +537,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group h-96 md:h-96 w-80 md:w-full md:w-96 aspect-square perspective-1000 flex flex-col items-center justify-center"
+            className="group h-80 md:h-96 w-full max-w-sm md:max-w-md lg:w-96 aspect-square perspective-1000 flex flex-col items-center justify-center"
             style={{ perspective: "1000px" }}
             onClick={(e) => {
               if (window.innerWidth < 768) {
@@ -623,32 +630,32 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
+        className="py-12 md:py-24 px-4 bg-gradient-to-b from-primary to-[#0A0D1A] text-white relative overflow-hidden"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-clip-text pb-2 text-transparent bg-gradient-to-r from-white to-accent">
             Cabinet membre des réseaux
           </h2>
         </motion.div>
-        <div className="max-w-7xl mx-auto flex justify-center gap-12">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
           {/* CTA final */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="text-center  "
+            className="text-center"
           >
             <Image
               src="/assets/ace-avocat.png"
               alt="ADWIZ Logo"
-              className="rounded-2xl object-cover filter invert"
+              className="rounded-2xl object-cover filter invert w-40 h-40 md:w-52 md:h-52"
               width={210}
               height={210}
             />
@@ -659,12 +666,12 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.4 }}
-            className="text-center  flex justify-center gap-4"
+            className="text-center flex justify-center gap-4"
           >
             <Image
               src="/assets/solution-hf.png"
               alt="ADWIZ Logo"
-              className="rounded-2xl object-cover filter invert"
+              className="rounded-2xl object-cover filter invert w-40 h-40 md:w-52 md:h-52"
               width={210}
               height={210}
             />
