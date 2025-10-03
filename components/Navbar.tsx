@@ -79,23 +79,23 @@ export default function Navbar() {
       <div
         className={`backdrop-blur-lg bg-black/10 border ${
           isVisible ? "border-accent/20" : "border-transparent"
-        } rounded-full px-6 py-3`}
+        } rounded-full px-4 md:px-6 py-2.5 md:py-3`}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center">
             <Image
               src="/assets/logo-baseline.svg"
               alt="ADWIZ Logo"
               width={120}
               height={40}
-              className="h-8 w-auto"
+              className="h-6 md:h-8 w-auto"
             />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/cabinet"
-              className={` hover:text-accent transition-colors ${
+              className={`font-semibold hover:text-accent transition-all duration-300 ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
               }`}
             >
@@ -107,7 +107,7 @@ export default function Navbar() {
               onMouseEnter={handleServicesEnter}
               onMouseLeave={handleServicesLeave}
             >
-              <button className={`flex items-center gap-1 hover:text-accent transition-all duration-300 ${
+              <button className={`font-semibold flex items-center gap-1 hover:text-accent transition-all duration-300 ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
               } ${servicesOpen ? 'text-accent' : ''}`}>
                 Que faisons-nous ? 
@@ -167,7 +167,7 @@ export default function Navbar() {
               onMouseEnter={handleClientsEnter}
               onMouseLeave={handleClientsLeave}
             >
-              <button className={`flex items-center gap-1 hover:text-accent transition-all duration-300 ${
+              <button className={`font-semibold flex items-center gap-1 hover:text-accent transition-all duration-300 ${
                 isLightPage ? "text-[#373433]" : "text-gray-300"
               } ${clientsOpen ? 'text-accent' : ''}`}>
                 Pour qui ? 
@@ -284,7 +284,7 @@ export default function Navbar() {
           <Link
             href="/cabinet"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`block hover:text-accent transition-colors ${
+            className={`block font-semibold hover:text-accent transition-colors ${
               isLightPage ? "text-[#373433]" : "text-gray-300"
             }`}
           >

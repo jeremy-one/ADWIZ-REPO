@@ -112,8 +112,13 @@ export default function Section1() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group h-[400px] perspective-1000"
                   style={{ perspective: "1000px" }}
+                  onClick={(e) => {
+                    if (window.innerWidth < 768) {
+                      e.currentTarget.querySelector('div')?.classList.toggle('rotate-y-180');
+                    }
+                  }}
                 >
-                  <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                  <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d md:group-hover:rotate-y-180">
                     {/* Face avant (recto) */}
                     <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 flex flex-col items-center justify-center text-center">
                       <div className="w-16 h-16 flex items-center justify-center bg-accent/20 rounded-2xl mb-6">
@@ -126,7 +131,8 @@ export default function Section1() {
                         {domain.title}
                       </h3>
                       <p className="text-accent/80 text-sm">
-                        Survolez pour voir les détails
+                        <span className="hidden md:inline">Survolez pour voir les détails</span>
+                        <span className="md:hidden">Touchez pour voir les détails</span>
                       </p>
                     </div>
 

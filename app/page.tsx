@@ -39,7 +39,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="min-h-screen flex px-4 relative overflow-hidden pt-14"
+        className="min-h-screen flex px-4 relative overflow-hidden pt-20 md:pt-14"
       >
         {/* Background Video avec animation */}
         <div className="absolute inset-0 z-0">
@@ -532,8 +532,13 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="group h-96 md:h-96 w-80 md:w-full md:w-96 aspect-square perspective-1000 flex flex-col items-center justify-center"
             style={{ perspective: "1000px" }}
+            onClick={(e) => {
+              if (window.innerWidth < 768) {
+                e.currentTarget.querySelector('div')?.classList.toggle('rotate-y-180');
+              }
+            }}
           >
-            <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 ">
+            <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d md:group-hover:rotate-y-180 ">
               {/* Face avant (recto) */}
               <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 flex flex-col items-center gap-8  justify-center text-center">
                 <Image

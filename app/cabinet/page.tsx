@@ -61,7 +61,7 @@ export default function CabinetPage() {
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-accent/5 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
       </div>
 
-      <div className="relative z-10 px-4 py-32">
+      <div className="relative z-10 px-4 py-24 md:py-32">
         <div className="max-w-7xl mx-auto">
           {/* En-tête */}
           <motion.div
@@ -86,15 +86,15 @@ export default function CabinetPage() {
             viewport={{ once: true }}
             className="mb-24 flex gap-24 flex-col items-center justify-center"
           >
-            <div className="flex gap-12 h-full">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 h-full">
               <motion.div
                 variants={itemVariants}
-                className="text-center  flex flex-col h-full"
+                className="text-center flex flex-col h-full w-full md:w-auto"
               >
                 <Image
                   src="/assets/fdw.jpeg"
                   alt="ADWIZ Logo"
-                  className="rounded-2xl object-cover "
+                  className="rounded-2xl object-cover w-full md:w-auto"
                   width={500}
                   height={210}
                 />
@@ -102,7 +102,7 @@ export default function CabinetPage() {
 
               <motion.div
                 variants={itemVariants}
-                className=" flex flex-col gap-4 justify-center"
+                className="flex flex-col gap-4 justify-center"
               >
                 <div className="max-w-4xl mx-auto space-y-6 text-white/80 text-lg leading-relaxed">
                   <p>
@@ -178,18 +178,18 @@ export default function CabinetPage() {
             {/* Rôle de l'avocat */}
             <motion.div
               variants={itemVariants}
-              className="flex gap-8 items-center justify-center flex-col md:flex-row py-24"
+              className="flex gap-8 items-center justify-center flex-col md:flex-row py-12 md:py-24"
             >
-              <div className="flex flex-col gap-4 order-2 md:order-1">
+              <div className="flex flex-col gap-4 order-2 md:order-1 w-full md:w-auto">
                 <Image
                   src="/assets/desk-2.jpg"
                   alt="ADWIZ Logo"
-                  className="rounded-2xl object-cover w-96 h-96"
+                  className="rounded-2xl object-cover w-full md:w-96 h-64 md:h-96"
                   width={500}
                   height={210}
                 />
               </div>
-              <div className="flex flex-col gap-4 order-1 md:order-2">
+              <div className="flex flex-col gap-4 order-1 md:order-2 w-full md:w-auto">
                 <h3 className="text-2xl font-bold text-white mb-8 ">
                   Le rôle de l'avocat dans le dossier
                 </h3>
@@ -239,9 +239,9 @@ export default function CabinetPage() {
             {/* Mise en œuvre des actions */}
             <motion.div
               variants={itemVariants}
-              className=" py-24 flex gap-8 items-center justify-center flex-col md:flex-row"
+              className="py-12 md:py-24 flex gap-8 items-center justify-center flex-col md:flex-row"
             >
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 w-full md:w-auto">
                 <h3 className="text-2xl font-bold text-white mb-8 ">
                   La mise en œuvre des actions
                 </h3>
@@ -265,11 +265,11 @@ export default function CabinetPage() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 w-full md:w-auto">
                 <Image
                   src="/assets/desk-1.jpg"
                   alt="ADWIZ Logo"
-                  className="rounded-2xl object-cover w-96 h-96"
+                  className="rounded-2xl object-cover w-full md:w-96 h-64 md:h-96"
                   width={500}
                   height={500}
                 />
