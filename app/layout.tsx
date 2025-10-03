@@ -24,10 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Head>
-        <meta name="robots" content="noindex" />
-      </Head>
+    <html lang="fr">
       <body className={`${workSans.variable} antialiased`}>
         <Navbar />
         {children}
