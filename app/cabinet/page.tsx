@@ -104,7 +104,7 @@ export default function CabinetPage() {
                 variants={itemVariants}
                 className="flex flex-col gap-4 justify-center"
               >
-                <div className="max-w-4xl mx-auto space-y-6 text-white/80 text-lg leading-relaxed">
+                <div className="max-w-4xl mx-auto space-y-8 text-white/80 text-lg leading-relaxed">
                   <p>
                     Notre parcours s'inscrit dans un enchaînement d'expériences
                     complémentaires.
@@ -119,21 +119,23 @@ export default function CabinetPage() {
                     complète, alliant rigueur, agilité et compréhension
                     stratégique :
                   </p>
-                  <ul className="list-disc list-inside space-y-8 text-white/80 text-lg leading-relaxed">
+                  <ul className="list-disc list-inside space-y-8 text-white/80 text-lg leading-relaxed [&>li]:flex [&>li]:flex-col [&>li]:max-w-4xl [&>li]:mx-auto">
                     <li>
-                      <span className="font-bold">White & Case LLP</span> :
-                      L'exigence des grands cabinets internationaux, la rigueur
-                      des processus et la maîtrise technique avancée
+                      <span className="font-bold">White & Case LLP</span>
+                      <span>L'exigence des grands cabinets internationaux, la rigueur
+                      des processus et la maîtrise technique avancée</span>
                     </li>
                     <li>
-                      <span className="font-bold">Delcade</span> : L'innovation
-                      et la culture entrepreneuriale appliquées au conseil
+                      <span className="font-bold">Delcade</span>
+                      <span>L'innovation
+                      et la culture entrepreneuriale appliquées au conseil</span>
                     </li>
                     <li>
-                      <span className="font-bold">Dynamis Avocats</span> : Une
+                      <span className="font-bold">Dynamis Avocats</span>
+                      <span>Une
                       pratique ancrée dans la réalité des dirigeants, la
                       capacité à prioriser les enjeux et à orienter les
-                      décisions
+                      décisions</span>
                     </li>
                   </ul>
                   <p className="text-white/80 text-lg leading-relaxed mt-6">

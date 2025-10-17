@@ -114,8 +114,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                Défendre vos intérêts, structurer vos projets, sécuriser vos
-                transactions.
+                RESOUDRE VOS DIFFICULTES, STRUCTURER VOS PROJETS, SECURISER&nbsp;VOS&nbsp;TRANSACTIONS.
               </motion.h1>
               <motion.p
                 className="text-white/70 text-lg max-w-4xl mx-auto text-center"
@@ -123,10 +122,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                Avocat en droit des affaires, j’interviens à chaque moment
-                stratégique de la vie de l’entreprise, en conseil comme en
-                contentieux. Mes conseils sont un levier de croissance pour mes
-                clients.
+                Je vous accompagne à chaque moment stratégique de la vie de votre entreprise, en conseil comme en contentieux ou lorsque cette dernière rencontre des difficultés.
               </motion.p>
             </div>
 
@@ -247,10 +243,9 @@ export default function Home() {
         </h2>
         <p className="text-white/70 text-base md:text-lg max-w-4xl mx-auto text-center px-4">
           Parce que nous proposons un accompagnement qui est centré sur vos
-          objectifs et vos besoins. <br className="hidden md:block" /> Que vous soyez dirigeants ou associés
-          d'une PME/ETI, entrepreneurs en phase de croissance ou avec un projet
-          de reprise, nous adaptons notre intervention à vos priorités et à
-          votre rythme de décision.
+          objectifs et vos besoins. <br className="hidden md:block" /> Que vous soyez commerçant, dirigeant ou associé
+          d'une TPE/PME/ETI, entrepreneurs en phase de croissance ou avec un projet
+          de reprise, nous adaptons notre intervention à vos enjeux et à vos priorités.
         </p>
 
         <motion.div
@@ -537,7 +532,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group h-80 md:h-96 w-full max-w-sm md:max-w-md lg:w-96 aspect-square perspective-1000 flex flex-col items-center justify-center"
+            className="group h-96 md:h-[500px] w-full max-w-sm md:max-w-md lg:w-96 perspective-1000 flex flex-col items-center justify-center"
             style={{ perspective: "1000px" }}
             onClick={(e) => {
               if (window.innerWidth < 768) {
@@ -547,7 +542,7 @@ export default function Home() {
           >
             <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d md:group-hover:rotate-y-180 ">
               {/* Face avant (recto) */}
-              <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 flex flex-col items-center gap-8  justify-center text-center">
+              <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 pb-10 flex flex-col items-center gap-8 justify-center text-center overflow-visible">
                 <Image
                   src="/assets/fdw.png"
                   alt="ADWIZ Logo"
@@ -555,8 +550,8 @@ export default function Home() {
                   width={210}
                   height={210}
                 />
-                <div>
-                  <h2 className="text-2xl font-bold text-white">
+                <div className="overflow-visible">
+                  <h2 className="text-2xl font-bold text-white pb-3 overflow-visible" style={{ lineHeight: '1.5', paddingBottom: '0.5rem' }}>
                     François-Dominique Wojas
                   </h2>
                   <p className="text-lg text-gray-300 max-w-2xl mx-auto">
@@ -655,7 +650,7 @@ export default function Home() {
             <Image
               src="/assets/ace-avocat.png"
               alt="ADWIZ Logo"
-              className="rounded-2xl object-cover filter invert w-40 h-40 md:w-52 md:h-52"
+              className="object-contain filter invert w-[150px] h-auto"
               width={210}
               height={210}
             />
@@ -671,7 +666,7 @@ export default function Home() {
             <Image
               src="/assets/solution-hf.png"
               alt="ADWIZ Logo"
-              className="rounded-2xl object-cover filter invert w-40 h-40 md:w-52 md:h-52"
+              className="object-contain filter invert w-[150px] h-auto"
               width={210}
               height={210}
             />

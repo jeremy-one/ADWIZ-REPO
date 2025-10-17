@@ -110,7 +110,7 @@ export default function Section1() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group h-[380px] md:h-[400px] perspective-1000"
+                  className="group h-[450px] md:h-[480px] perspective-1000"
                   style={{ perspective: "1000px" }}
                   onClick={(e) => {
                     if (window.innerWidth < 768) {
