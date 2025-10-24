@@ -562,7 +562,7 @@ export default function Home() {
 
               {/* Face arrière (verso) */}
               <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 p-6 flex flex-col items-cente justify-center w-full">
-                <a href="tel:0554529507">
+                <a href="tel:+33633540320">
                   <Image
                     src="/assets/qr-code.svg"
                     alt="ADWIZ Logo"

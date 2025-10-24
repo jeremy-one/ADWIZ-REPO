@@ -91,7 +91,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Téléphone",
-      content: "+33 (0)5 54 52 95 07",
+      content: "+33 6 33 54 03 20",
       description: "Lun-Ven 9h-18h",
     },
     {
