@@ -17,52 +17,56 @@ export default function Section1() {
 
   const domains = [
     {
-      title: "Je veux structurer juridiquement mon activité",
+      title: "Entreprises en difficulté",
+      subtitle: "Je suis débiteur, créancier ou repreneur",
       items: [
-        "Création de sociétés",
-        "Structuration de groupes (holding, conventions intragroupe, conventions de gouvernance)",
-        "Modifications statutaires",
-        "Contrats commerciaux",
+        "Prévention : Mandat ad hoc, conciliation, administration provisoire",
+        "Sauvetage : Sauvegarde, redressement judiciaire",
+        "Liquidation judiciaire",
+        "Reprise d'entreprises à la barre",
       ],
-      versoTitle: "Droit des sociétés - Droit commercial",
-      icon: Briefcase,
-      link: "/droit-des-societes-droit-des-contrats",
+      versoTitle: "Traitement des difficultés - Reprise à la barre",
+      icon: AlertTriangle,
+      link: "/entreprises-en-difficulte",
     },
     {
-      title: "Je veux m'associer, céder ou reprendre une entreprise",
+      title: "Contentieux des affaires",
+      subtitle: "J'ai un litige ou une créance à recouvrer",
       items: [
-        "Négocations, Valorisations, Audit",
-        "Rédaction des actes de cession",
-        "Rédaction des pactes d'associés",
-        "Exécution de l'opération, formalités",
-      ],
-      versoTitle: "Transactions - Levées de fonds",
-      icon: Handshake,
-      link: "/transactions-levees-de-fonds",
-    },
-    {
-      title: "J'ai un litige ou une créance à recouvrer",
-      items: [
-        "Litiges commerciaux",
-        "Responsabilité des dirigeants ",
-        "Conflits d'associés ",
-        "Recouvrement de créances - Mesures d'exécution",
+        "Contentieux commercial",
+        "Contentieux des sociétés",
+        "Conflits d'associés, Responsabilité du dirigeant",
+        "Recouvrement, Mesures d'exécution",
       ],
       versoTitle: "Contentieux - Recouvrement",
       icon: Gavel,
       link: "/contentieux-recouvrement",
     },
     {
-      title: "Entreprises en difficulté : je suis débiteur ou créancier",
+      title: "Transactions - Levées de fonds",
+      subtitle: "Je m'associe, je cède ou je reprends une entreprise",
       items: [
-        "Amiable (mandat ad hoc - conciliation)",
-        "Judiciaire (sauvegarde, redressement, liquidation judiciaire)",
-        "Accompagnement du débiteur (négociations, plan)",
-        "Protection du créancier (déclaration de créance, contrats en cours, revendication)",
+        "Cessions de titres",
+        "Cessions de fonds de commerce",
+        "Augmentations de capital",
+        "Pactes d'associés",
       ],
-      versoTitle: "Entreprises en difficulté",
-      icon: AlertTriangle,
-      link: "/entreprises-en-difficulte",
+      versoTitle: "Cessions - Acquisitions - Opérations sur le capital",
+      icon: Handshake,
+      link: "/transactions-levees-de-fonds",
+    },
+    {
+      title: "Droit des sociétés - Droit commercial",
+      subtitle: "Je veux structurer juridiquement mon activité",
+      items: [
+        "Créations de sociétés, Structurations de groupes",
+        "Secrétariat juridique, Modifications statutaires",
+        "Contrats commerciaux",
+        "Baux commerciaux",
+      ],
+      versoTitle: "Droit des sociétés - Droit commercial",
+      icon: Briefcase,
+      link: "/droit-des-societes-droit-des-contrats",
     },
   ];
 
@@ -121,15 +125,20 @@ export default function Section1() {
                   <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d md:group-hover:rotate-y-180">
                     {/* Face avant (recto) */}
                     <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 px-2">
+                        {domain.title}
+                      </h3>
                       <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-accent/20 rounded-2xl mb-4 md:mb-6">
                         {(() => {
                           const Icon = domain.icon;
                           return <Icon className="w-8 h-8 text-accent" />;
                         })()}
                       </div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 px-2">
-                        {domain.title}
-                      </h3>
+                      {domain.subtitle && (
+                        <p className="text-white text-base md:text-lg font-medium mb-3 md:mb-4 px-2">
+                          {domain.subtitle}
+                        </p>
+                      )}
                       <p className="text-accent/80 text-xs md:text-sm">
                         <span className="hidden md:inline">Survolez pour voir les détails</span>
                         <span className="md:hidden">Touchez pour voir les détails</span>
