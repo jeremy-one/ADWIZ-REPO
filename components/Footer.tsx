@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   const [isLightPage, setIsLightPage] = useState(false);
@@ -22,7 +23,7 @@ export default function Footer() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8">
           {/* Colonne Logo et description */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
@@ -57,34 +58,34 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-400 hover:text-accent transition-colors text-sm"
-                >
-                  Droit des sociétés
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-accent transition-colors text-sm"
-                >
-                  Transactions & Levée de fonds
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-accent transition-colors text-sm"
-                >
-                  Contentieux & Recouvrement
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
+                  href="/entreprises-en-difficulte"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
                   Entreprises en difficulté
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contentieux-recouvrement"
+                  className="text-gray-400 hover:text-accent transition-colors text-sm"
+                >
+                  Contentieux des affaires
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/transactions-levees-de-fonds"
+                  className="text-gray-400 hover:text-accent transition-colors text-sm"
+                >
+                  Transactions - Levées de fonds
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/droit-des-societes-droit-des-contrats"
+                  className="text-gray-400 hover:text-accent transition-colors text-sm"
+                >
+                  Droit des sociétés - Droit commercial
                 </Link>
               </li>
             </ul>
@@ -102,18 +103,10 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/le-cabinet"
+                  href="/cabinet"
                   className="text-gray-400 hover:text-accent transition-colors text-sm"
                 >
-                  Qui sommes-nous ?
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-accent transition-colors text-sm"
-                >
-                  Réseaux
+                  Qui sommes-nous ?
                 </Link>
               </li>
               <li>
@@ -132,6 +125,14 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/honoraires"
+                  className="text-gray-400 hover:text-accent transition-colors text-sm"
+                >
+                  Honoraires
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -144,12 +145,21 @@ export default function Footer() {
             >
               Nous trouver
             </h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400 text-sm">
-                <span className="block">12 Place de la Bourse</span>
-                <span>33000 Bordeaux</span>
+            <ul className="space-y-2" style={{ listStyleType: 'none', paddingLeft: 0 }}>
+              <li className="text-gray-400 text-sm flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=12+Place+de+la+Bourse+33000+Bordeaux"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
+                  <span className="block">12 Place de la Bourse</span>
+                  <span>33000 Bordeaux</span>
+                </a>
               </li>
-              <li className="text-gray-400 text-sm">
+              <li className="text-gray-400 text-sm flex items-center gap-3">
+                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
                   href="tel:+33633540320"
                   className="hover:text-accent transition-colors"
@@ -157,7 +167,8 @@ export default function Footer() {
                   +33 6 33 54 03 20
                 </a>
               </li>
-              <li className="text-gray-400 text-sm">
+              <li className="text-gray-400 text-sm flex items-center gap-3">
+                <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
                   href="mailto:contact@adwiz.fr"
                   className="hover:text-accent transition-colors"
