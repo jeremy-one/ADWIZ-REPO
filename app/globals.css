@@ -1,151 +1,5 @@
 @import "tailwindcss";
 
-/* TT Norms Font Faces - Normal */
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Extra-Light.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Extra-Bold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Heavy.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Black.otf') format('opentype');
-  font-weight: 950;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* TT Norms Font Faces - Italic */
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Thin-Italic.otf') format('opentype');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Extra-Light-Italic.otf') format('opentype');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Light-Italic.otf') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Italic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Medium-Italic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Bold-Italic.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Extra-Bold-Italic.otf') format('opentype');
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Heavy-Italic.otf') format('opentype');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url('/fonts/TT Norms Font/TT-Norms-Black-Italic.otf') format('opentype');
-  font-weight: 950;
-  font-style: italic;
-  font-display: swap;
-}
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -217,7 +71,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --font-tt-norms: 'TT Norms', sans-serif;
+  --font-montserrat: var(--font-montserrat), sans-serif;
   --font-work-sans: var(--font-work-sans), sans-serif;
 }
 
@@ -227,14 +81,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Configuration des titres avec TT Norms par défaut */
+/* Configuration des titres avec Montserrat par défaut */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-tt-norms);
+  font-family: var(--font-montserrat);
 }
 
 ul {
   list-style-type: disc;
-  font-family: var(--font-tt-norms);
+  font-family: var(--font-montserrat);
 }
 
 /* Configuration des paragraphes avec Work Sans */

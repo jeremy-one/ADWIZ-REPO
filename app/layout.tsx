@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { Work_Sans, Montserrat } from "next/font/google";
 
 import "./globals.css";
 
@@ -11,6 +11,13 @@ const workSans = Work_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-work-sans",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${workSans.variable} antialiased`}>
+      <body className={`${workSans.variable} ${montserrat.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
