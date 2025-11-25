@@ -129,20 +129,12 @@ export default function Navbar() {
                     <div className="w-80 bg-gradient-to-b from-black/98 to-black/95 backdrop-blur-xl border border-accent/30 rounded-2xl p-6 shadow-2xl shadow-black/50">
                       <div className="space-y-1">
                         <Link
-                          href="/droit-des-societes-droit-des-contrats"
+                          href="/entreprises-en-difficulte"
                           className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
                           style={{ fontFamily: 'var(--font-work-sans)' }}
                         >
                           <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
-                          <span className="font-medium">Droit des Sociétés - Commercial</span>
-                        </Link>
-                        <Link
-                          href="/transactions-levees-de-fonds"
-                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
-                          style={{ fontFamily: 'var(--font-work-sans)' }}
-                        >
-                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
-                          <span className="font-medium">Transaction - Levée de fonds</span>
+                          <span className="font-medium">Entreprises en difficulté</span>
                         </Link>
                         <Link
                           href="/contentieux-recouvrement"
@@ -150,15 +142,23 @@ export default function Navbar() {
                           style={{ fontFamily: 'var(--font-work-sans)' }}
                         >
                           <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
-                          <span className="font-medium">Contentieux - Recouvrement</span>
+                          <span className="font-medium">Contentieux des affaires</span>
                         </Link>
                         <Link
-                          href="/entreprises-en-difficulte"
+                          href="/transactions-levees-de-fonds"
                           className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
                           style={{ fontFamily: 'var(--font-work-sans)' }}
                         >
                           <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
-                          <span className="font-medium">Entreprises en difficulté</span>
+                          <span className="font-medium">Transactions - Levées de fonds</span>
+                        </Link>
+                        <Link
+                          href="/droit-des-societes-droit-des-contrats"
+                          className="group/item flex items-center gap-3 py-3 px-4 text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 rounded-xl"
+                          style={{ fontFamily: 'var(--font-work-sans)' }}
+                        >
+                          <div className="w-2 h-2 rounded-full bg-accent/60 group-hover/item:bg-accent group-hover/item:scale-125 transition-all duration-300"></div>
+                          <span className="font-medium">Droit des sociétés - Droit commercial</span>
                         </Link>
                       </div>
                     </div>
@@ -306,17 +306,17 @@ export default function Navbar() {
               Que faisons-nous ?
             </div>
             <div className="pl-4 space-y-2">
-              <Link href="/droit-des-societes-droit-des-contrats" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`} style={{ fontFamily: 'var(--font-work-sans)' }}>
-                Droit des Sociétés - Commercial
-              </Link>
-              <Link href="/transactions-levees-de-fonds" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`} style={{ fontFamily: 'var(--font-work-sans)' }}>
-                Transaction - Levée de fonds
-              </Link>
-              <Link href="/contentieux-recouvrement" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`} style={{ fontFamily: 'var(--font-work-sans)' }}>
-                Contentieux - Recouvrement
-              </Link>
               <Link href="/entreprises-en-difficulte" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`} style={{ fontFamily: 'var(--font-work-sans)' }}>
                 Entreprises en difficulté
+              </Link>
+              <Link href="/contentieux-recouvrement" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`} style={{ fontFamily: 'var(--font-work-sans)' }}>
+                Contentieux des affaires
+              </Link>
+              <Link href="/transactions-levees-de-fonds" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`} style={{ fontFamily: 'var(--font-work-sans)' }}>
+                Transactions - Levées de fonds
+              </Link>
+              <Link href="/droit-des-societes-droit-des-contrats" onClick={() => setIsMobileMenuOpen(false)} className={`block text-sm hover:text-accent transition-colors ${isLightPage ? "text-[#373433]" : "text-gray-400"}`} style={{ fontFamily: 'var(--font-work-sans)' }}>
+                Droit des sociétés - Droit commercial
               </Link>
             </div>
           </div>
