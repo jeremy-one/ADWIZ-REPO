@@ -178,7 +178,7 @@ export default function HonorairesPage() {
                     </p>
                   )}
 
-                  {mode.note && (
+                  {'note' in mode && mode.note && (
                     <p className="text-accent/80 text-sm italic mt-4">
                       {mode.note}
                     </p>
