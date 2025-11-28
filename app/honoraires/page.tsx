@@ -9,11 +9,20 @@ import {
   Check,
   X,
   CreditCard,
-  AlertCircle
+  AlertCircle,
+  LucideIcon
 } from "lucide-react";
 
+interface ModeFacturation {
+  icon: LucideIcon;
+  title: string;
+  description: string[];
+  tarif?: string;
+  note?: string;
+}
+
 export default function HonorairesPage() {
-  const modesFacturation = [
+  const modesFacturation: ModeFacturation[] = [
     {
       icon: FileText,
       title: "Honoraires au forfait",
@@ -178,7 +187,7 @@ export default function HonorairesPage() {
                     </p>
                   )}
 
-                  {'note' in mode && mode.note && (
+                  {mode.note && (
                     <p className="text-accent/80 text-sm italic mt-4">
                       {mode.note}
                     </p>
