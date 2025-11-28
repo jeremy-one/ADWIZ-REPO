@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0D1A] to-primary text-white">
-      {/* Hero Section */}
+      {/* Hero Section - Test deploy */}
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
