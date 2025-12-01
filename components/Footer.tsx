@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 export default function Footer() {
   const [isLightPage, setIsLightPage] = useState(false);
@@ -154,8 +154,8 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
                 >
-                  <span className="block">12 Place de la Bourse</span>
-                  <span>33000 Bordeaux</span>
+                  <span className="block">12, PLACE DE LA BOURSE</span>
+                  <span>33000 - BORDEAUX</span>
                 </a>
               </li>
               <li className="text-gray-400 text-sm flex items-center gap-3">
@@ -175,6 +175,10 @@ export default function Footer() {
                 >
                   contact@adwiz.law
                 </a>
+              </li>
+              <li className="text-gray-400 text-sm flex items-center gap-3">
+                <Clock className="w-5 h-5 text-accent flex-shrink-0" />
+                <span>Lun-Ven 9h-18h</span>
               </li>
             </ul>
           </div>

@@ -83,28 +83,28 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
-      icon: Mail,
-      title: "Email",
-      content: "contact@adwiz.law",
-      description: "Réponse sous 24h",
+      icon: MapPin,
+      title: "Adresse",
+      content: "12, PLACE DE LA BOURSE",
+      description: "33000 - BORDEAUX",
     },
     {
       icon: Phone,
       title: "Téléphone",
       content: "+33 6 33 54 03 20",
-      description: "Lun-Ven 9h-18h",
+      description: "",
     },
     {
-      icon: MapPin,
-      title: "Adresse",
-      content: "12 PLACE DE LA BOURSE",
-      description: "33000, BORDEAUX",
+      icon: Mail,
+      title: "Email",
+      content: "contact@adwiz.law",
+      description: "",
     },
     {
       icon: Clock,
       title: "Horaires",
       content: "Lun-Ven 9h-18h",
-      description: "Sam 9h-12h",
+      description: "",
     },
   ];
 
@@ -151,9 +151,7 @@ export default function ContactPage() {
               Contactez-nous
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Notre équipe d'experts en droit des affaires est à votre
-              disposition pour vous accompagner dans vos projets et répondre à
-              vos questions.
+              Avocat en droit des affaires à l'écoute de vos besoins
             </p>
           </motion.div>
 
@@ -191,9 +189,11 @@ export default function ContactPage() {
                         <p className="text-white/90 font-medium mb-1">
                           {info.content}
                         </p>
-                        <p className="text-white/60 text-sm">
-                          {info.description}
-                        </p>
+                        {info.description && (
+                          <p className="text-white/90 font-medium">
+                            {info.description}
+                          </p>
+                        )}
                       </div>
                     </motion.div>
                   ))}

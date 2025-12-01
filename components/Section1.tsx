@@ -20,10 +20,22 @@ export default function Section1() {
       title: "Entreprises en difficulté",
       subtitle: "Je suis débiteur, créancier ou repreneur",
       items: [
-        "Prévention : Mandat ad hoc, conciliation, administration provisoire",
-        "Sauvetage : Sauvegarde, redressement judiciaire",
-        "Liquidation judiciaire",
-        "Reprise d'entreprises à la barre",
+        {
+          text: "Prévention : Mandat ad hoc, conciliation",
+          link: "/entreprises-en-difficulte/prevention",
+        },
+        {
+          text: "Sauvetage : Sauvegarde, redressement judiciaire",
+          link: "/entreprises-en-difficulte/sauvetage",
+        },
+        {
+          text: "Liquidation judiciaire",
+          link: "/entreprises-en-difficulte/liquidation-judiciaire",
+        },
+        {
+          text: "Reprise d'entreprises à la barre",
+          link: "/entreprises-en-difficulte/reprise",
+        },
       ],
       versoTitle: "Traitement des difficultés - Reprise à la barre",
       icon: AlertTriangle,
@@ -33,10 +45,10 @@ export default function Section1() {
       title: "Contentieux des affaires",
       subtitle: "J'ai un litige ou une créance à recouvrer",
       items: [
-        "Contentieux commercial",
-        "Contentieux des sociétés",
-        "Conflits d'associés, Responsabilité du dirigeant",
-        "Recouvrement, Mesures d'exécution",
+        { text: "Contentieux commercial", link: null },
+        { text: "Contentieux des sociétés", link: null },
+        { text: "Conflits d'associés, Responsabilité du dirigeant", link: null },
+        { text: "Recouvrement, Mesures d'exécution", link: null },
       ],
       versoTitle: "Contentieux - Recouvrement",
       icon: Gavel,
@@ -46,10 +58,10 @@ export default function Section1() {
       title: "Transactions - Levées de fonds",
       subtitle: "Je m'associe, je cède ou je reprends une entreprise",
       items: [
-        "Cessions de titres",
-        "Cessions de fonds de commerce",
-        "Augmentations de capital",
-        "Pactes d'associés",
+        { text: "Cessions de titres", link: null },
+        { text: "Cessions de fonds de commerce", link: null },
+        { text: "Augmentations de capital", link: null },
+        { text: "Pactes d'associés", link: null },
       ],
       versoTitle: "Cessions - Acquisitions - Opérations sur le capital",
       icon: Handshake,
@@ -59,10 +71,10 @@ export default function Section1() {
       title: "Droit des sociétés - Droit commercial",
       subtitle: "Je veux structurer juridiquement mon activité",
       items: [
-        "Créations de sociétés, Structurations de groupes",
-        "Secrétariat juridique, Modifications statutaires",
-        "Contrats commerciaux",
-        "Baux commerciaux",
+        { text: "Créations de sociétés, Structurations de groupes", link: null },
+        { text: "Secrétariat juridique, Modifications statutaires", link: null },
+        { text: "Contrats commerciaux", link: null },
+        { text: "Baux commerciaux", link: null },
       ],
       versoTitle: "Droit des sociétés - Droit commercial",
       icon: Briefcase,
@@ -160,17 +172,38 @@ export default function Section1() {
                       </div>
 
                       <div className="flex-1 space-y-2 md:space-y-3 mb-4 md:mb-6 overflow-y-auto">
-                        {domain.items.map((item, i) => (
-                          <div
-                            key={i}
-                            className="flex items-start gap-2 md:gap-3 p-2 md:p-3 rounded-xl bg-accent/5 border border-accent/10"
-                          >
-                            <div className="min-w-2 w-2 h-2 rounded-full bg-accent mt-1 md:mt-2 flex-shrink-0" />
-                            <span className="text-xs md:text-sm text-white/90 leading-relaxed">
-                              {item}
-                            </span>
-                          </div>
-                        ))}
+                        {domain.items.map((item, i) => {
+                          const itemText = item.text;
+                          const itemLink = item.link;
+
+                          if (itemLink) {
+                            return (
+                              <Link
+                                key={i}
+                                href={itemLink}
+                                className="flex items-start gap-2 md:gap-3 p-2 md:p-3 rounded-xl bg-accent/5 border border-accent/10 hover:bg-accent/10 hover:border-accent/30 transition-all duration-300 group/link cursor-pointer"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <div className="min-w-2 w-2 h-2 rounded-full bg-accent mt-1 md:mt-2 flex-shrink-0 group-hover/link:scale-125 transition-transform duration-300" />
+                                <span className="text-xs md:text-sm text-white/90 leading-relaxed group-hover/link:text-white transition-colors duration-300">
+                                  {itemText}
+                                </span>
+                              </Link>
+                            );
+                          }
+
+                          return (
+                            <div
+                              key={i}
+                              className="flex items-start gap-2 md:gap-3 p-2 md:p-3 rounded-xl bg-accent/5 border border-accent/10"
+                            >
+                              <div className="min-w-2 w-2 h-2 rounded-full bg-accent mt-1 md:mt-2 flex-shrink-0" />
+                              <span className="text-xs md:text-sm text-white/90 leading-relaxed">
+                                {itemText}
+                              </span>
+                            </div>
+                          );
+                        })}
                       </div>
 
                       <Link

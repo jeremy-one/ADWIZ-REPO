@@ -132,7 +132,7 @@ export default function Home() {
                 {
                   title: "Dirigeants",
                   description:
-                    "Organisez votre activité. Gérez les contentieux, le recouvrement et les difficultés.",
+                    "Organisez votre activité. Gérez les contentieux et les difficultés.",
                   icon: BriefcaseBusiness,
                   link: "/dirigeants",
                 },
@@ -245,7 +245,7 @@ export default function Home() {
           Parce que nous proposons un accompagnement qui est centré sur vos
           objectifs et vos besoins. <br className="hidden md:block" /> Que vous soyez commerçant, dirigeant ou associé
           d'une TPE/PME/ETI, entrepreneurs en phase de croissance ou avec un projet
-          de reprise, nous adaptons notre intervention à vos enjeux et à vos priorités.
+          de reprise, nous adaptons notre intervention à vos enjeux.
         </p>
 
         <motion.div
@@ -306,7 +306,7 @@ export default function Home() {
                   {
                     icon: Target,
                     title:
-                      "Un accompagnement sur mesure, dimensionné à vos enjeux",
+                      "Un accompagnement personnalisé et adapté",
                     points: [
                       "Chaque client, chaque projet est unique.",
                       "Notre approche est centrée sur le conseil et le service, pas de produits standards.",
@@ -321,7 +321,7 @@ export default function Home() {
                   },
                   {
                     icon: Handshake,
-                    title: "Un partenaire engagé, exigeant et constructif",
+                    title: "Un partenaire à l'écoute, constructif et engagé",
                     points: [
                       "Nous contribuons à faire émerger les bonnes décisions.",
                       "Nous posons les questions utiles, anticipons les points sensibles, et apportons un regard pragmatique.",
@@ -336,7 +336,7 @@ export default function Home() {
                   },
                   {
                     icon: Shield,
-                    title: "Un cadre structuré pour avancer avec clarté",
+                    title: "Un cadre structuré, transparent et clair",
                     points: [
                       "Notre organisation, notre méthode et nos ressources vous font gagner du temps et facilitent la prise de décision.",
                       "Vous avancez en étant mieux préparé, mieux entouré, plus sécurisé.",

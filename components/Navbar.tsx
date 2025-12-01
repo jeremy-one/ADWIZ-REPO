@@ -224,8 +224,7 @@ export default function Navbar() {
             </div>
             
             <Link
-              href="https://app.lemcal.com/@fdw"
-              target="_blank"
+              href="/contact"
               className={` px-6 py-2 rounded-full font-semibold hover:bg-accent/90 transition-colors ${
                 isLightPage
                   ? "text-white bg-gradient-to-r from-[#879BEB] to-[#BAA080]/90 hover:bg-gradient-to-r hover:from-[#BAA080] hover:to-[#879BEB]/90 transition-all duration-300"
@@ -233,7 +232,7 @@ export default function Navbar() {
               }`}
               style={{ fontFamily: 'var(--font-work-sans)' }}
             >
-              Prendre RDV
+              Contact
             </Link>
           </div>
 
@@ -339,8 +338,7 @@ export default function Navbar() {
           </div>
           
           <Link
-            href="https://app.lemcal.com/@fdw"
-            target="_blank"
+            href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`block text-center px-6 py-2 rounded-full font-semibold hover:bg-accent/90 transition-colors ${
               isLightPage
@@ -349,7 +347,7 @@ export default function Navbar() {
             }`}
             style={{ fontFamily: 'var(--font-work-sans)' }}
           >
-            Prendre RDV
+            Contact
           </Link>
         </div>
       </motion.div>
